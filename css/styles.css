@@ -6,6 +6,8 @@
     font-family: "Acme";
     padding-top: 1px;
     padding-bottom: 3px;
+    padding-left:1px;
+    padding-right:1px;
 }
 .grad-bg:hover {
     background: #222;
