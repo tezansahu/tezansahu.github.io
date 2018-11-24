@@ -1,49 +1,56 @@
-
 .grad-bg {
-    background: #222;
-    background: linear-gradient(to right bottom, #9d9d9d, #222);
-    vertical-align: central;
-    font-family: "Acme";
-    padding-top: 1px;
-    padding-bottom: 3px;
-    padding-left:1px;
-    padding-right:1px;
+  background: #222;
+  background: linear-gradient(to right bottom, #565656, #111);
+  vertical-align: central;
+  font-family: "Acme";
+  padding-top: 1px;
+  padding-bottom: 3px;
+  padding-left: 1px;
+  padding-right: 1px;
 }
-.grad-bg:hover {
-    background: #222;
-    background: linear-gradient(to right bottom, #565656, #111);
-}
-.hover-dark{
-    background-color:#222;
+/* .grad-bg:hover {
+  background: #222;
+  background: 
+} */
+.hover-dark {
+  background-color: #222;
 }
 .text-white:link {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 .text-white:hover {
-    color: white;
-    text-decoration: none;
-   
+  color: white;
+  text-decoration: none;
 }
 .text-white:visited {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
-.rounded-bottom{
-    border-bottom-left-radius:6px;
-    border-bottom-right-radius:6px;
+.rounded-bottom {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
-.rounded-top{
-    border-top-left-radius:6px;
-    border-top-right-radius:6px;
+.rounded-top {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 .image-plate {
-    margin-bottom:20px;
-    margin-top:20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s ease;
+}
+
+.image-plate:hover {
+  opacity: 0.5;
 }
