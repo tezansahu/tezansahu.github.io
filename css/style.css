@@ -1454,6 +1454,37 @@ h6 {
 .circle {
   border-radius: 20px; }
 
+.load-btn {
+  display: inline-block;
+  outline: none;
+  line-height: 40px;
+  padding: 10px 30px;
+  font-size: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+
+.load-btn:focus {
+  outline: none; }
+
+.load-btn.danger-border {
+  color: #9C280F;
+  border: 2px solid #9C280F;
+  background: #fff; }
+
+.load-btn.danger-border:hover {
+  color: #fff;
+  background-image: -moz-linear-gradient(0deg, #000000 0%, #9C280F 100%);
+  background-image: -webkit-linear-gradient(0deg, #000000 0%, #9C280F 100%);
+  background-image: -ms-linear-gradient(0deg, #000000 0%, #9C280F 100%);
+  /* background: #f44a40; */
+  border: 2px solid transparent; }
+
 .genric-btn {
   display: inline-block;
   outline: none;
