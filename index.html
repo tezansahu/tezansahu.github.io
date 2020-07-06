@@ -80,19 +80,20 @@
 								<div class="personal_text">
 									<h6>Hey Guys, i am</h6>
 									<h3>Tezan Sahu</h3>
-									<h4>Undergraduate at IIT Bombay</h4>
-									<p>Intern at Microsoft | Blockchain & Deep Learning Enthusiast</p>
+									<h4>Senior Undergraduate at IIT Bombay</h4>
+									<p>Institute System Administrator at IIT Bombay</p>
 									<ul class="list basic_info">
-										<li><a href="#"><i class="lnr lnr-calendar-full"></i> 19th December, 1998</a></li>
-										<li><a href="#"><i class="lnr lnr-phone-handset"></i> (+91) 90223 50789</a></li>
 										<li><a href="mailto:tezansahu@gmail.com"><i class="lnr lnr-envelope"></i> tezansahu@gmail.com</a></li>
-										<li><a href="#"><i class="lnr lnr-home"></i> Mumbai, India</a></li>
+										<li><a href="#"><i class="lnr lnr-phone-handset"></i> (+91) 90223 50789</a></li>
+										<li><a href="#"><i class="lnr lnr-home"></i> Navi Mumbai, India</a></li>
+										<li><a href="#"><i class="lnr lnr-calendar-full"></i> 19th December, 1998</a></li>
 									</ul>
 									<ul class="list personal_social">
 										<li><a href="http://github.com/tezansahu" target="_blank"><i class="fa fa-github"></i></a></li>
 										<li><a href="https://www.linkedin.com/in/tezan-sahu" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 										<li><a href="https://twitter.com/SahuTezan" target="_blank"><i class="fa fa-twitter"></i></a></li>
 										<li><a href="https://www.facebook.com/tezan.sahu.3" target="_blank"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCuvYds_Jb1qxj3fbq8h0K7Q" target="_blank"><i class="fa fa-youtube"></i></a></li>
 										
 									</ul>
 								</div>
@@ -105,14 +106,17 @@
         <!--================End Home Banner Area =================-->
         
         <!--================Welcome Area =================-->
-        <section class="welcome_area p_80" id="about">
+        <section class="welcome_area p_80" id="about" style="padding-bottom:10pt">
         	<div class="container">
         		<div class="row welcome_inner">
         			<div class="col-lg-6">
         				<div class="welcome_text">
 							<div class="row" style="padding-left: 20px">
 								<h4>About Myself</h4>
-								<p>I'm a Mechanical Engineering Undergraduate at IIT Bombay, pursuing a Minor in Computer Science & Engineering. I like to explore different realms of programming & have a keen interest in Blockchain Technologies, Security, Machine Learning, Deep Learning, Data Analytics, & Software Development.</br></br>I was a Convener at the Web & Coding Club, IIT Bombay where we carried out activities to help people learn and build an interest in programming. I also actively participate in hackathons and have won several prizes (full list <a href="#hackathons" style="color:#9C280F">here</a>).</p>
+								<p>
+									I'm a Senior Mechanical Engineering Undergraduate at IIT Bombay, pursuing a Minor in Computer Science & Engineering. I love to explore different domains of computer science & have a keen interest in Deep Learning & Blockchain Technologies.</br></br>
+									I <a href="#art_gallery" style="color:#9C280F">Paint</a>. I <a href="https://www.youtube.com/channel/UCuvYds_Jb1qxj3fbq8h0K7Q" style="color:#9C280F">Sing</a>. And love listening to some soothing Hindi Music during leisure (& even while studying :P). I like to learn new stuff & am always up for challenges! I love interacting with people and understand a situation through various perspectives. </br></br>
+									Being an enthusiatic programmer, I am always ready to discuss interesting projects. I also love participating in hackathons and have won several prizes (full list <a href="#hackathons" style="color:#9C280F">here</a>).</p>
 							</div>
         					<!--<div class="row">
         						<div class="col-md-4">
@@ -209,7 +213,7 @@
 									<span></span>
 									<div class="media">
 										<div class="d-flex">
-											<p>May 2020 to Present</p>
+											<p>May 2020 to Jul 2020</p>
 										</div>
 										<div class="media-body">
 											<h4>Microsoft</h4>
@@ -727,11 +731,95 @@
 		</section>
 		<!--================Art Gallery Area =================-->
 
+		<!--================Contact Area =================-->
+        <section class="contact_area" style="padding-top:30pt; padding-bottom: 30pt;">
+            <div class="container">
+				<div class="main_title">
+        			<h2>Contact Me</h2>
+        			<p>If you need to contact me electronically or <a href="./cv_tezan.pdf" target="_blank" style="color:#9C280F">offer me a job</a>, you can reach out by sending your message here</p>
+        		</div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<!--================Contact Area =================-->
+		
+		<!--================Contact Success and Error message Area =================-->
+        <div id="success" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Thank you</h2>
+                        <p>Your message is successfully sent...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals error -->
+
+        <div id="error" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Sorry !</h2>
+                        <p> Something went wrong </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================End Contact Success and Error message Area =================-->
+
 
         <!--================Footer Area =================-->
-        <footer class="footer_area p_50">
+        <footer class="footer_area" style="padding-top: 20pt; padding-bottom: 20pt;">
         	<div class="container">
         		<div>
+					<div>
+						<aside class="f_widget social_widget">
+							<div class="f_title">
+								<h3>Follow Me</h3>
+							</div>
+							<p>Let's be social</p>
+							<ul class="list" style="margin-bottom: 20pt;">
+								<li><a href="https://www.linkedin.com/in/tezan-sahu" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://www.facebook.com/tezan.sahu.3" target="_blank"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://twitter.com/SahuTezan" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://www.youtube.com/channel/UCuvYds_Jb1qxj3fbq8h0K7Q" target="_blank"><i class="fa fa-youtube"></i></a></li>
+								<li><a href="https://www.instagram.com/tezan_sahu/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							</ul>
+						</aside>
+					</div>
 					<span>
 						Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Created with <i class="fa fa-heart" aria-hidden="true" style="color:#9C280F"></i> by Tezan Sahu
 					</span>
@@ -802,7 +890,10 @@ Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. </
         <script src="js/jquery.ajaxchimp.min.js"></script>
         <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
         <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="js/mail-script.js"></script>
+		<script src="js/mail-script.js"></script>
+		<script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/contact.js"></script>
         <script src="js/theme.js"></script>
 		<script src="js/projects.js"></script>
     </body>
