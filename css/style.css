@@ -1119,9 +1119,9 @@ button:focus {
 .contact_form .form-group {
   margin-bottom: 10px; }
   .contact_form .form-group .form-control {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 26px;
-    color: #999;
+    color: #444;
     border: 1px solid #eeeeee;
     font-family: "Roboto", sans-serif;
     border-radius: 0px;
@@ -1130,13 +1130,13 @@ button:focus {
       box-shadow: none;
       outline: none; }
     .contact_form .form-group .form-control.placeholder {
-      color: #999; }
+      color: #777; }
     .contact_form .form-group .form-control:-moz-placeholder {
-      color: #999; }
+      color: #777; }
     .contact_form .form-group .form-control::-moz-placeholder {
-      color: #999; }
+      color: #777; }
     .contact_form .form-group .form-control::-webkit-input-placeholder {
-      color: #999; }
+      color: #777; }
   .contact_form .form-group textarea {
     resize: none; }
     .contact_form .form-group textarea.form-control {
