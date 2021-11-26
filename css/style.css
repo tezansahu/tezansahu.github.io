@@ -329,7 +329,7 @@ button:focus {
     position: relative;
     width: 100%;
     min-height: 700px;
-    display: flex; }
+    display: block; }
     .home_banner_area .banner_inner .banner_content {
       color: #222222;
       vertical-align: middle;
