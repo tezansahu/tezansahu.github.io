@@ -44,6 +44,7 @@ build/
 # Analytics and tracking files
 google*.html
 *.xml
+!sitemap.xml
 
 # Large image files (keep smaller optimized versions)
 assets/images/originals/
