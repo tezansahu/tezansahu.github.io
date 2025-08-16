@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tezansahu.com/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Prevent crawling of certain file types
+User-agent: *
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+# Allow images and fonts for better SEO
+Allow: /assets/images/
+Allow: /assets/fonts/

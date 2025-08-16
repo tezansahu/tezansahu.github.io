@@ -1,0 +1,46 @@
+# GitHub Pages Configuration
+
+# Enable GitHub Pages
+github:
+  pages:
+    enabled: true
+    source: "/"
+
+# Jekyll configuration (optional, for future enhancements)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site settings
+title: "Tezan Sahu | AI Engineer & Bestselling Author"
+description: "Data-driven software engineer at Microsoft building AI products, bestselling author, and passionate mentor."
+url: "https://tezansahu.com"
+baseurl: ""
+
+# Custom domain for GitHub Pages
+domain: tezansahu.com
+
+# SEO settings
+author: "Tezan Sahu"
+twitter:
+  username: SahuTezan
+  card: summary_large_image
+
+# Social media
+social:
+  name: Tezan Sahu
+  links:
+    - https://linkedin.com/in/tezan-sahu
+    - https://twitter.com/SahuTezan
+    - https://github.com/tezansahu
+    - https://medium.com/@tezansahu
+    - https://instagram.com/tezan_sahu
+    - https://youtube.com/@tezansahu
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .gitignore
+  - .vscode/
+  - node_modules/
+  - "*.tmp"

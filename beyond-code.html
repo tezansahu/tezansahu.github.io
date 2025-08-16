@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Code: A Practical Guide for Data Scientists | Tezan Sahu</title>
+    <meta name="description" content="Beyond Code is a #1 Amazon bestseller offering actionable insights for modern Data Scientists, Analysts & Engineers. Learn to balance technical prowess and soft skills to excel in the competitive Data Science industry.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Beyond Code: A Practical Guide for Data Scientists">
+    <meta property="og:description" content="A #1 Amazon bestseller offering actionable insights for modern Data Scientists, Analysts & Engineers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tezansahu.com/beyond-code">
+    <meta property="og:image" content="https://tezansahu.com/assets/images/beyond-code-book.png">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Beyond Code: A Practical Guide for Data Scientists">
+    <meta name="twitter:description" content="A #1 Amazon bestseller offering actionable insights for modern Data Scientists, Analysts & Engineers.">
+    <meta name="twitter:image" content="https://tezansahu.com/assets/images/beyond-code-book.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/ts-logo-square.png">
+    <link rel="apple-touch-icon" href="assets/images/ts-logo-square.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/book.css">
+</head>
+<body class="book-page">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="assets/images/ts-logo-rectangle.png" alt="TS Logo" class="nav-logo-img">
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="book-hero">
+        <div class="container">
+            <div class="book-hero-content">
+                <div class="book-cover">
+                    <img src="assets/images/beyond-code-book.png" alt="Beyond Code Book Cover" class="book-image">
+                    <div class="bestseller-badge">
+                        <i class="fas fa-trophy"></i>
+                        National Bestseller on Amazon
+                    </div>
+                </div>
+                <div class="book-details">
+                    <div class="book-category">Data Science • Career Development</div>
+                    <h1 class="book-title">Beyond Code</h1>
+                    <h2 class="book-subtitle">A Practical Guide for Data Scientists</h2>
+                    <p class="book-description">
+                        In the rapidly evolving world of data science, technical skills alone aren't enough. 
+                        "Beyond Code" bridges the gap between technical prowess and professional success, 
+                        offering actionable insights for modern Data Scientists, Analysts & Engineers.
+                    </p>
+                    <div class="book-stats">
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Copies Sold</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.8/5</span>
+                            <span class="stat-label">Rating</span>
+                        </div>
+                    </div>
+                    <div class="book-cta">
+                        <a href="#" class="btn-primary" id="buy-amazon">
+                            <i class="fab fa-amazon"></i>
+                            Buy on Amazon
+                        </a>
+                        <a href="#" class="btn-secondary" id="preview-book">
+                            <i class="fas fa-eye"></i>
+                            Preview Book
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Overview -->
+    <section class="book-overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2>Why This Book?</h2>
+                    <p>
+                        The data science industry is more competitive than ever. While countless resources teach you 
+                        the technical skills, very few address the soft skills, career navigation, and holistic 
+                        development needed to truly excel.
+                    </p>
+                    <p>
+                        "Beyond Code" fills this gap by providing practical, actionable advice from someone who has 
+                        walked the path - from IIT Bombay to Microsoft, from individual contributor to industry mentor.
+                    </p>
+                </div>
+                <div class="overview-features">
+                    <div class="feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Practical Insights</h3>
+                        <p>Real-world advice from industry experience</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-road"></i>
+                        <h3>Career Navigation</h3>
+                        <p>Strategic guidance for professional growth</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Soft Skills Focus</h3>
+                        <p>The skills they don't teach in school</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="book-contents">
+        <div class="container">
+            <h2 class="section-title">What's Inside</h2>
+            <div class="contents-grid">
+                <div class="chapter-card">
+                    <div class="chapter-number">01</div>
+                    <h3>Foundation Building</h3>
+                    <p>Understanding the data science landscape and building a strong technical foundation</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">02</div>
+                    <h3>Professional Skills</h3>
+                    <p>Communication, stakeholder management, and business acumen for data scientists</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">03</div>
+                    <h3>Career Strategy</h3>
+                    <p>Job hunting, interview preparation, and building a compelling professional brand</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">04</div>
+                    <h3>Growth Mindset</h3>
+                    <p>Continuous learning, networking, and staying relevant in a fast-evolving field</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">05</div>
+                    <h3>Leadership</h3>
+                    <p>Transitioning from individual contributor to team lead and beyond</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">06</div>
+                    <h3>Industry Insights</h3>
+                    <p>Real stories, case studies, and lessons learned from successful practitioners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="book-testimonials">
+        <div class="container">
+            <h2 class="section-title">What Readers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"This book filled all the gaps in my data science education. The practical advice is gold!"</p>
+                    <div class="testimonial-author">
+                        <strong>Alex Rivera</strong>
+                        <span>Senior Data Scientist @ Netflix</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Beyond Code is what every aspiring data scientist needs. It's not just about the code - it's about building a career."</p>
+                    <div class="testimonial-author">
+                        <strong>Maria Santos</strong>
+                        <span>ML Engineer @ Uber</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Tezan's insights helped me transition from academia to industry smoothly. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <strong>Dr. James Wong</strong>
+                        <span>Research Scientist @ Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="book-author">
+        <div class="container">
+            <div class="author-content">
+                <div class="author-image">
+                    <img src="assets/images/tezan-author-profile.jpg" alt="Tezan Sahu">
+                </div>
+                <div class="author-info">
+                    <h2>About the Author</h2>
+                    <h3>Tezan Sahu</h3>
+                    <p>
+                        Tezan Sahu is a data-driven software engineer at Microsoft working on the M365 Copilot 
+                        Extensibility Platform team. He graduated with Institute Rank 2 from IIT Bombay and has 
+                        extensive experience in AI, data science, and product development.
+                    </p>
+                    <p>
+                        As a Top 1% mentor on Topmate, Tezan has guided 100+ professionals in their data science 
+                        careers and has addressed over 20,000 learners through speaking engagements and workshops.
+                    </p>
+                    <div class="author-credentials">
+                        <div class="credential">
+                            <i class="fas fa-building"></i>
+                            <span>Software Engineer II @ Microsoft</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>IIT Bombay (Institute Rank 2)</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-users"></i>
+                            <span>100+ Professionals Mentored</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-microphone"></i>
+                            <span>20,000+ Learners Reached</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="book-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Go Beyond Code?</h2>
+                <p>Join thousands of data scientists who have transformed their careers with practical insights from "Beyond Code"</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary" id="buy-amazon-footer">
+                        <i class="fab fa-amazon"></i>
+                        Buy on Amazon
+                    </a>
+                    <a href="/#contact" class="btn-secondary">
+                        <i class="fas fa-comments"></i>
+                        Ask the Author
+                    </a>
+                </div>
+                <div class="guarantee">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>30-day money-back guarantee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Tezan Sahu. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <p>Built with ❤️ and ☕</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/book.js"></script>
+</body>
+</html>
