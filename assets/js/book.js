@@ -19,6 +19,12 @@ function initBookPageFunctionality() {
     
     // Testimonials carousel (if needed)
     initTestimonialsCarousel();
+    
+    // Scroll indicator functionality
+    initScrollIndicator();
+    
+    // Book testimonials marquee
+    initBookTestimonialsMarquee();
 }
 
 function initAmazonLinks() {
@@ -75,46 +81,111 @@ function showBookPreview() {
         <div class="modal-overlay">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>Book Preview</h3>
+                    <h3>Skills you will learn in Beyond Code</h3>
                     <button class="modal-close">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="preview-content">
-                        <h4>Table of Contents</h4>
-                        <ul class="preview-toc">
-                            <li><strong>Chapter 1:</strong> Foundation Building - Understanding the Data Science Landscape</li>
-                            <li><strong>Chapter 2:</strong> Professional Skills - Communication and Business Acumen</li>
-                            <li><strong>Chapter 3:</strong> Career Strategy - Job Hunting and Interview Success</li>
-                            <li><strong>Chapter 4:</strong> Growth Mindset - Continuous Learning in a Fast-Evolving Field</li>
-                            <li><strong>Chapter 5:</strong> Leadership - From Individual Contributor to Team Lead</li>
-                            <li><strong>Chapter 6:</strong> Industry Insights - Real Stories and Case Studies</li>
-                        </ul>
-                        
-                        <div class="preview-excerpt">
-                            <h4>Sample Excerpt</h4>
-                            <blockquote>
-                                "In the rapidly evolving world of data science, technical skills alone aren't enough. 
-                                The most successful data scientists are those who can bridge the gap between complex 
-                                algorithms and business value, communicate insights effectively, and adapt to the 
-                                changing landscape of technology and industry needs..."
-                            </blockquote>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-user-cog"></i>
+                            </div>
+                            <h4>How to Develop a T-Shaped Skillset</h4>
+                            <p>(Chapter 1)</p>
                         </div>
                         
-                        <div class="preview-features">
-                            <h4>What You'll Learn</h4>
-                            <ul>
-                                <li>How to communicate complex technical concepts to non-technical stakeholders</li>
-                                <li>Strategies for building a compelling professional brand in data science</li>
-                                <li>Interview techniques that set you apart from other candidates</li>
-                                <li>Leadership skills for advancing in your data science career</li>
-                                <li>Real-world case studies from successful data science professionals</li>
-                            </ul>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h4>How to Cultivate a Data-Driven Outlook</h4>
+                            <p>(Chapter 2)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>How to Foster a Creative Mindset for Data Science</h4>
+                            <p>(Chapter 2)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h4>How to Measure Outcomes that Drive Impact</h4>
+                            <p>(Chapter 3)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>How to Embrace a Growth Mindset</h4>
+                            <p>(Chapter 4)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>How to Continue Learning Amidst Daily Work</h4>
+                            <p>(Chapter 4)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>How to Influence Others through Data Storytelling</h4>
+                            <p>(Chapter 5)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>How to Manage Conflict at Work</h4>
+                            <p>(Chapter 5)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <h4>How to Thrive in a Dynamic Environment</h4>
+                            <p>(Chapter 6)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>How to Boost Productivity & Combat Procrastination</h4>
+                            <p>(Chapter 8)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4>How to Build a Compelling Personal Brand</h4>
+                            <p>(Chapter 9)</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <h4>How to Practice Adaptive Leadership in Data Science</h4>
+                            <p>(Chapter 10)</p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn-primary" onclick="document.querySelector('#buy-amazon').click()">
-                        <i class="fab fa-amazon"></i> Buy Now on Amazon
+                    <button class="btn-primary" onclick="window.open('https://www.amazon.com/Beyond-Code-Strategies-Technical-Scientists-ebook/dp/B0BW8MJW6G?asin=9356483345&revisionId=&format=4&depth=2', '_blank')">
+                        <i class="fab fa-amazon"></i> Read Sample on Amazon
                     </button>
                 </div>
             </div>
@@ -136,7 +207,8 @@ function showBookPreview() {
         .modal-overlay {
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -144,107 +216,248 @@ function showBookPreview() {
         }
         
         .modal-content {
-            background: white;
-            border-radius: 15px;
-            max-width: 800px;
-            max-height: 90vh;
-            overflow-y: auto;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 24px;
+            max-width: 1000px;
             width: 100%;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .modal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem;
-            border-bottom: 1px solid #eee;
+            padding: 2rem 2.5rem 1rem;
+            flex-shrink: 0;
         }
         
         .modal-header h3 {
-            color: #333;
+            color: #133155;
             margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            flex: 1;
         }
         
         .modal-close {
-            background: none;
+            background: rgba(107, 114, 128, 0.1);
             border: none;
-            font-size: 2rem;
-            color: #999;
+            font-size: 1.5rem;
+            color: #6b7280;
             cursor: pointer;
             line-height: 1;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-left: 1rem;
         }
         
         .modal-close:hover {
-            color: #333;
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            transform: scale(1.1);
         }
         
         .modal-body {
-            padding: 2rem;
+            padding: 0 2.5rem 1rem;
+            flex: 1;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(107, 114, 128, 0.3) transparent;
         }
         
-        .preview-content h4 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
+        .modal-body::-webkit-scrollbar {
+            width: 6px;
         }
         
-        .preview-content h4:first-child {
-            margin-top: 0;
+        .modal-body::-webkit-scrollbar-track {
+            background: transparent;
         }
         
-        .preview-toc {
-            list-style: none;
-            padding: 0;
+        .modal-body::-webkit-scrollbar-thumb {
+            background: rgba(107, 114, 128, 0.3);
+            border-radius: 3px;
         }
         
-        .preview-toc li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #f0f0f0;
+        .modal-body::-webkit-scrollbar-thumb:hover {
+            background: rgba(107, 114, 128, 0.5);
         }
         
-        .preview-excerpt blockquote {
-            background: #f8fafc;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 16px;
             padding: 1.5rem;
-            border-left: 4px solid #667eea;
-            font-style: italic;
-            color: #555;
-            margin: 1rem 0;
-        }
-        
-        .preview-features ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .preview-features li {
-            padding: 0.5rem 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(107, 114, 128, 0.1);
+            backdrop-filter: blur(10px);
             position: relative;
-            padding-left: 1.5rem;
+            overflow: hidden;
         }
         
-        .preview-features li::before {
-            content: '✓';
+        .skill-item::before {
+            content: '';
             position: absolute;
+            top: 0;
             left: 0;
-            color: #4caf50;
-            font-weight: bold;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #2172A9, #133155);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .skill-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(135deg, #133155, #2172A9);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 0 0 16px 16px;
+        }
+        
+        .skill-item:hover::before {
+            opacity: 1;
+        }
+        
+        .skill-item:hover::after {
+            opacity: 1;
+        }
+        
+        .skill-item:hover {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            color: #2172A9;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-item h4 {
+            color: #133155;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .skill-item p {
+            color: #133155;
+            background: #FFC444;
+            font-size: 0.85rem;
+            margin: 0;
+            font-weight: 600;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            display: inline-block;
+            margin-top: 0.5rem;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
         }
         
         .modal-footer {
-            padding: 2rem;
-            border-top: 1px solid #eee;
+            padding: 1.5rem 2.5rem 2rem;
+            border-top: 1px solid rgba(107, 114, 128, 0.1);
             text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .modal-footer .btn-primary {
+            background: linear-gradient(135deg, #2172A9, #133155);
+            color: white;
+            border: none;
+            padding: 0.875rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 15px rgba(33, 114, 169, 0.3);
+        }
+        
+        .modal-footer .btn-primary:hover {
+            background: linear-gradient(135deg, #133155, #1D1E20);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(33, 114, 169, 0.4);
         }
         
         @media (max-width: 768px) {
-            .modal-overlay {
-                padding: 1rem;
+            .modal-content {
+                max-width: 95%;
+                height: 85vh;
+                margin: 1rem;
             }
             
-            .modal-header,
-            .modal-body,
+            .modal-header {
+                padding: 1.5rem;
+            }
+            
+            .modal-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .modal-body {
+                padding: 0 1.5rem 1rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .skill-item {
+                padding: 1.25rem;
+            }
+            
+            .skill-icon {
+                font-size: 2rem;
+            }
+            
             .modal-footer {
                 padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .modal-content {
+                height: 90vh;
+                border-radius: 16px;
+            }
+            
+            .modal-header h3 {
+                font-size: 1.3rem;
+            }
+            
+            .skill-item h4 {
+                font-size: 0.9rem;
             }
         }
     `;
@@ -476,4 +689,265 @@ function initTestimonialsCarousel() {
         }
         updateCarousel();
     }, 5000);
+}
+
+// Scroll indicator functionality
+function initScrollIndicator() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function() {
+            const nextSection = document.querySelector('.bestseller-showcase');
+            if (nextSection) {
+                nextSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+}
+
+// Book testimonials marquee functionality
+function initBookTestimonialsMarquee() {
+    const marqueeContainer = document.getElementById('book-testimonials-marquee');
+    
+    if (marqueeContainer) {
+        // Clone the testimonials for seamless infinite loop
+        const testimonialCards = Array.from(marqueeContainer.children);
+        const testimonialCount = testimonialCards.length;
+        
+        // Clone each testimonial card to create seamless loop
+        testimonialCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            marqueeContainer.appendChild(clone);
+        });
+        
+        // Add click event listeners to all testimonial cards (original and cloned)
+        const allTestimonialCards = marqueeContainer.querySelectorAll('.testimonial-card');
+        
+        allTestimonialCards.forEach((card, index) => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const fullText = this.getAttribute('data-full-text');
+                const authorNameElement = this.querySelector('.author-info h4');
+                const authorTitleElement = this.querySelector('.author-info span');
+                
+                if (authorNameElement && authorTitleElement && fullText) {
+                    const authorName = authorNameElement.textContent;
+                    const authorTitle = authorTitleElement.textContent;
+                    showTestimonialModal(fullText, authorName, authorTitle);
+                } else {
+                    console.error('Missing elements:', { authorNameElement, authorTitleElement, fullText });
+                }
+            });
+        });
+    } else {
+        console.error('Marquee container not found!');
+    }
+}
+
+// Show testimonial modal
+function showTestimonialModal(fullText, authorName, authorTitle) {
+    // Remove any existing testimonial modals first
+    const existingModal = document.querySelector('.book-testimonial-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    const modal = document.createElement('div');
+    modal.className = 'book-testimonial-modal'; // Changed class name to avoid conflicts
+    modal.innerHTML = `
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Reader Testimonial</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>"${fullText}"</blockquote>
+                    <div class="testimonial-author">
+                        <strong>${authorName}</strong>
+                        <span>${authorTitle}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Add modal styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .book-testimonial-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10001;
+        }
+        
+        .book-testimonial-modal .modal-overlay {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .book-testimonial-modal .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+        
+        .book-testimonial-modal .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .book-testimonial-modal .modal-header h3 {
+            color: #133155;
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .book-testimonial-modal .modal-close {
+            background: rgba(107, 114, 128, 0.1);
+            border: none;
+            font-size: 1.5rem;
+            color: #6b7280;
+            cursor: pointer;
+            line-height: 1;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .book-testimonial-modal .modal-close:hover {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            transform: scale(1.1);
+        }
+        
+        .book-testimonial-modal .modal-body {
+            padding: 2rem;
+        }
+        
+        .book-testimonial-modal .testimonial-rating {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+        }
+        
+        .book-testimonial-modal .testimonial-rating .fas {
+            color: #FFC444;
+            font-size: 1.2rem;
+        }
+        
+        .book-testimonial-modal blockquote {
+            background: #f8fafc;
+            padding: 2rem;
+            border-left: 4px solid #2172A9;
+            font-style: italic;
+            color: #374151;
+            margin: 0 0 2rem 0;
+            border-radius: 0 12px 12px 0;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        
+        .book-testimonial-modal .testimonial-author {
+            text-align: center;
+        }
+        
+        .book-testimonial-modal .testimonial-author strong {
+            display: block;
+            color: #133155;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .book-testimonial-modal .testimonial-author span {
+            color: #6b7280;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .book-testimonial-modal .modal-content {
+                max-width: 95%;
+                margin: 1rem;
+            }
+            
+            .book-testimonial-modal .modal-header {
+                padding: 1.5rem 1.5rem 1rem;
+            }
+            
+            .book-testimonial-modal .modal-body {
+                padding: 1.5rem;
+            }
+            
+            .book-testimonial-modal blockquote {
+                padding: 1.5rem;
+                font-size: 1rem;
+            }
+        }
+    `;
+    
+    document.head.appendChild(style);
+    document.body.appendChild(modal);
+    
+    // Close modal functionality
+    const closeButton = modal.querySelector('.modal-close');
+    const overlay = modal.querySelector('.modal-overlay');
+    
+    closeButton.addEventListener('click', () => closeBookTestimonialModal(modal, style));
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeBookTestimonialModal(modal, style);
+        }
+    });
+    
+    // Close on Escape key
+    const handleEscape = (e) => {
+        if (e.key === 'Escape') {
+            closeBookTestimonialModal(modal, style);
+            document.removeEventListener('keydown', handleEscape);
+        }
+    };
+    document.addEventListener('keydown', handleEscape);
+    
+    console.log('Book testimonial modal created successfully');
+}
+
+function closeBookTestimonialModal(modal, style) {
+    modal.remove();
+    style.remove();
+    console.log('Book testimonial modal closed');
 }
