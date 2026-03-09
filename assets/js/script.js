@@ -728,3 +728,36 @@ function openArtworkModal(imageSrc, title, size, medium) {
         }
     });
 }
+
+
+// Research section — progressive show/hide (smooth accordion)
+function toggleResearchItems() {
+    const wrapper = document.getElementById('research-extra-wrapper');
+    const btn = document.getElementById('research-toggle-btn');
+    const expanded = btn.classList.contains('expanded');
+
+    if (expanded) {
+        // Collapse: lock current height first, then animate to 0
+        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+            wrapper.style.maxHeight = '0';
+            wrapper.classList.remove('expanded');
+        });
+    } else {
+        // Expand: animate to full content height
+        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+        wrapper.classList.add('expanded');
+        // After transition, remove fixed max-height so content can reflow freely
+        wrapper.addEventListener('transitionend', function handler() {
+            if (wrapper.classList.contains('expanded')) {
+                wrapper.style.maxHeight = 'none';
+            }
+            wrapper.removeEventListener('transitionend', handler);
+        });
+    }
+
+    btn.classList.toggle('expanded', !expanded);
+    btn.innerHTML = expanded
+        ? '<i class="fas fa-chevron-down"></i>&nbsp; Show More'
+        : '<i class="fas fa-chevron-up"></i>&nbsp; Show Less';
+}
