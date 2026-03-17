@@ -169,9 +169,8 @@ p {
 }
 
 .nav-logo-img {
-    height: 40px;
-    width: auto;
-    max-width: 120px;
+    height: 52px;
+    width: 52px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -1439,7 +1438,7 @@ section {
 }
 
 .service-card.elite {
-    background: linear-gradient(135deg, #7c2d12 0%, #dc2626 100%);
+    background: linear-gradient(135deg, #133155 0%, #2172A9 100%);
     color: white;
     border-color: #FFC444;
 }
@@ -1487,10 +1486,17 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.service-card.featured .service-icon,
-.service-card.elite .service-icon {
+.service-card.featured .service-icon {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
+}
+
+.service-card.digital.elite .service-icon {
+    background: #FFC444;
+}
+
+.service-card.digital.elite .service-icon i {
+    color: #133155;
 }
 
 .service-card.digital .service-icon {
@@ -1588,13 +1594,13 @@ section {
 
 .elite-btn {
     background: #FFC444;
-    color: #7c2d12;
+    color: #133155;
     border-color: white;
 }
 
 .elite-btn:hover {
     background: white;
-    color: #7c2d12;
+    color: #133155;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 196, 68, 0.4);
 }
@@ -1673,16 +1679,17 @@ section {
 /* Filter Controls */
 .speaking-controls {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 3rem;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .filter-buttons {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .filter-btn {
@@ -1706,7 +1713,7 @@ section {
 
 .search-bar {
     position: relative;
-    min-width: 250px;
+    width: 100%;
 }
 
 .search-input {
@@ -2889,8 +2896,8 @@ section {
     }
 
     .nav-logo-img {
-        height: 35px;
-        max-width: 100px;
+        height: 44px;
+        width: 44px;
     }
 
     .nav-menu {
