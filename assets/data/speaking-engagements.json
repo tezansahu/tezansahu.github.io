@@ -1,0 +1,985 @@
+[
+    {
+        "title": "AI-Powered Computer Vision for Critical Systems: Healthcare & National Security",
+        "venue": "ATAL Faculty Development Program | CBIT, Hyderabad",
+        "date": "August 2026",
+        "sortDate": "2026-08",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "AI Systems Engineering: Tool Calling & Model Context Protocol (MCP)",
+        "venue": "IEEE CASS Workshop Series | NSAKCET, Hyderabad",
+        "date": "June 2026",
+        "sortDate": "2026-06",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Institutionalize Your Instincts: Encoding expertise, taste, and tribal knowledge into reusable AI skills",
+        "venue": "SkillUp AI | The Garage, Microsoft (India)",
+        "date": "May 2026",
+        "sortDate": "2026-05",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Crafting Intelligent Agents with Microsoft Agent Framework",
+        "venue": "Agentic AI Seminar | Gurunanak College, Hyderabad",
+        "date": "April 2026",
+        "sortDate": "2026-04",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "AI for Talent Acquisition",
+        "venue": "Learning Day | Global Talent Acquisition (GTA) Asia, Microsoft",
+        "date": "April 2026",
+        "sortDate": "2026-04",
+        "category": "microsoft",
+        "type": "🎙️ Podcast",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "What Does Your Agent Remember About You? (And Should It?)",
+        "venue": "AI Conference 2026 | Tech Mahindra, Hyderabad",
+        "date": "April 2026",
+        "sortDate": "2026-04",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/ai-conference-2026.png",
+        "description": "<p>Delivered as the youngest speaker at AI Conference 2026, this talk tackled the often-overlooked challenge of memory in AI agent systems. Using a relatable analogy — a friend who remembers every embarrassing thing you’ve ever done and brings it up at the worst moment — the session explored why agents need memory, what types exist, and the real risks when memory goes wrong.</p><p><strong>Key Topics Covered:</strong></p><ul><li>The Amnesia Problem — why stateless sessions force users to re-explain everything, every time</li><li>A taxonomy of four memory types and how each works in practice</li><li>Real-world implementations: who’s using agent memory and what they store</li><li>Three failure modes: staleness (outdated facts), poisoning (injected false info), and privacy leaks</li><li>Ethics, regulation, and governance — should agents remember everything?</li><li>Open problems the field hasn’t solved yet</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202604_AgentConference2026_WhatDoesYourAgentRememberAboutYou.pdf"
+            },
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/microsoft-ai-innovators-hub_aiconference2026-hyderabad-ai-activity-7441098722404556800-gsnW"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_aiagents-memoryinai-aiconference-activity-7449093232791121920-ZEfU"
+            }
+        ]
+    },
+    {
+        "title": "Context Engineering: The Hidden Skill Behind Production-Ready AI",
+        "venue": "NextGen Data 2026 | Barcelona, Spain",
+        "date": "March 2026",
+        "sortDate": "2026-03",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/nextgen-data-2026.png",
+        "description": "<p>Presented at NextGen Data 2026 in Barcelona (virtually), this talk made the case that most production AI failures aren’t model failures — they’re context failures. Drawing an analogy to exam preparation (reading too much, going blank mid-question, or writing great answers to the wrong question), the session introduced context engineering as the critical discipline for anyone shipping AI to production.</p><p><strong>Key Topics Covered:</strong></p><ul><li>The demo-to-production gap: why perfect demos become unreliable deployments (hallucinations, latency, spiralling costs)</li><li>The context window as your application’s RAM — instructions, knowledge, and tool outputs</li><li>Common context failure patterns and how to diagnose them</li><li>Practical context strategies for production systems</li><li>Cutting-edge patterns emerging from the field</li><li>Open source tools and arsenal for context engineering</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202603_NextGenData2026_ContextEngineeringTheHiddenSkillForProductionReadyAI.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_nextgendata2026-contextengineering-ai-activity-7441347937152000000-STwW"
+            }
+        ]
+    },
+    {
+        "title": "Context Engineering: The Make-or-Break Skill for Production AI",
+        "venue": "PyConf Hyderabad 2026",
+        "date": "March 2026",
+        "sortDate": "2026-03",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/context-engineering-pyconf26.jpg",
+        "description": "<p>Delivered at PyConf Hyderabad 2026, this talk brought context engineering to the Python community — showing why the gap between a working demo and a reliable production AI system almost always comes down to how you fill the context window. The session used the memorable analogy of exam preparation gone wrong to drive home why ‘the model isn’t broken, the context is.’</p><p><strong>Key Topics Covered:</strong></p><ul><li>Production reality check: perfect retrieval vs. hallucinations, snappy responses vs. unbearable latency</li><li>Defining the discipline: the context window as your application’s RAM (instructions, knowledge, tool outputs)</li><li>Common context failures and diagnostic approaches</li><li>Practical context strategies for Python-based AI applications</li><li>Cutting-edge patterns and the open source arsenal</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202603_PyConfHyderabad_ContextEngineeringTheMakeOrBreakSkillForProductionAI.pdf"
+            },
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_pyconfhyd2026-speaker-python-activity-7432273262535118848-pLW2"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_pyconfhyd2026-activity-7438909327479816192-lluG"
+            },
+            {
+                "label": "LinkedIn Post 3",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_pyconfhyderabad2026-pyconf-hydpy-activity-7440608058755411968-WIXt"
+            }
+        ]
+    },
+    {
+        "title": "Stop Hoping, Start Evaluating",
+        "venue": "Future World Conversations | Future World Alliance",
+        "date": "March 2026",
+        "sortDate": "2026-03",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/stop-hoping-start-evaluating-future-world-conversations.png",
+        "description": "<p>Delivered at Future World Conversations, this talk challenged the AI community to move beyond ‘looks good enough’ and embrace systematic evaluation for AI agents. The session walked through the anatomy of an AI agent, a structured building process, and then deep-dived into why evaluations are the missing piece in most agent development workflows.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Anatomical elements of AI agents: LLMs, system prompts, tools &amp; functions, memory &amp; context, guardrails, and the orchestrator</li><li>A practical 5-step agent building process</li><li>Introduction to evals — what they are, why they matter, and how to design them effectively</li><li>Evaluation-Driven Development (EDD) as a methodology for building reliable agents</li><li>Tools and resources to get started with agent evaluation</li></ul>",
+        "links": [
+            {
+                "label": "Recording",
+                "icon": "fas fa-video",
+                "url": "https://youtu.be/RoDtHuNUbDo?si=bXUgm5hxFDpA53_O"
+            },
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202603_FutureWorldConversations_StopHopingStartEvaluating.pdf"
+            },
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_the-scariest-moment-in-agent-development-activity-7437733422858637312-yTJS"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_stop-hoping-start-evaluating-building-ai-activity-7442132774234304512-Sr4o"
+            }
+        ]
+    },
+    {
+        "title": "Agent Skills: Turning Tribal Knowledge into Plug-and-play Leverage",
+        "venue": "KITE (Design) & Copilot Extensibility Teams, Microsoft",
+        "date": "March 2026",
+        "sortDate": "2026-03",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/agent-skills.png",
+        "description": "<p>Presented to Microsoft's KITE (Design) and Copilot Extensibility teams, this session introduced Agent Skills — a new paradigm for packaging tribal knowledge into reusable, plug-and-play modules for AI coding agents. The talk made the case that prompt libraries fail because of discovery friction and personalization gaps, and showed how skills solve this by auto-loading contextual expertise only when needed.</p><p><strong>Key Topics Covered:</strong></p><ul><li>The problem: repeated context copy-pasting, knowledge trapped in heads, and prompt libraries nobody uses</li><li>What Agent Skills are: folder-based packages (SKILL.md + scripts + references) — no SDK, no framework, no deployment pipeline</li><li>Progressive disclosure: how skills scale where system prompts don't (install 50, only 1–2 load per task)</li><li>Skills vs. Agents: packaged expertise for existing agents vs. autonomous loops with frameworks</li><li>The open standard ecosystem: write once, use in Claude Code, GitHub Copilot, Codex, Cursor, and 10+ tools</li><li>Skill ideas built for the room: design-review, spec-writer, a11y-audit, m365-extension-spec, and more</li><li><strong>Live demo:</strong> Building a skill in under 5 minutes using the skill-creator skill</li><li>Design principles for great skills and the sharing paradox (org-wide vs. team-level vs. personal)</li></ul>",
+        "links": []
+    },
+    {
+        "title": "Powering India's AI Tomorrow",
+        "venue": "AI Student Summit 2026 | KLH University, Hyderabad",
+        "date": "February 2026",
+        "sortDate": "2026-02",
+        "category": "universities",
+        "type": "🎤 Panel Discussion",
+        "image": "./assets/images/speaking-engagements/ai-student-summit-2026.png",
+        "description": "<p>Participated in a strategic panel discussion at the AI Student Summit 2026 (KLH University, Hyderabad), engaging with an audience of 3,500+ students on the future trajectory of Artificial Intelligence in India. The panel explored the acceleration of AI adoption across sectors, the role of India's AI startup ecosystem in driving innovation and economic advancement, and the critical dimensions of responsible and ethical AI.</p><p><strong>Topics Discussed:</strong></p><ul><li>The future trajectory of AI in India and the acceleration of AI adoption across sectors</li><li>Role of the AI startup ecosystem in driving innovation and economic advancement</li><li>Responsible and ethical AI: policy frameworks and governance</li><li>Talent development and building the next generation of AI practitioners</li><li>Scalable AI deployment within the Indian context</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_ai-india-artificialintelligence-activity-7434447538767781888-uA_1"
+            }
+        ]
+    },
+    {
+        "title": "The Authenticity Paradox: Engineering Soul into the Intelligent Age",
+        "venue": "Manifest 2026 | Framer, Creative Community & Microsoft",
+        "date": "February 2026",
+        "sortDate": "2026-02",
+        "category": "community",
+        "type": "🎤 Panel Discussion",
+        "image": "./assets/images/speaking-engagements/manifest-2026.png",
+        "description": "<p>Participated in a cross-disciplinary panel debate at Manifest 2026 (organized by Framer, Creative Community &amp; Microsoft), exploring the tension between AI-driven scale and human authenticity. The discussion challenged conventional thinking about what happens when AI products optimize for the wrong metrics, and argued for taste-driven development as a counterbalance to velocity-obsessed engineering.</p><p><strong>Key Themes Discussed:</strong></p><ul><li>Authenticity breaks when AI scales — not because the tech fails, but because we optimize for the wrong things</li><li>Goodhart's Law is eating AI products: when trustworthiness becomes a score, systems test well but feel hollow</li><li>The trade-off future generations will regret: trading architectural integrity for velocity (10x faster builds, 10x technical debt, 1/10th the thinking)</li><li>The case for taste-driven development: spec-driven contracts and conscious overrides that bake judgment into systems from day one</li><li>The gap between vibe-coded prototypes and production — where authenticity dies</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tejj_ai-design-manifest2026-activity-7424045881433427968-A3Dk"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_last-weekend-i-had-the-privilege-of-being-activity-7426871301891444737-xnBh"
+            }
+        ]
+    },
+    {
+        "title": "From Prompting to Proving: Eval-Driven AI Agent",
+        "venue": "Hello Intelligence 2026 | Microsoft AI Innovators Hub, Hyderabad",
+        "date": "January 2026",
+        "sortDate": "2026-01",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/hello-intelligence.png",
+        "description": "<p>Delivered at Hello Intelligence 2026 (Microsoft AI Innovators Hub, Hyderabad), this talk made the case that the best AI teams don't move fast because they guess better — they move fast because they measure better. The session covered the anatomy of AI agents, a systematic building process, and deep-dived into why evaluations are the missing piece in most agent development workflows.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Anatomy of AI agents and their core building blocks</li><li>A 5-step process to build agents systematically</li><li>Why evals are not optional — turning intuition into data, and data into compounding progress</li><li>Evaluation-Driven Development (EDD) as a methodology</li><li>Tools and frameworks to get started with agent evaluation today</li><li>Practical advice: start small, test against reality (not happy paths), and let measurement guide you</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_ai-agenticai-aiengineering-activity-7416328101909037056-GUqU"
+            }
+        ]
+    },
+    {
+        "title": "Agentic Product Making",
+        "venue": "Senior Leadership, Microsoft",
+        "date": "November 2025",
+        "sortDate": "2025-11",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": null,
+        "description": "<p>Conducted a hands-on vibe-coding workshop for Microsoft's extended senior leadership team during their offsite, demonstrating how AI-powered coding with GitHub Copilot can transform engineering workflows. The session went beyond surface-level tool usage, guiding leaders through practical exercises that culminated in live demos and prototypes built in real-time.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Using GitHub Copilot effectively — moving beyond basic autocomplete to AI-first development</li><li>Hands-on exercises: leaders building and iterating on prototypes during the session</li><li>Framing AI-powered development in terms of strategic value, not just capability</li><li>Live demo showcase: leaders sharing their prototypes and ideas built collaboratively with AI</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_ive-led-workshops-before-but-never-for-activity-7399665793975775233-rOYC"
+            }
+        ]
+    },
+    {
+        "title": "Eval-Driven Agent Development",
+        "venue": "AgentJam | Global AI Community, Hyderabad",
+        "date": "November 2025",
+        "sortDate": "2025-11",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/agentjam_global_ai_hyd.png",
+        "description": "<p>Delivered at AgentJam (Global AI Community, Hyderabad), this talk shared a practitioner's perspective on Evaluation-Driven Development for AI agents. Drawing from hands-on experience building and shipping agents, the session presented a framework for making agent quality systematic rather than aspirational.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Evals velocity = product velocity: the fastest AI teams measure daily, not just build daily</li><li>Start small, scale systematically: begin with 10–20 representative cases, then grow the eval suite in response to real failure modes</li><li>Mix your methods: rule-based checks for precision &amp; reproducibility + LLM-as-judge for nuance and ambiguity</li><li>Design for the real world: inject noise, embrace ambiguity, test edge cases — not just textbook inputs</li><li>Measurement over hope: turning \"I think it works\" into \"here's the data — it works 87% of the time, and here's where it breaks\"</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_globalaihyderabad-aiagents-evaluation-activity-7398251300787904513-qQra"
+            }
+        ]
+    },
+    {
+        "title": "Do Agents Do What Developers Say?",
+        "venue": "MLADS+ Agents Conference | Microsoft (Virtual)",
+        "date": "November 2025",
+        "sortDate": "2025-11",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/do-agents-do-what-developers-say.jpeg",
+        "description": "<p>Presented at the MLADS+ Agents Conference (Microsoft), this talk introduced Instruction-Following Accuracy (IF-Accuracy) — a developer-centric evaluation framework for measuring how faithfully AI agents follow the business logic encoded in their instructions. The work addressed a critical gap: existing eval rubrics judge user experience, but agentic systems need developer instruction fidelity.</p><p><strong>Key Topics Covered:</strong></p><ul><li>The motivation: developers encode custom business logic via instructions and expect it to be followed — but only ~70% of instructions were being followed vs. 95% in benchmarks</li><li>Root causes of the gap: ambiguous instructions, conflicts with system prompts, tool failures, and attention bottlenecks</li><li>The IF-Accuracy computation pipeline: atomic instruction breakdown, turn-wise applicability assignment, conversational instruction-following analysis, and hierarchical aggregation</li><li>Analytics &amp; visualization: turning raw scores into actionable insights via dashboards</li><li>Real customer impact: improving IF-Accuracy to 90+%, unblocking large-scale agent deployments</li><li>How to leverage the framework: standalone tool, internal evaluation platform integration, and extensibility to other agent platforms</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_aiagents-evaluation-instructionfollowing-activity-7397991272969347072-JKoK"
+            }
+        ]
+    },
+    {
+        "title": "Beyond Chat: Building Eval-Driven AI Agents",
+        "venue": "IEEE Leadership Summit | Symbiosis Institute of Technology, Hyderabad",
+        "date": "November 2025",
+        "sortDate": "2025-11",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/ieee-leadership-summit.jpeg",
+        "description": "<p>A full-day hands-on workshop at the IEEE Leadership Summit, taking students on a structured journey from AI essentials to building and evaluating production-grade AI agents. The morning covered foundational concepts and agent building with Microsoft Agent Framework, while the afternoon focused on creating comprehensive evaluation suites using the Azure AI Evaluation SDK.</p><p><strong>Learning Objectives &amp; Topics:</strong></p><ul><li>Understanding what AI agents are, when to use them, and how they differ from chatbots</li><li>Core elements of agentic systems: fundamentals, architectural patterns, and design tradeoffs</li><li><strong>Lab 1:</strong> Building functional AI agents with Microsoft Agent Framework</li><li><strong>Lab 2:</strong> Creating comprehensive evaluation suites with Azure AI Evaluation SDK</li><li>Evaluation-driven development: using evals to iteratively improve agent behavior</li><li>Production deployment considerations and best practices</li></ul>",
+        "links": [
+            {
+                "label": "GitHub Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/building-eval-driven-ai-agents"
+            },
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202511_IEEELeadershipSummit_BeyondChatBuildingEvalDrivenAIAgents.pdf"
+            },
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_folks-im-thrilled-to-share-that-ive-been-activity-7393512768592789504-tAoP"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_%F0%9D%9F%91%F0%9D%9F%8E-%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%9D%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AC-%F0%9D%9F%93-%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%AC-%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%9F%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%9E-activity-7396041931044188160-32Va"
+            }
+        ]
+    },
+    {
+        "title": "Implementing Agentic AI Features",
+        "venue": "Cloud + AI | IDC, Microsoft (India)",
+        "date": "October 2025",
+        "sortDate": "2025-10",
+        "category": "microsoft",
+        "type": "📚 Course",
+        "image": "./assets/images/speaking-engagements/implementing-agentic-ai-features.jpeg",
+        "description": "<p>Co-taught with Devidas Gupta, this two-day instructor-led course at Microsoft India (Cloud + AI, IDC) equipped software engineers with the foundational knowledge and practical skills to build AI-driven capabilities using agentic paradigms. The course combined classroom instruction with hands-on labs, grounding AI in engineering discipline.</p><p><strong>Course Content:</strong></p><ul><li>Foundational knowledge of AI, agents, and agentic protocols</li><li>MCP Servers and popular frameworks &amp; tools for agent development</li><li>Common components of AI-based capabilities and a workflow for AI feature development</li><li>Security and Responsible AI (RAI) considerations</li><li>Verification and validation techniques for agentic systems</li><li>Optimization techniques for production agent deployments</li><li>Hands-on labs reinforcing classroom discussions throughout both days</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_agenticai-microsoft-aiengineering-activity-7389951960902205440-EFSG"
+            }
+        ]
+    },
+    {
+        "title": "Intro to Evals: The Why, What & How of Making Agent Quality a Habit",
+        "venue": "AI4All | CAPE, Microsoft (India)",
+        "date": "October 2025",
+        "sortDate": "2025-10",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/intro-to-evals.png",
+        "description": "<p>Co-presented with Akhil at Microsoft's AI4All initiative (CAPE team), this workshop demystified evaluation-driven development for AI agents. Drawing from months of building, breaking, and refining agents, the session reframed evals not as unit tests but as human judgment, scaled — and walked attendees through a practical approach to making agent quality systematic.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Evals ≠ traditional QA: unit tests check \"does it work?\" — evals ask \"does it work well, in the messy, ambiguous, human way we expect it to?\"</li><li>Start manual: define what \"good\" looks like before automating with LLM-as-a-judge</li><li>Evals encode expertise: turning PM and domain expert intuition into repeatable signals that scale</li><li>Not all evals are worth automating: focus effort on high-impact, high-frequency user journeys</li><li>Tools amplify but don't replace thinking: using platforms to automate evals at scale, but only after defining clear scenarios, assertions, and success criteria by hand</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_ai-aiagents-evaluation-activity-7388435536564142080-_9vn"
+            }
+        ]
+    },
+    {
+        "title": "Intro to Vibe Coding",
+        "venue": "Heartfulness International School | Microsoft Garage (India)",
+        "date": "October 2025",
+        "sortDate": "2025-10",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/intro-to-vibe-coding_give.jpeg",
+        "description": "<p>Kicked off a full-day Vibe Coding workshop for 100+ students from Heartfulness International School at Microsoft Garage, as part of the Microsoft Give Campaign. The session introduced students to AI-first development — not just typing code, but thinking with AI, co-creating with tools like GitHub Copilot, and turning curiosity into shipped projects.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Introduction to Vibe Coding: what it means to think and build with AI as a co-creator</li><li>Live demos of playful projects built with GitHub Copilot</li><li>Hands-on session: students building their own PacMan game variants from scratch</li><li>Publishing live games on GitHub Pages — from idea to deployed project in one session</li><li>Shifting mindset from \"learning about tech\" to creating with it</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_microsoftgive-vibecoding-aiforgood-activity-7389156541972537346-O0dx"
+            }
+        ]
+    },
+    {
+        "title": "Gen AI Workshop",
+        "venue": "Aaruush '25 | SRMIST, Chennai",
+        "date": "September 2025",
+        "sortDate": "2025-09",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/gen-ai-aaruush25.jpg",
+        "description": "<p>A comprehensive Gen AI workshop at Aaruush ’25 (SRMIST, Chennai), delivered across two tracks. The first track covered AI agent fundamentals, agentic design patterns, and the rise of agentic protocols, with live demos building single-agent and multi-agent systems using Microsoft’s AutoGen framework. The second track focused on AI model customization and fine-tuning.</p><p><strong>Track 1 — AI Agents Unleashed:</strong></p><ul><li>AI agent fundamentals: what makes agents smart (autonomy, goal-orientation, context-awareness)</li><li>Agent architecture and agentic design patterns</li><li>Rise of agentic protocols (MCP, A2A)</li><li>Live demos: building single-agent and multi-agent systems with AutoGen</li><li>Taking AI agents to production</li></ul><p><strong>Track 2 — AI Model Finetuning:</strong></p><ul><li>Why customize AI models: domain specificity, reduced prompt engineering, edge deployment, privacy</li><li>Demystifying technical jargon: SLMs, Chain of Thought, reasoning models, LoRA, QLoRA</li><li>Live demo: fine-tuning a Phi-4 model for medical reasoning tasks</li></ul>",
+        "links": [
+            {
+                "label": "Agents Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/building-ai-agents-with-autogen/tree/aaruush_2025"
+            },
+            {
+                "label": "Agents Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202509_Aaruush_GenAIWorkshop_AIAgentsUnleashed.pdf"
+            },
+            {
+                "label": "Finetuning Notebook",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/ai-garage/blob/master/finetuning-phi-4-on-medical-reasoning/Phi-4-Finetuning-on-Medical-Reasoning.ipynb"
+            },
+            {
+                "label": "Finetuning Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202509_Aaruush_GenAIWorkshop_AIModelFinetuning.pdf"
+            }
+        ]
+    },
+    {
+        "title": "How to Build AI Agents with AutoGen - the PM Edition",
+        "venue": "Product Space",
+        "date": "September 2025",
+        "sortDate": "2025-09",
+        "category": "edtech",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/how-to-build-ai-agents-with-autogen-pm-edition.jpg",
+        "description": "<p>A 6-hour, two-day hands-on workshop for Product Space, designed specifically for 40+ Product Managers — most of whom hadn't coded in 5+ years. The session took participants from zero to building multi-agent systems with Microsoft's AutoGen framework, proving that PMs don't need to be full-stack developers to prototype and orchestrate AI agents.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Why PMs need to understand agentic frameworks beyond prompting</li><li>The AI Agent Stack: tools that matter today</li><li>Design patterns for AI agents</li><li>AutoGen fundamentals and hands-on setup</li><li>Single-agent evolution: instructions → tools → memory → RAG</li><li>Multi-agent orchestration: getting agents to collaborate</li><li>Production-ready systems: UI, observability, and edge cases</li></ul><p>The highlight was watching seasoned PMs rediscover their coding spark — bridging product vision with technical possibility in real-time.</p>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_aiagents-productmanagement-autogen-activity-7371063873761738752-StzA"
+            }
+        ]
+    },
+    {
+        "title": "Model Context Protocol (MCP): From Buzzword to Build-Ready",
+        "venue": "SkillUp AI | The Garage, Microsoft (India)",
+        "date": "August 2025",
+        "sortDate": "2025-08",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/mcp-from-buzzword-to-build-ready.png",
+        "description": "<p>Co-presented with Pankaj Aher (Principal Software Engineer, Microsoft IDC) at SkillUp AI for 200+ attendees, this workshop cut through the hype around MCP (Model Context Protocol) and showed attendees how to actually build with it. The session combined architectural deep-dives with multiple live demos, covering everything from MCP primitives to creating production-ready agents that use MCP servers.</p><p><strong>Key Topics Covered:</strong></p><ul><li>AI agents and tool use — why tools are essential for useful agents</li><li>Introduction to MCP: what it is, its architecture, and core primitives (with demos)</li><li>Ecosystem overview of available MCP servers</li><li><strong>Demo:</strong> Creating an M365 Copilot Agent with MCP Tools using Agent Toolkit (ATK)</li><li><strong>Demo:</strong> Creating an M365 Copilot Agent with Remote MCP Servers using Copilot Studio</li><li><strong>Demo:</strong> Using MCP Servers with GitHub Copilot in VS Code</li><li>Security in MCP — threat models and mitigation strategies</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202508_SkillUpAI_MCPFromBuzzworkToBuildReady.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_ai-microsoftgarage-mcp-activity-7366680957396910080-ZExq"
+            }
+        ]
+    },
+    {
+        "title": "Tool Use & MCP",
+        "venue": "AI Uncovered Masterclass, STCI Microsoft",
+        "date": "August 2025",
+        "sortDate": "2025-08",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/tool-use-&-mcp.jpg",
+        "description": "<p>Co-presented with Kanishk Lal as part of the AI Uncovered Masterclass at STCI Microsoft, this session provided a comprehensive walkthrough of tool use in LLMs and the Model Context Protocol (MCP). Starting from the evolution of function calling (ReAct, Toolformer, OpenAI API), the talk built up to MCP as the solution to the M×N integration problem, covering its architecture, primitives, and security considerations — all anchored by three live demos.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Evolution of function/tool calling: ReAct pattern, Toolformer, and OpenAI's Function Calling API</li><li>The M×N integration problem and how MCP transforms it into M+N</li><li>MCP architecture: Hosts, Clients, Servers (local &amp; remote), and transport mechanisms (STDIO, Streamable HTTP)</li><li>MCP primitives: Tools, Resources, Resource Templates, Prompts, and Interactive UI Components</li><li><strong>Demo 1:</strong> Creating a basic local MCP server in C# and running it in VS Code</li><li><strong>Demo 2:</strong> Leveraging existing MCP servers (Playwright + MS SQL) for product research on Amazon</li><li><strong>Demo 3:</strong> Transforming a fine-tuned DistilBERT sentiment classifier API into a conversational assistant via MCP</li><li>Security threats in MCP (Tool Poisoning, Puppet/Tool Shadowing, Rug Pull attacks) and mitigations</li><li>UTCP (Universal Tool Calling Protocol) as an emerging alternative and its tradeoffs vs. MCP</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202508_AIUncoveredMasterclass_ToolUse&MCP.pdf"
+            }
+        ]
+    },
+    {
+        "title": "Multi-Agent Systems with LLMs for NLP",
+        "venue": "AI Uncovered Masterclass, STCI Microsoft",
+        "date": "August 2025",
+        "sortDate": "2025-08",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/muli-agent-systems-with-llms-for-nlp.jpg",
+        "description": "<p>Co-presented with Gurparkash Singh and Shubhojit Mallick as part of the AI Uncovered Masterclass at STCI Microsoft, this session covered the full spectrum of LLM-based AI agents and multi-agent systems. The talk progressed from foundational agent concepts and agentic design patterns through to multi-agent architectures, communication paradigms, and observability — punctuated by live demos building real multi-agent workflows with Microsoft's AutoGen framework.</p><p><strong>Key Topics Covered:</strong></p><ul><li>LLM-based AI agents: what they are, how they differ from traditional rule-based agents, and the paradigm shift with LLMs as reasoning engines</li><li>Automation vs. Workflows vs. AI Agents — clarifying the distinctions</li><li>Memory in AI agents: debunking misconceptions (context window ≠ memory, RAG ≠ memory) and types of agent memory</li><li>The AI agent stack and agentic design patterns</li><li>Multi-Agent Systems (MAS): why they matter (complexity, scalability, robustness, specialization) and common agent roles</li><li>Agent communication: cooperative, competitive, and debate paradigms; centralized vs. decentralized structures; message passing vs. shared memory</li><li><strong>Demo:</strong> Blog-to-Twitter Thread Scheduler using a sequential multi-agent pipeline</li><li><strong>Demo:</strong> Marketing Campaign Creator using a swarm-based multi-agent architecture</li><li>Observability in MAS: transparency, interpretability, key metrics, and frameworks</li><li>Designing resilient AI agents: handling loops, timeouts, network failures, corrupted inputs, and harmful content</li><li>Computer-Using Agents (CUA): Claude Computer Use, OpenAI Operator, Browser-Use, Manus AI, and UI-TARS</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202508_AIUncoveredMasterclass_LLMBasedAIAgents&MultiAgentSystems.pdf"
+            }
+        ]
+    },
+    {
+        "title": "Agent Building & Model Finetuning",
+        "venue": "SIT Hyderabad - Industrial Visit",
+        "date": "August 2025",
+        "sortDate": "2025-08",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/agent-building-&-model-finetuning.jpg",
+        "description": "<p>A hands-on workshop for 100+ students during SIT Hyderabad's industrial visit to Microsoft, bridging theory to practice with live AI agent building and model fine-tuning. The session showed how to build declarative agents in M365 Copilot using Agents Toolkit (ATK) with access to MCP tools, followed by a walkthrough of AI model customization and fine-tuning techniques.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Building declarative agents in M365 Copilot using Agents Toolkit (ATK)</li><li>Integrating MCP tools into Copilot agents for extended capabilities</li><li>Why customize AI models: domain specificity, reduced prompt engineering, edge deployment, privacy</li><li>Demystifying technical jargon: SLMs, Chain of Thought, reasoning models, LoRA, QLoRA</li><li>Live demo: fine-tuning a Phi-4 model for medical reasoning tasks</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_microsoft-sit-innovation-activity-7367745952889102337-zjoV"
+            }
+        ]
+    },
+    {
+        "title": "Vibe Mode On! Flip the Switch to AI-First Programming",
+        "venue": "Microsoft M365 Core",
+        "date": "July 2025",
+        "sortDate": "2025-07",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/vibe-mode-on.jpg",
+        "description": "<p>Delivered to Microsoft M365 Core, this talk explored the vibe coding revolution — the shift from AI-assisted to AI-first programming. The session covered industry trends, the evolving AI coding toolkit, practical challenges like hallucinations and the context conundrum, and shared battle-tested best practices and error handling strategies for getting the most out of AI-powered development tools.</p><p><strong>Key Topics Covered:</strong></p><ul><li>What vibe coding actually is: an AI-first, conversational style of programming that goes beyond AI-assisted coding</li><li>Industry trends and the growing AI coding toolkit: IDE integrations, browser-based generators, CLI tools, and Microsoft's internal tools (GitHub Copilot, Bandish, SWE Agent, Rubber Ducky)</li><li>Navigating major challenges: the hallucination monster and the context conundrum</li><li>The \"AI is Dumb\" fallacy — why treating your AI co-pilot like a day-one intern produces better results</li><li>8 universal best practices: start with a plan, work incrementally, use Git religiously, debug with error messages, add codebase instructions, reference API docs explicitly, use annotated screenshots, and keep experimenting with models</li><li>Error handling strategies: Revert &amp; Re-Prompt, Call Out Patterns, Debugging User Flows, and Visual Debugging with UI Screenshots</li><li>Tool-specific tips for GitHub Copilot and SWE Agent</li><li>What's next: agent clusters, agent fleets, and our evolving roles in an AI-first era</li></ul>",
+        "links": []
+    },
+    {
+        "title": "Intern Global Hackathon Kickoff",
+        "venue": "The Garage (India) & The University Recruiting Team, Microsoft",
+        "date": "July 2025",
+        "sortDate": "2025-07",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/intern-global-hackathon-kickoff.jpg",
+        "description": "<p>Mentored 500+ Microsoft interns at IDC Hyderabad during the Intern Global Hackathon kickoff, in collaboration with The Garage and The University Recruiting Team. Alongside fellow mentors, the session tackled questions on tech stacks, time management, and how to build a hackathon prototype while juggling an internship.</p><p><strong>Core Advice Shared:</strong></p><ul><li>Time-box your creativity: 2–3 hour focus blocks beat scattered all-nighters</li><li>MVP over perfection: solve the problem first, polish comes later</li><li>Team with opposites: the best ideas are born at intersections</li><li>Solve the problem, not the stack: impact matters more than the number of frameworks used</li><li>Reuse what exists: APIs and open-source are your friends</li><li>Fail fast, pivot faster: if it's not working by Day 2, switch it up</li><li>Build with an AI-first mindset: use GenAI to mock UIs, generate code, and brainstorm features</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_hackathon-internship-microsoft-activity-7343159045110841344-sXWE"
+            }
+        ]
+    },
+    {
+        "title": "AI-Powered Innovation",
+        "venue": "SkillUp AI | The Garage, Microsoft (India)",
+        "date": "Multiple sessions across 2024-2025",
+        "sortDate": "2025-05",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/ai-powered-innovation.jpg",
+        "description": "<p>A recurring hands-on workshop series at SkillUp AI (Microsoft Garage India), guiding participants through the Garage Growth Framework — a structured innovation methodology that uses AI tools at every stage to accelerate the journey from opportunity identification to sponsor-ready pitch. Multiple sessions were delivered across Microsoft's Hyderabad and Noida campuses over 2024–2025.</p><p><strong>Key Topics Covered (following the Garage Growth Framework):</strong></p><ul><li><strong>Pre-Ideate:</strong> Crafting \"How Might We\" opportunity statements and using AI to enhance and refine them</li><li><strong>Ideate:</strong> Generating radical ideas with AI, then rating, ranking, and rationalizing them using structured criteria (desirability, feasibility, innovation level, market opportunity)</li><li><strong>Hack:</strong> Creating storyboards, prototypes, and demo videos using AI tools to bring ideas to life</li><li><strong>Validate:</strong> Generating discovery interview scripts and simulating persona responses to test ideas before building</li><li><strong>Sponsor:</strong> Building pitch decks, project outlines, and video scripts with AI assistance to secure sponsorship</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_microsoftlife-internsatmicrosoft-aipoweredinnovation-activity-7212317173619310592-BrI3"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_microsoftlife-newhires-aipoweredinnovation-activity-7226071705138446336-e9MM"
+            },
+            {
+                "label": "LinkedIn Post 3",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_lifeatmicrosoft-thegarage-aipoweredinnovation-activity-7333329926911078402-Mw46"
+            }
+        ]
+    },
+    {
+        "title": "Agents Assemble! Building Powerful AI Workforces with Autogen",
+        "venue": "24xAI Conference | Microsoft (Virtual)",
+        "date": "April 2025",
+        "sortDate": "2025-04",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/agents-assemble.jpg",
+        "description": "<p>Presented at the 24xAI Conference, this talk demonstrated how to build powerful AI workforces by orchestrating multiple specialized agents using Microsoft’s AutoGen framework. The session moved from foundational concepts to live coding demos, showing how agents can collaborate, decompose complex tasks, and leverage tools to achieve goals beyond the reach of any single agent.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Why multi-agent systems: the limitations of single-agent architectures</li><li>AutoGen framework: architecture, agent types, and conversation patterns</li><li>Building single-agent systems with tool use</li><li>Orchestrating multi-agent teams: task decomposition, delegation, and collaboration</li><li>Live coding demos with the companion GitHub repository</li></ul>",
+        "links": [
+            {
+                "label": "GitHub Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/building-ai-agents-with-autogen/tree/24xAI_2025"
+            }
+        ]
+    },
+    {
+        "title": "Building AI Agents with Autogen",
+        "venue": "Google Developers' Group (GDG) | NMIT, Bangalore",
+        "date": "March 2025",
+        "sortDate": "2025-03",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/building-ai-agents-with-autogen.jpg",
+        "description": "<p>A hands-on workshop at NMIT Bangalore, taking students from AI agent fundamentals through to building functional single-agent and multi-agent systems with Microsoft’s AutoGen framework. The session covered the evolution from clunky bots to intelligent agents, the role of LLMs as reasoning engines, and practical agentic design patterns.</p><p><strong>Key Topics Covered:</strong></p><ul><li>What’s an AI Agent: autonomy, goal-orientation, context-awareness, and interactivity</li><li>From clunky bots to smart sidekicks — the evolution of agent systems</li><li>LLMs as the brains behind agents: capabilities and limitations</li><li>Agentic design patterns for real-world applications</li><li><strong>Hands-on:</strong> Building single-agent systems with tool integration</li><li><strong>Hands-on:</strong> Building multi-agent systems with orchestration</li><li>Taking AI agents to production: considerations and best practices</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202503_GDGNMIT_BuildingAIAgentsWithAutogen.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_ai-aiagents-autogen-activity-7312315231634894849-7Bjh"
+            }
+        ]
+    },
+    {
+        "title": "AI Toolkit for Entrepreneurs Workshop",
+        "venue": "GrowthSchool",
+        "date": "November 2024",
+        "sortDate": "2024-11",
+        "category": "edtech",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/ai-toolkit-for-entrepreneurs.jpg",
+        "description": "<p>Delivered as a mentorship session for GrowthSchool's Mastermind project, this workshop — \"AI Toolkit for Entrepreneurs: From Concept to Pitch in Record Time\" — guided aspiring entrepreneurs through a structured, AI-powered journey from initial idea generation to a polished pitch deck and promotional video.</p><p><strong>Workshop Modules:</strong></p><ul><li><strong>Module 1 — Generating &amp; Validating Ideas with AI:</strong> Using specific prompts to generate diverse product ideas, refining based on user feedback and market trends, interpreting AI-driven market insights, and identifying profitable opportunities</li><li><strong>Module 2 — Building a Landing Page with AI:</strong> Step-by-step walkthrough of setting up templates, using AI to populate content and generate section ideas, customizing with branding elements, and crafting effective calls-to-action</li><li><strong>Module 3 — Creating a Pitch Deck &amp; Promotional Video with AI:</strong> Building visually appealing pitch decks with Gamma, simplifying complex data with AI, and creating engaging video pitches with Clipchamp</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_just-wrapped-up-an-electrifying-ai-workshop-activity-7261611515634417666-kQmW"
+            }
+        ]
+    },
+    {
+        "title": "Fast-Track Ideas to Products with Generative AI",
+        "venue": "NxtWave",
+        "date": "September 2024",
+        "sortDate": "2024-09",
+        "category": "edtech",
+        "type": "🔬 Masterclass",
+        "image": "./assets/images/speaking-engagements/gen-ai-mega-workshop.jpg",
+        "description": "<p>A mega-workshop attended by 16,000+ students across India that explored 10+ cutting-edge AI tools — from ChatGPT and Copilot to Gamma AI and Clipchamp — empowering participants to take their ideas from concept to product. The session went beyond tools to cover essential frameworks and methodologies for building AI-powered products.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Prompt Engineering with \"RACEF\" and \"Chain-of-Thought\" frameworks</li><li>Opportunity Statements using the \"How Might We\" framework</li><li>Market Research: revenue opportunities &amp; competitor analysis</li><li>Customer-Driven Development and defining the Minimum Viable Product (MVP)</li><li>Storytelling &amp; Branding for product positioning</li><li>Hands-on with 10+ AI tools for ideation, content creation, landing pages, pitch decks, and video production</li></ul><p>In just 72 hours after the workshop, 200+ participants transformed their ideas into tangible product blueprints and compelling pitches — with many more following in the days after.</p>",
+        "links": [
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_the-mega-workshop-series-is-back-and-activity-7235558604286611456-QkVq"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_chatgpt-copilot-gammaai-activity-7239662552413020160-Qq1L"
+            }
+        ]
+    },
+    {
+        "title": "How to Become a Data Scientist at Microsoft",
+        "venue": "NxtWave",
+        "date": "June 2024",
+        "sortDate": "2024-06",
+        "category": "edtech",
+        "type": "🎙️ Podcast",
+        "image": "./assets/images/speaking-engagements/how-to-become-a-data-scientist-at-microsoft.jpeg",
+        "description": "<p>In this podcast with NxtWave — one of their most loved and highest-rated episodes, revived and replayed multiple times due to overwhelming demand — Tezan shared the journey from Mechanical Engineering at IIT Bombay to Data Scientist at Microsoft, offering a practical roadmap for aspiring data scientists. The conversation covered everything from foundational skills and learning strategies to interview preparation, portfolio building, and the soft skills that drive career advancement.</p><p><strong>Topics Discussed:</strong></p><ul><li>Journey from Mechanical Engineering to Data Scientist — the role of curiosity, diverse internships, and continuous learning</li><li>Inside Microsoft: work culture, learning opportunities, and the scale of impact</li><li>Microsoft Copilot and industry trends shaping the AI landscape</li><li>Step-by-step roadmap: mathematics foundations, Python &amp; SQL, data analysis, ML/DL, and choosing a specialization (NLP, Computer Vision, LLMs)</li><li>Building a strong portfolio: personal projects, re-implementing research papers, deploying on real platforms</li><li>LinkedIn optimization and professional networking strategies</li><li>Soft skills for career growth: data storytelling, creativity, growth mindset, and adaptive leadership</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_podcast-datascience-nxtwave-activity-7193097692120526849-okNf"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_datascience-ai-nxtwave-activity-7208135933806735360-YrkH"
+            }
+        ]
+    },
+    {
+        "title": "Multilingual Transformers in Action: XLMR & mT5",
+        "venue": "AI Uncovered Masterclass, STCI Microsoft",
+        "date": "June 2024",
+        "sortDate": "2024-06",
+        "category": "microsoft",
+        "type": "🔬 Hands-on Session",
+        "image": null,
+        "description": "",
+        "links": []
+    },
+    {
+        "title": "Beyond Textbooks: The Real-Life Adventures of Being a Data Scientist",
+        "venue": "NxtWave's NIAT Bootcamp",
+        "date": "May 2024",
+        "sortDate": "2024-05",
+        "category": "edtech",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/beyond-textbooks.png",
+        "description": "<p>Delivered at NxtWave’s NIAT Bootcamp, this talk gave students an unfiltered look at the realities of being a Data Scientist at Microsoft. Moving beyond textbook definitions, the session shared personal journey insights, demystified industry roles, and provided a practical roadmap for aspiring data scientists — including hard-won lessons from cracking a role at Microsoft.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Personal journey: from IIT Bombay to Applied Scientist at Microsoft</li><li>Life as a Data Scientist — what the job actually looks like day-to-day</li><li>Demystifying roles: Data Scientist vs. Data Analyst vs. ML Engineer vs. Data Engineer</li><li>Step-by-step roadmap to becoming a Data Scientist</li><li>Mission Microsoft: insights and learnings from interview preparation</li><li>AI and the future of Data Science — how AI is changing the profession</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202405_NIATBootcamp_BeyondTextbooksTheRealLifeAdventuresOfBeingADataScientist.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_tezansahu-nxtwave-niat-activity-7202304585271566336-bIaI"
+            }
+        ]
+    },
+    {
+        "title": "Into the Future of Coding with GitHub Copilot",
+        "venue": "24xAI Conference | Microsoft (Virtual)",
+        "date": "April 2024",
+        "sortDate": "2024-04",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/24xai-github.png",
+        "description": "<p>Selected as the only speaker from Microsoft's India Development Centre (and likely the youngest) at the 24xAI Conference — a global 24-hour internal event organized by the AL &amp; ML Connected Community, bringing together AI minds from APJ, EMEA, and the Americas. The talk showcased how GitHub Copilot is transforming developer productivity through live coding demos spanning code generation, explanation, optimization, debugging, testing, and documentation.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Understanding AI in coding: adoption statistics and the productivity gains driving widespread adoption</li><li>What is GitHub Copilot: one of the most widely adopted AI dev tools across enterprises</li><li>Getting started with GitHub Copilot in VS Code</li><li><strong>Live demos:</strong> code generation, code explanation, optimization, debugging, testing, and automatic documentation</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_microsoft-connectedcommunities-aicommunity-activity-7186574211572752384-y4x0"
+            }
+        ]
+    },
+    {
+        "title": "Job Hunt Cracked: Conquer Your Job Search with Gen AI",
+        "venue": "",
+        "date": "March 2024",
+        "sortDate": "2024-03",
+        "category": "community",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/job-hunt-cracked.png",
+        "description": "<p>Co-hosted with Sandra Anil for 30+ attendees, this session showed how to supercharge the job search process using AI tools. From beating ATS systems to crafting killer applications and acing interviews, the session provided a practical toolkit for modern job seekers.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Networking with AI on LinkedIn — discovering and connecting with the right people</li><li>Crafting ATS-beating resumes &amp; cover letters using AI</li><li>Filling job applications efficiently with AI-powered automation</li><li>Setting up a personal website ready to share with recruiters</li><li>Using AI coaches to prepare for and ace interviews</li><li>Leveraging AI tools for salary negotiation strategies</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_jobsearch-ai-jobsearchtips-activity-7180232635112124416-ZLpT"
+            }
+        ]
+    },
+    {
+        "title": "Into the Future of Coding with GitHub Copilot",
+        "venue": "SkillUp AI | The Garage, Microsoft (Redmond)",
+        "date": "March 2024",
+        "sortDate": "2024-03",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/into-the-future-of-coding-with-github-copilot.jpeg",
+        "description": "<p>Presented at The Garage in Microsoft Redmond, this SkillUp AI session — attended by 600+ live virtual participants — explored how GitHub Copilot is reshaping the way developers write code. Through live coding demos, the talk showcased Copilot’s capabilities across code generation, explanation, optimization, debugging, testing, and documentation — backed by real adoption data.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Understanding AI in coding: adoption statistics (80.5% of programmers using AI tools, 55% faster task completion)</li><li>What is GitHub Copilot: one of the most widely adopted AI dev tools (37,000+ businesses, 1 in 3 Fortune 500 companies)</li><li>Getting started with GitHub Copilot in VS Code</li><li><strong>Live demos:</strong> code generation, code explanation, optimization, debugging, testing, and automatic documentation</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202403_GarageRedmond_IntoTheFutureOfCodingWithGitHubCopilot.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_githubcopilot-microsoft-thegarage-activity-7173542832282955776-dewa"
+            }
+        ]
+    },
+    {
+        "title": "Exploring Generative AI for Stunning Images",
+        "venue": "GIVE Campaign | The Garage, Microsoft (India)",
+        "date": "October 2023",
+        "sortDate": "2023-10",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/exploring-generative-ai-for-stunning-images.jpeg",
+        "description": "<p>Conducted under the GIVE Campaign at Microsoft Garage India, this workshop introduced students to the world of AI image generation. Starting with the basics of prompt engineering and building up to hands-on creation with DALL-E 3, the session showed participants how AI is blurring the boundaries between imagination and reality.</p><p><strong>Key Topics Covered:</strong></p><ul><li>The Generative AI revolution — how AI image generation has evolved</li><li>Prompt Engineering 101: what it is, why it matters, and best practices for writing effective prompts</li><li>Stunning images with DALL-E 3: turning imagination into photorealistic images</li><li>Editing like a pro with ClipDrop: uncrop, cleanup, background removal, and more</li><li>Sketch-to-image using Stable Doodle</li><li>AI Art — a myriad of opportunities and creative applications</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202310_GIVEInitiative_ExploringGenerativeAIForStunningImages.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_microsoft-give-thegarage-activity-7124598293753470976-JCjJ"
+            }
+        ]
+    },
+    {
+        "title": "Work Smarter with Microsoft's Cutting-Edge AI",
+        "venue": "Future Ready Talent | TakeLessons India C.",
+        "date": "September 2023",
+        "sortDate": "2023-09",
+        "category": "universities",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/work-smarter-with-microsofts-ai-tools.png",
+        "description": "<p>This talk at TakeLessons India introduced Microsoft’s suite of AI-powered productivity tools, demonstrating how professionals can leverage them to work smarter. From Bing Chat and Edge Copilot to Microsoft Designer and GitHub Copilot, the session covered practical applications with live demos and high-quality prompt templates.</p><p><strong>Key Topics Covered:</strong></p><ul><li>The AI Revolution and Microsoft’s role in democratizing AI</li><li>Leveraging Bing Chat for (almost) any task — with prompt templates and best practices</li><li>Streamlining research with Edge Copilot</li><li>Creating stunning images with Bing Image Creator</li><li>Designing creatives with Microsoft Designer</li><li>Coding smarter with GitHub Copilot</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202309_TakeLessons_WorkSmarterWithMicrosoft'sCuttingEdgeAI.pdf"
+            },
+            {
+                "label": "LinkedIn Post 1",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_bingai-bingai-bingimagecreator-activity-7107218777762631680-zq05"
+            },
+            {
+                "label": "LinkedIn Post 2",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_are-you-involved-in-higher-education-if-activity-7100688253506265089-oTY1"
+            }
+        ]
+    },
+    {
+        "title": "Pixels to Perfection: Mastering AI for Stunning Images",
+        "venue": "SkillUp AI | The Garage, Microsoft (India)",
+        "date": "August 2023",
+        "sortDate": "2023-08",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/pixels-to-perfection.png",
+        "description": "<p>Delivered at SkillUp AI (Microsoft Garage India), this session deep-dived into AI image generation with a focus on creating photorealistic, professional-quality images. The talk covered tools and techniques spanning realistic image generation, product photography, branding, and advanced image editing workflows.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Realistic image generation for any subject using AI tools</li><li>AI-powered product photography and branding &amp; logo design</li><li>Advanced image editing techniques: cleanup, text removal, background removal, relighting, and uncropping</li><li>Tools, prompts, and resources shared via a companion Notion page</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202308_SkillUpAI_PixelsToPerfectionMasteringAIForStunningImages.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_tezasahu-generativeai-aiart-activity-7086540359287111680-TzAS"
+            }
+        ]
+    },
+    {
+        "title": "AI Renaissance: Crafting Immersive Experiences with AI-Powered Avatars, Music & Videos",
+        "venue": "SkillUp AI | The Garage, Microsoft (India)",
+        "date": "July 2023",
+        "sortDate": "2023-07",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/ai-renaissance.png",
+        "description": "<p>This SkillUp AI workshop at Microsoft Garage India explored the creative frontiers of generative AI beyond text and images. The hands-on session walked participants through generating AI avatars, composing royalty-free music, creating customized voice-overs, producing talking-head videos, and building explainer animation videos — all powered by AI tools.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Generating AI avatars for personal and professional use</li><li>Composing royalty-free music with AI</li><li>Creating customized voice-overs</li><li>Producing talking-head videos with AI-powered avatars</li><li>Building explainer animation videos</li><li>All prompts and resources shared via a companion Notion page</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202307_SkillUpAI_AIRenaissanceCraftingImmersiveExperiencesWithAIPoweredAvatarsMusic&Videos.pdf"
+            },
+            {
+                "label": "Tools & Prompts",
+                "icon": "fas fa-globe",
+                "url": "https://tezansahu.notion.site/Resources-AI-Renaissance-9816745e49784f4daf6162a3a64b632d"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_tezasahu-skillupai-generativeai-activity-7090184526785646592-Ji82"
+            }
+        ]
+    },
+    {
+        "title": "Interview with Sundar Srinivasan, VP at Microsoft Search & AI",
+        "venue": "STCI, Microsoft",
+        "date": "June 2023",
+        "sortDate": "2023-06",
+        "category": "microsoft",
+        "type": "🎙️ Interview",
+        "image": "./assets/images/speaking-engagements/interview-with-sundar.png",
+        "description": "<p>A candid video interview with Sundar Srinivasan (VP, Microsoft Search &amp; AI), where Tezan shared his journey as an Applied Scientist on the Bing Autosuggest team, his diverse passions beyond work, and his learnings at Microsoft. The conversation touched on work culture, mentoring, work-life balance, and advice for early-career professionals.</p><p><strong>Topics Discussed:</strong></p><ul><li>Role at Microsoft: working on Bing Autosuggest — making search suggestions more relevant and personalized for millions of users</li><li>Passions beyond code: painting (three solo exhibitions), singing (YouTube covers), technical writing, and authoring the bestselling book \"Beyond Code\"</li><li>Microsoft's learning culture: sessions, workshops, conferences, and the non-technical growth in communication, personal branding, and adaptive leadership</li><li>Mentoring culture at Microsoft: being on both sides of the table — how mentoring helps articulate complex ideas simply</li><li>Advice for early-career professionals: channelize your energy by finding the right platform, environment, and people to maximize impact</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7083121199492337664"
+            }
+        ]
+    },
+    {
+        "title": "Meet a Data Scientist, ML, AI & Data Science",
+        "venue": "MLADS Conference | Microsoft (Virtual)",
+        "date": "May 2023",
+        "sortDate": "2023-05",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/meet-a-data-scientist.jpeg",
+        "description": "<p>Featured as the youngest speaker alongside four other professionals at the \"Meet a Data Scientist — Hyderabad\" session, organized as part of Microsoft's MLADS (Machine Learning, AI &amp; Data Science) Conference. The session involved sharing personal career journeys, connecting with data enthusiasts, answering audience queries, and discussing career prospects in Data Science.</p><p><strong>Key Takeaways Shared:</strong></p><ul><li>Focus on building a T-shaped skillset early in your career — breadth across domains, depth in one</li><li>It's all about the data: ML, DL, LLMs, and analytics tools are just means to efficiently solve problems</li><li>The art of Data Storytelling is a must-have skill — data needs to be explained and actionable insights must be derived</li><li>Fail fast to succeed faster — embrace experimentation and learn from setbacks</li><li>Leadership is a mindset, not just a job title — take initiative and show accountability</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_datascience-machinelearning-ai-activity-7079296679606140928-HIfV"
+            }
+        ]
+    },
+    {
+        "title": "Data Science Roadmap",
+        "venue": "Bosscoder Academy",
+        "date": "February 2024",
+        "sortDate": "2024-02",
+        "category": "edtech",
+        "type": "🎙️ Podcast",
+        "image": "./assets/images/speaking-engagements/roadmap-to-become-data-scientist.jpg",
+        "description": "<p>In this podcast with Bosscoder Academy, Tezan shared a comprehensive roadmap for aspiring data scientists looking to break into top tech companies. The conversation covered everything from foundational skills and learning resources to interview preparation strategies, with specific insights drawn from the journey to becoming a Data Scientist at Microsoft.</p><p><strong>Topics Discussed:</strong></p><ul><li>A complete data science roadmap: skills, tools, and learning path</li><li>Interview preparation guide for data science roles at Microsoft and similar companies</li><li>Navigating the transition from academics to industry</li><li>Building a strong portfolio and standing out as a candidate</li></ul>",
+        "links": [
+            {
+                "label": "Recording",
+                "icon": "fas fa-video",
+                "url": "https://youtu.be/-zowlwWrGR4?si=cA3OGKK_Q4wvx2Ek"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_datascience-datasciencecareer-podcast-activity-7162795995662147584-aGal"
+            }
+        ]
+    },
+    {
+        "title": "Image Alchemy: Transforming Ideas into Reality with AI-Powered Image Creation",
+        "venue": "Jumma Jam | Studio91, Microsoft",
+        "date": "February 2024",
+        "sortDate": "2024-02",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/jumma-jam-image-alchemy.png",
+        "description": "<p>This interactive workshop at Jumma Jam (Studio91, Microsoft) transformed participants into AI image creation experts using Midjourney. The session went beyond basics, covering advanced prompting techniques, parameterization, and practical workflows for product photography and AI-powered advertising.</p><p><strong>Key Topics Covered:</strong></p><ul><li>Basics of Midjourney: getting started, generating images, exploring variations, and upscaling</li><li>Three common mistakes while creating realistic images (and how to avoid them)</li><li>Advanced prompting: mega prompt templates, parameterization (aspect ratio, style, chaos), and reverse engineering</li><li>Maintaining consistent faces across multiple AI-generated images</li><li>AI-powered product photography and knolling techniques</li><li>Using AI for advertising: models for ads and creative campaigns</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/202402_JummaJamSession_ImageAlchemyTransformingIdeasIntoRealityWithAIPoweredImageCreation.pdf"
+            }
+        ]
+    },
+    {
+        "title": "AI Tools to Supercharge Your Workflow",
+        "venue": "D'Industry Podcast with Tejj",
+        "date": "November 2024",
+        "sortDate": "2024-11",
+        "category": "community",
+        "type": "🎙️ Podcast",
+        "image": "./assets/images/speaking-engagements/ai-tools-supercharge-workflow.jpg",
+        "description": "<p>In this episode of the D’Industry Podcast, Tezan explored the latest AI tools reshaping professional workflows, with live walkthroughs demonstrating real-world applications. The conversation covered practical ways to integrate AI into everyday work, from coding assistants to content creation and productivity tools.</p><p><strong>Topics Discussed:</strong></p><ul><li>Overview of the most impactful AI tools available for professionals</li><li>Live walkthroughs showing AI tools in action across different workflows</li><li>How to evaluate and adopt AI tools effectively</li><li>The future trajectory of AI-assisted work</li></ul>",
+        "links": [
+            {
+                "label": "Recording",
+                "icon": "fas fa-video",
+                "url": "https://youtu.be/oQou1LL3jgI?si=ZhRVEpqgFU5LmPSD"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_ai-tools-to-supercharge-your-workflow-live-activity-7258077860467257344-XA5w"
+            }
+        ]
+    },
+    {
+        "title": "Unlocking India's AI Potential",
+        "venue": "D'Industry Podcast with Tejj",
+        "date": "August 2024",
+        "sortDate": "2024-08",
+        "category": "community",
+        "type": "🎙️ Podcast",
+        "image": "./assets/images/speaking-engagements/unlocking-indias-ai-potential.jpg",
+        "description": "<p>In this episode of the D’Industry Podcast, Tezan discussed India’s rapidly growing AI ecosystem and the opportunities it presents for developers, startups, and enterprises. The conversation covered Microsoft’s role in democratizing AI access across the country, the unique challenges and advantages of the Indian AI landscape, and actionable advice for professionals looking to build careers in AI.</p><p><strong>Topics Discussed:</strong></p><ul><li>The current state and future trajectory of AI in India</li><li>Microsoft’s investments in India’s AI infrastructure and talent development</li><li>Opportunities for developers and startups in the Indian AI ecosystem</li><li>Practical advice for professionals entering the AI space</li></ul>",
+        "links": [
+            {
+                "label": "Recording",
+                "icon": "fas fa-video",
+                "url": "https://youtu.be/G4vVzLJLswY?si=XQe01xatfU9JYTtV"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_unlocking-indias-ai-potential-insights-activity-7229808285674053632-jaem"
+            }
+        ]
+    },
+    {
+        "title": "How to use DVC, PyCaret and FastAPI for Machine Learning Workflow",
+        "venue": "DVC Community Spotlight",
+        "date": "January 2022",
+        "sortDate": "2022-01",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/dvc-pycaret-fastapi-ml-workflow.jpg",
+        "description": "<p>Featured as a DVC Community Spotlight, this talk demonstrated a streamlined end-to-end machine learning workflow combining three powerful open-source tools. The session showed how to version data and experiments with DVC, rapidly prototype and compare models with PyCaret, and serve predictions through a production-ready FastAPI application.</p><p><strong>Key Topics Covered:</strong></p><ul><li>DVC (Data Version Control): versioning datasets and tracking ML experiments reproducibly</li><li>PyCaret: low-code ML library for rapid model experimentation and comparison</li><li>FastAPI: building fast, production-grade APIs for model serving</li><li>Integrating the three tools into a cohesive, reproducible ML workflow</li></ul>",
+        "links": [
+            {
+                "label": "Recording",
+                "icon": "fas fa-video",
+                "url": "https://youtu.be/FGrSQcEvg9E?si=44PYBX6xnqGhL0Fq"
+            }
+        ]
+    },
+    {
+        "title": "Blockchain 101",
+        "venue": "Web & Coding Club, IIT Bombay",
+        "date": "2018",
+        "sortDate": "2018-01",
+        "category": "universities",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/blockchain-101.jpg",
+        "description": "",
+        "links": []
+    }
+]

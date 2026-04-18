@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Testimonial modal functionality
     initTestimonialModal();
     
+    // Speaking modal functionality
+    initSpeakingModal();
+    
     // Creative section functionality
     initCreativeSection();
     
@@ -471,112 +474,203 @@ function toggleTimelineItem(header) {
 }
 
 // Speaking Section Functionality
-let currentCategory = 'all';
+let currentYear = 'all';
+let currentForum = 'all';
+let currentFormat = 'all';
 let currentSearchTerm = '';
 let visibleItems = 6;
-let allSpeakingItems = [];
+let allSpeakingData = [];
 
 // Initialize speaking section
 document.addEventListener('DOMContentLoaded', function() {
-    initializeSpeakingSection();
+    loadSpeakingData();
 });
 
-function initializeSpeakingSection() {
-    // Get all speaking cards and convert to array
-    allSpeakingItems = Array.from(document.querySelectorAll('.speaking-card'));
-    
-    // Sort by date in reverse chronological order (newest first)
-    allSpeakingItems.sort((a, b) => {
-        const dateA = a.dataset.sortDate || '0000-00';
-        const dateB = b.dataset.sortDate || '0000-00';
-        return dateB.localeCompare(dateA); // Reverse order (newest first)
+function loadSpeakingData() {
+    fetch('./assets/data/speaking-engagements.json')
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            // Separate upcoming from past
+            var upcoming = data.filter(function(item) { return item.upcoming === true; });
+            allSpeakingData = data.filter(function(item) { return !item.upcoming; });
+            // Sort past by date descending (newest first)
+            allSpeakingData.sort(function(a, b) {
+                return (b.sortDate || '0000-00').localeCompare(a.sortDate || '0000-00');
+            });
+            // Sort upcoming by date ascending (soonest first)
+            upcoming.sort(function(a, b) {
+                return (a.sortDate || '9999-99').localeCompare(b.sortDate || '9999-99');
+            });
+            renderUpcomingEngagements(upcoming);
+            initializeSpeakingSection();
+        });
+}
+
+function renderUpcomingEngagements(upcoming) {
+    var container = document.getElementById('upcoming-engagements');
+    var grid = document.getElementById('upcoming-grid');
+    if (!container || !grid || upcoming.length === 0) return;
+
+    grid.innerHTML = '';
+    upcoming.forEach(function(item) {
+        var card = document.createElement('div');
+        card.className = 'upcoming-card';
+
+        var linkHTML = '';
+        if (item.links && item.links.length > 0) {
+            var link = item.links[0];
+            linkHTML = '<a href="' + link.url + '" target="_blank" rel="noopener noreferrer" class="upcoming-link"><i class="' + link.icon + '"></i> ' + link.label + ' →</a>';
+        }
+
+        card.innerHTML =
+            '<span class="upcoming-badge">' + item.type + '</span>' +
+            '<h4>' + item.title + '</h4>' +
+            '<div class="upcoming-venue">' + item.venue + '</div>' +
+            '<div class="upcoming-date"><i class="far fa-calendar"></i> ' + item.date + '</div>' +
+            linkHTML;
+
+        grid.appendChild(card);
     });
-    
-    // Set up filter buttons
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
+
+    // Clone all cards for seamless infinite loop
+    var origCards = Array.from(grid.children);
+    origCards.forEach(function(c) {
+        grid.appendChild(c.cloneNode(true));
+    });
+
+    // Adjust animation speed based on item count (~5s per card)
+    grid.style.animationDuration = (upcoming.length * 5) + 's';
+
+    container.style.display = 'block';
+}
+
+function createSpeakingCard(item, index) {
+    var card = document.createElement('div');
+    card.className = 'speaking-card';
+    card.dataset.category = item.category;
+    card.dataset.sortDate = item.sortDate;
+    card.dataset.index = index;
+
+    var imageHTML;
+    if (item.image) {
+        imageHTML = '<img src="' + item.image + '" loading="lazy" alt="' + item.title + '">';
+    } else {
+        imageHTML = '<div class="image-coming-soon"></div>';
+    }
+
+    card.innerHTML =
+        '<div class="speaking-image">' +
+            imageHTML +
+            '<div class="speaking-category">' + item.type + '</div>' +
+        '</div>' +
+        '<div class="speaking-content">' +
+            '<h4>' + item.title + '</h4>' +
+            '<div class="speaking-venue">' + item.venue + '</div>' +
+            '<div class="speaking-date">' + item.date + '</div>' +
+        '</div>';
+
+    return card;
+}
+
+function initializeSpeakingSection() {
+    // Set up year pills
+    var yearPills = document.querySelectorAll('.year-pill');
+    yearPills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+            yearPills.forEach(function(p) { p.classList.remove('active'); });
             this.classList.add('active');
-            
-            // Get category
-            currentCategory = this.dataset.category || 'all';
-            
-            // Filter items
+            currentYear = this.dataset.year || 'all';
+            visibleItems = 6;
             filterSpeakingItems();
         });
     });
-    
+
+    // Set up forum dropdown
+    var forumSelect = document.getElementById('forum-filter');
+    if (forumSelect) {
+        forumSelect.addEventListener('change', function() {
+            currentForum = this.value;
+            visibleItems = 6;
+            filterSpeakingItems();
+        });
+    }
+
+    // Set up format dropdown
+    var formatSelect = document.getElementById('format-filter');
+    if (formatSelect) {
+        formatSelect.addEventListener('change', function() {
+            currentFormat = this.value;
+            visibleItems = 6;
+            filterSpeakingItems();
+        });
+    }
+
     // Set up search
-    const searchInput = document.querySelector('.search-input');
+    var searchInput = document.querySelector('.search-input');
     if (searchInput) {
         searchInput.addEventListener('input', function() {
             currentSearchTerm = this.value.toLowerCase();
+            visibleItems = 6;
             filterSpeakingItems();
         });
     }
-    
+
     // Set up load more button
-    const loadMoreBtn = document.querySelector('.load-more-btn');
+    var loadMoreBtn = document.querySelector('.load-more-btn');
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', loadMoreItems);
     }
-    
-    // Initial filter
+
+    // Initial render
     filterSpeakingItems();
 }
 
+function getFormatGroup(type) {
+    if (type.includes('Talk')) return 'talk';
+    if (type.includes('Workshop') || type.includes('Masterclass') || type.includes('Hands-on') || type.includes('Course')) return 'hands-on';
+    if (type.includes('Podcast') || type.includes('Interview')) return 'podcast';
+    if (type.includes('Panel')) return 'panel';
+    return 'talk';
+}
+
+function getFilteredItems() {
+    return allSpeakingData.filter(function(item) {
+        // Year filter
+        var itemYear = item.sortDate ? item.sortDate.substring(0, 4) : '';
+        var yearMatch = currentYear === 'all' ||
+            (currentYear === 'earlier' && parseInt(itemYear) < 2023) ||
+            (currentYear !== 'earlier' && itemYear === currentYear);
+
+        // Forum filter
+        var forumMatch = currentForum === 'all' || item.category === currentForum;
+
+        // Format filter
+        var formatMatch = currentFormat === 'all' || getFormatGroup(item.type) === currentFormat;
+
+        // Search filter
+        var searchMatch = currentSearchTerm === '' ||
+            item.title.toLowerCase().includes(currentSearchTerm) ||
+            item.venue.toLowerCase().includes(currentSearchTerm) ||
+            (item.description && item.description.toLowerCase().includes(currentSearchTerm));
+
+        return yearMatch && forumMatch && formatMatch && searchMatch;
+    });
+}
+
 function filterSpeakingItems() {
-    let filteredItems = [];
-    
-    allSpeakingItems.forEach(item => {
-        const category = item.dataset.category;
-        const title = item.querySelector('h4').textContent.toLowerCase();
-        const venue = item.querySelector('.speaking-venue').textContent.toLowerCase();
-        const tags = Array.from(item.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
-        
-        // Check category filter
-        const categoryMatch = currentCategory === 'all' || category === currentCategory;
-        
-        // Check search term
-        const searchMatch = currentSearchTerm === '' || 
-            title.includes(currentSearchTerm) ||
-            venue.includes(currentSearchTerm) ||
-            tags.some(tag => tag.includes(currentSearchTerm));
-        
-        if (categoryMatch && searchMatch) {
-            filteredItems.push(item);
-        }
-    });
-    
-    // Sort filtered items by date (newest first) to maintain chronological order
-    filteredItems.sort((a, b) => {
-        const dateA = a.dataset.sortDate || '0000-00';
-        const dateB = b.dataset.sortDate || '0000-00';
-        return dateB.localeCompare(dateA);
-    });
-    
-    // Get the speaking grid container
-    const speakingGrid = document.getElementById('speaking-grid');
+    var filtered = getFilteredItems();
+
+    var speakingGrid = document.getElementById('speaking-grid');
     if (speakingGrid) {
-        // Clear the grid
         speakingGrid.innerHTML = '';
-        
-        // Add filtered items up to the visible limit in chronological order
-        filteredItems.slice(0, visibleItems).forEach(item => {
-            speakingGrid.appendChild(item);
+        filtered.slice(0, visibleItems).forEach(function(item) {
+            // Use the original index in allSpeakingData so modal can look up details
+            var originalIndex = allSpeakingData.indexOf(item);
+            speakingGrid.appendChild(createSpeakingCard(item, originalIndex));
         });
     }
-    
-    // Update load more button
-    updateLoadMoreButton(filteredItems.length);
-    
-    // Reset visible items if new filter applied
-    if (filteredItems.length <= visibleItems) {
-        visibleItems = 6;
-    }
+
+    updateLoadMoreButton(filtered.length);
 }
 
 function loadMoreItems() {
@@ -585,13 +679,9 @@ function loadMoreItems() {
 }
 
 function updateLoadMoreButton(totalFilteredItems) {
-    const loadMoreBtn = document.querySelector('.load-more-btn');
+    var loadMoreBtn = document.querySelector('.load-more-btn');
     if (loadMoreBtn) {
-        if (visibleItems >= totalFilteredItems) {
-            loadMoreBtn.style.display = 'none';
-        } else {
-            loadMoreBtn.style.display = 'inline-block';
-        }
+        loadMoreBtn.style.display = (visibleItems >= totalFilteredItems) ? 'none' : 'inline-block';
     }
 }
 
@@ -671,6 +761,87 @@ I highly recommend Tezan for his ability to understand the problem, create a sol
         if (event.key === 'Escape' && modal.style.display === 'block') {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+    });
+}
+
+// Speaking Modal functionality
+function initSpeakingModal() {
+    var modal = document.getElementById('speakingModal');
+    var closeBtn = document.querySelector('.speaking-modal-close');
+
+    if (!modal || !closeBtn) return;
+
+    // Use event delegation on the speaking grid
+    var speakingGrid = document.getElementById('speaking-grid');
+    if (speakingGrid) {
+        speakingGrid.addEventListener('click', function(e) {
+            var card = e.target.closest('.speaking-card');
+            if (!card) return;
+
+            var index = parseInt(card.dataset.index, 10);
+            var item = allSpeakingData[index];
+            if (!item) return;
+
+            // Image
+            var modalImgContainer = document.getElementById('modalSpeakingImage');
+            if (item.image) {
+                modalImgContainer.innerHTML = '<img src="' + item.image + '" alt="' + item.title + '">';
+            } else {
+                modalImgContainer.innerHTML = '<div class="image-coming-soon"></div>';
+            }
+
+            // Info
+            document.getElementById('modalSpeakingCategory').textContent = item.type;
+            document.getElementById('modalSpeakingTitle').textContent = item.title;
+            document.getElementById('modalSpeakingVenue').textContent = item.venue;
+            document.getElementById('modalSpeakingDate').textContent = item.date;
+
+            // Links
+            var linksContainer = document.getElementById('modalSpeakingLinks');
+            if (item.links && item.links.length > 0) {
+                linksContainer.innerHTML = item.links.map(function(link) {
+                    return '<a href="' + link.url + '" target="_blank" rel="noopener noreferrer"><i class="' + link.icon + '"></i> ' + link.label + '</a>';
+                }).join('');
+                linksContainer.style.display = 'flex';
+            } else {
+                linksContainer.innerHTML = '';
+                linksContainer.style.display = 'none';
+            }
+
+            // Description
+            var descContainer = document.getElementById('modalSpeakingDescription');
+            if (item.description) {
+                descContainer.innerHTML = '<h4>About This Session</h4><div class="session-description">' + item.description + '</div>';
+                descContainer.style.display = 'block';
+            } else {
+                descContainer.innerHTML = '';
+                descContainer.style.display = 'none';
+            }
+
+            // Show modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Close modal
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     });
 }
