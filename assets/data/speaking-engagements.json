@@ -56,7 +56,13 @@
         "type": "🎙️ Podcast",
         "image": "./assets/images/speaking-engagements/ai-agents-in-talent-acquisition.png",
         "description": "<p>Delivered at Microsoft Global Talent Acquisition (GTA) Asia Learning Day for an audience of close to 100, this session combined talks, a podcast-style conversation, and a live demo to show how AI agents can improve recruiting workflows end-to-end - from drafting job descriptions to extracting hiring signals and accelerating sourcing - while staying grounded in quality, consistency, and responsible human oversight.</p><p><strong>Key Takeaways:</strong></p><ul><li>AI is most effective in talent acquisition when it augments recruiter workflows, not replaces recruiter judgment</li><li>High-value use cases include JD creation, skills/keyword extraction, and generating Boolean strings for sourcing</li><li>Reliable recruiting agents need clear instructions, scoped capabilities, relevant connectors, and guided conversation starters</li><li>Grounding outputs on approved templates and knowledge sources improves consistency and trust</li><li>Adoption improves when teams start with repeatable scenarios and iteratively refine prompts based on real usage</li></ul>",
-        "links": []
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_ai-talentacquisition-microsoftcopilot-share-7454354326807822336-cmhz"
+            }
+        ]
     },
     {
         "title": "What Does Your Agent Remember About You? (And Should It?)",
