@@ -3,7 +3,19 @@
         "title": "AI-Powered Computer Vision for Critical Systems: Healthcare & National Security",
         "venue": "ATAL Faculty Development Program | CBIT, Hyderabad",
         "date": "August 2026",
-        "sortDate": "2026-08",
+        "sortDate": "2026-08-22",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "[TBA]",
+        "venue": "Aaruush '26 | SRMIST, Chennai",
+        "date": "August 2026",
+        "sortDate": "2026-08-22",
         "category": "universities",
         "type": "🔬 Workshop",
         "image": null,
@@ -15,9 +27,21 @@
         "title": "AI Systems Engineering: Tool Calling & Model Context Protocol (MCP)",
         "venue": "IEEE CASS Workshop Series | NSAKCET, Hyderabad",
         "date": "June 2026",
-        "sortDate": "2026-06",
+        "sortDate": "2026-06-10",
         "category": "universities",
         "type": "🔬 Workshop",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Advanced Prompting, APIs & AI Research Tools",
+        "venue": "AI Launchpad | Future World Alliance (Virtual)",
+        "date": "June 2026",
+        "sortDate": "2026-06-01",
+        "category": "community",
+        "type": "🗣️ Talk",
         "image": null,
         "description": "",
         "upcoming": true,
@@ -36,16 +60,67 @@
         "links": []
     },
     {
-        "title": "Crafting Intelligent Agents with Microsoft Agent Framework",
-        "venue": "Agentic AI Seminar | Gurunanak College, Hyderabad",
-        "date": "April 2026",
-        "sortDate": "2026-04",
-        "category": "universities",
-        "type": "🔬 Workshop",
+        "title": "[TBA]",
+        "venue": "Manifest 2.0",
+        "date": "May 2026",
+        "sortDate": "2026-05-17",
+        "category": "community",
+        "type": "🗣️ Talk",
         "image": null,
         "description": "",
         "upcoming": true,
         "links": []
+    },
+    {
+        "title": "[TBA]",
+        "venue": "India Electronics Week 2026 | Bengaluru, India",
+        "date": "May 2026",
+        "sortDate": "2026-05-13",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "How to Ensure AI is Secure for Your Business",
+        "venue": "India Electronics Week 2026 | Bengaluru, India",
+        "date": "May 2026",
+        "sortDate": "2026-05-15",
+        "category": "conferences",
+        "type": "🎤 Panel Discussion",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Hello, Agent! — Building AI Agents with Microsoft Agent Framework",
+        "venue": "IntelliPaat School of Technology, Hyderabad (Guru Nanak University)",
+        "date": "April 2026",
+        "sortDate": "2026-04",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": "assets/images/speaking-engagements/ist-gnu-hello-agent.jpg",
+        "description": "<p>A hands-on, zero-to-agent workshop delivered to students at IntelliPaat School of Technology (Guru Nanak University), walking participants through every layer of AI agent development using Microsoft Agent Framework. Rather than staying theoretical, the session was structured around a live lab in which students built a fully functional Campus Management Agent from scratch — wiring up tools, crafting system instructions, and managing multi-turn conversations.</p><p><strong>Key Takeaways:</strong></p><ul><li>Agents vs. chatbots: the critical differences — autonomy, tool use, stateful reasoning, and proactive action</li><li>Core agent anatomy: models, tools, memory, orchestration, guardrails, and output handlers — and how they fit together</li><li>Tool design principles: descriptive naming, LLM-oriented docstrings, typed annotations with Pydantic, and graceful error handling are not optional</li><li>Auto-generating tool schemas from well-annotated Python functions: good code and good AI integration are the same thing</li><li>System prompt engineering as a first-class artifact: vague instructions break agents; specificity in tool-use sequencing and information-gathering rules is essential</li><li>Session management enables genuine multi-turn usefulness — agents that remember context across a conversation are fundamentally more helpful</li><li>Production realities: latency, cost, observability, and the dangers of tool overload, no evaluation, and over-engineering too early</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/2020604_IST-GNU_HelloAgentBuildingAIAgentsWithMicrosoftAgentFramework.pdf"
+            },
+            {
+                "label": "GitHub Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/building-eval-driven-ai-agents/tree/building-ai-agents-workshop"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_aiagents-microsoftagentframework-agenticai-ugcPost-7455436949839822848-m-lv"
+            }
+        ]
     },
     {
         "title": "AI Agents in Talent Acquisition",
