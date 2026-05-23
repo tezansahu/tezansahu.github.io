@@ -51,49 +51,79 @@
         "title": "Institutionalize Your Instincts: Encoding expertise, taste, and tribal knowledge into reusable AI skills",
         "venue": "SkillUp AI | The Garage, Microsoft (India)",
         "date": "May 2026",
-        "sortDate": "2026-05",
+        "sortDate": "2026-05-22",
         "category": "microsoft",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/institutionalize-your-instinct-with-agent-skills.png",
+        "description": "<p>Delivered at SkillUp AI (Microsoft Garage, Hyderabad), this talk made the case that the next leap in AI productivity won't come from a smarter model — it will come from us getting better at packaging our own expertise into something the model can actually load. The session introduced Agent Skills as the open-standard mechanism for turning tribal knowledge, taste, and hard-won judgment into installable, reusable AI capabilities, and ended with a live build of a working skill on stage in under five minutes.</p><p><strong>Key Takeaways:</strong></p><ul><li>Every team has the person whose AI outputs are just better — the problem is that \"better\" lives in their head and disappears the moment they log off</li><li>The mindset flip: stop writing prompts, start installing skills — expertise the agent <em>holds</em>, not expertise you <em>carry</em></li><li>A Skill is almost embarrassingly simple: a folder with a SKILL.md (name, description, body) plus optional scripts, references, and assets — no SDK, no framework, no deployment pipeline</li><li>Progressive disclosure is the trick that makes skills scale: name+description are always-on, the body loads on match, sub-files load on-demand — install 50 skills and only 1–2 ever sit in the context window</li><li>Skills are not agents: skills are packaged expertise (15–30 min to build, portable across tools); agents are autonomous loops (days/weeks, framework-bound)</li><li>It's an open standard — Anthropic, GitHub Copilot, Cursor, Codex, Windsurf and more all consume the same format. Same playbook as MCP, but for expertise instead of tools</li><li>The highest-leverage skills are the ones built for your role and your team — engineers, data folks, PMs, finance, HR, consulting — not generic ones</li><li>You can build a useful Skill in under five minutes — the bottleneck is no longer engineering, it's deciding what tribal knowledge is worth institutionalising</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260522_SkillUpAI_InstitutionalizeYourInstinctsWithAgentSkills.pdf"
+            }
+        ]
     },
     {
-        "title": "[TBA]",
+        "title": "Your AI Never Once Said \"You're Wrong\"",
         "venue": "Manifest 2.0",
         "date": "May 2026",
         "sortDate": "2026-05-17",
         "category": "community",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/your-ai-never-once-said-youre-wrong.jpg",
+        "description": "<p>Delivered at Manifest 2.0, this talk tackled one of the most under-discussed failure modes in modern AI products: <em>sycophancy</em> — the model telling you what you want to hear instead of what you need to know. The session walked through the behaviour, the mechanism that produces it, the blindspot in standard product metrics that hides it, and a concrete five-lever toolkit builders can apply to push back against it.</p><p><strong>Key Takeaways:</strong></p><ul><li>Sycophancy isn't a hallucination or a lie — it's the model agreeing with you, and it's the most invisible failure mode in AI products today</li><li>It surfaces everywhere builders ship: coding assistants that bend to a developer's stated confidence, multi-agent systems where dissent collapses into consensus, and chatbots that endorsed harmful behaviour in 32% of tested high-stakes scenarios</li><li>The mechanism is structural — RLHF rewards agreeable responses, which makes successive models more sycophantic, which then win A/B tests because users rate them more highly</li><li>Users rate sycophantic models as <em>unbiased</em> and honest ones as <em>highly biased</em> — your satisfaction metric is actively hiding the problem</li><li>Every other failure mode has a signal; sycophancy doesn't — the dashboard will stay green right up until it breaks something important</li><li>Five levers to fight it: objective evals (premise-flip, signal-delta, pressure-persistence), \"ask don't tell\" prompting, devil's-advocate UX, multi-agent + RAG architecture fixes, and making sycophancy evals a launch-blocking gate</li><li>Open-source tools like Anthropic's Petri and Bloom let you benchmark this today</li><li>Sycophancy is also a security vector — praise-based manipulation has been shown to bypass safety guardrails in major models</li><li>This is ultimately a product decision, not a technical one: comfortable lies cost more than uncomfortable truths</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260517_Manifest2.0_YourAINeverOnceSaidYouAreWrong.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463817675845279744/"
+            }
+        ]
     },
     {
-        "title": "[TBA]",
-        "venue": "India Electronics Week 2026 | Bengaluru, India",
-        "date": "May 2026",
-        "sortDate": "2026-05-13",
-        "category": "conferences",
-        "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
-    },
-    {
-        "title": "How to Ensure AI is Secure for Your Business",
-        "venue": "India Electronics Week 2026 | Bengaluru, India",
+        "title": "The Vibes will Run Out: \"Taste\" as the New Organizational Operating System",
+        "venue": "BharatAI Conference | India Electronics Week 2026 | Bengaluru, India",
         "date": "May 2026",
         "sortDate": "2026-05-15",
         "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/the-vibes-will-run-out.jpg",
+        "description": "<p>Delivered at the BharatAI Conference (India Electronics Week 2026, Bengaluru), this talk argued that the vibe-coding era is hitting its limits — and what becomes valuable next is the one thing AI can't generate on its own: <em>taste</em>. Drawing on research, industry data, and historical parallels from desktop publishing to aviation automation, the session reframed taste as an organizational capability and made the case for building the \"conductor layer\" that sits above the tool.</p><p><strong>Key Takeaways:</strong></p><ul><li>AI has collapsed the barriers to building — but the prototype-to-product boundary is where most teams quietly fall apart</li><li>The evidence is in: AI-co-authored code shows ~1.7x more major issues and ~2.7x more security vulnerabilities; developers feel 20% faster while actually being 19% slower</li><li>Four crises are unfolding at once: the Invisible Standard, the Ownership Gap, the Expectation Asymmetry, and the Tool Proliferation Trap</li><li>Access always outpaces mastery — desktop publishing and cockpit automation both proved this; vibe coding is the next chapter of the same story</li><li>When capability commoditises, value migrates up — scaffolding and first drafts are getting cheaper; evaluation, system design, and production stewardship are appreciating</li><li>Taste is trained judgment about what will work in the messy real world — knowing when to stop, what <em>not</em> to build, and which decisions will age well</li><li>Taste can be institutionalised by mining your best work, codifying blueprints, and injecting them upstream of AI generation</li><li>The closing line: <em>the vibes will always run out — what remains is the judgment you built along the way</em></li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260515_BharatAI_TheVibesWillRunOut.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7462713739423780864/"
+            }
+        ]
+    },
+    {
+        "title": "AIoT on the Cloud: Selecting the Right Hosting Solutions",
+        "venue": "IoTShow.in | India Electronics Week 2026 | Bengaluru, India",
+        "date": "May 2026",
+        "sortDate": "2026-05-13",
+        "category": "conferences",
         "type": "🎤 Panel Discussion",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/aiot-on-the-cloud.jpg",
+        "description": "<p>Participated as a panelist at IoTShow.in (India Electronics Week 2026, Bengaluru) alongside leaders from Jio, ThingZo, Shalaka Connected Devices, and independent consulting. The panel tackled one of the most consequential architectural questions of the AIoT era — where intelligence should actually live, and how to pick the right hosting model for it — cutting through the cloud-vs-edge hype to surface the real tradeoffs for builders deploying AI on connected devices at scale.</p><p><strong>Key Takeaways:</strong></p><ul><li>IoT tells you what happened; AIoT tells you what to do about it — intelligence now lives at every layer, not just in a cloud dashboard</li><li>Latency budget drives architecture: ultra-low-latency decisions belong on-device or at the edge; learning and analytics belong in the cloud</li><li>Hybrid wins for most real deployments — train in the cloud, infer at the edge, sync opportunistically</li><li>Most AI hosting mistakes come from treating AI like just another microservice — it's a physics problem, not a scaling problem</li><li>Edge AI has crossed a tipping point: TinyML, NVIDIA Jetson, Ollama, and SLMs like Phi/Llama-3.2 make local inference cheap and capable</li><li>Stanford's Minions Protocol shows local + cloud collaboration can deliver ~98% of GPT-4 quality at a fraction of the cost</li><li>Security must be designed in from silicon up — default passwords and unpatched firmware are still the dominant attack vectors</li><li>Data sovereignty (DPDP, GDPR) makes \"just put it in the cloud\" a non-starter for entire industries</li><li>Open protocols (MQTT, ONNX, containerised edge workloads) are the best antidote to vendor lock-in</li><li>India's AIoT opportunity is to leapfrog — skip expensive edge GPUs and deploy intelligence on $5 microcontrollers and affordable SLMs</li><li>The next frontier is the Internet of Agents — sensors as tools, actuators as actions, and a hard new evaluation problem when AI controls the physical world</li></ul>",
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7462351344742322176/"
+            }
+        ]
     },
     {
         "title": "Hello, Agent! — Building AI Agents with Microsoft Agent Framework",
