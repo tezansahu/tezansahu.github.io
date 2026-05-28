@@ -486,10 +486,45 @@ document.addEventListener('DOMContentLoaded', function() {
     loadSpeakingData();
 });
 
+// Strip // line comments and /* ... */ block comments from a JSONC string,
+// while preserving comment-like sequences that appear inside string literals.
+function stripJsonComments(text) {
+    var out = '';
+    var i = 0;
+    var len = text.length;
+    var inString = false;
+    var inLineComment = false;
+    var inBlockComment = false;
+    while (i < len) {
+        var ch = text[i];
+        var next = i + 1 < len ? text[i + 1] : '';
+        if (inLineComment) {
+            if (ch === '\n') { inLineComment = false; out += ch; }
+            i++;
+        } else if (inBlockComment) {
+            if (ch === '*' && next === '/') { inBlockComment = false; i += 2; }
+            else { i++; }
+        } else if (inString) {
+            out += ch;
+            if (ch === '\\' && i + 1 < len) { out += text[i + 1]; i += 2; continue; }
+            if (ch === '"') inString = false;
+            i++;
+        } else {
+            if (ch === '"') { inString = true; out += ch; i++; }
+            else if (ch === '/' && next === '/') { inLineComment = true; i += 2; }
+            else if (ch === '/' && next === '*') { inBlockComment = true; i += 2; }
+            else { out += ch; i++; }
+        }
+    }
+    // Remove trailing commas before } or ] (also allowed by JSONC)
+    return out.replace(/,(\s*[}\]])/g, '$1');
+}
+
 function loadSpeakingData() {
-    fetch('./assets/data/speaking-engagements.json')
-        .then(function(response) { return response.json(); })
-        .then(function(data) {
+    fetch('./assets/data/speaking-engagements.jsonc')
+        .then(function(response) { return response.text(); })
+        .then(function(text) {
+            var data = JSON.parse(stripJsonComments(text));
             // Separate upcoming from past
             var upcoming = data.filter(function(item) { return item.upcoming === true; });
             allSpeakingData = data.filter(function(item) { return !item.upcoming; });

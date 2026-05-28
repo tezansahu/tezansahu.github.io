@@ -24,10 +24,10 @@
         "links": []
     },
     {
-        "title": "AI Systems Engineering: Tool Calling & Model Context Protocol (MCP)",
+        "title": "Teach Your Agent to Hear: From FFT to Tool Calls — Wiring SP Pipelines with MCP",
         "venue": "IEEE CASS Workshop Series | NSAKCET, Hyderabad",
-        "date": "June 2026",
-        "sortDate": "2026-06-10",
+        "date": "September 2026",
+        "sortDate": "2026-09",
         "category": "universities",
         "type": "🔬 Workshop",
         "image": null,
@@ -35,8 +35,32 @@
         "upcoming": true,
         "links": []
     },
+    // {
+    //     "title": "[TBA]",
+    //     "venue": "Build //localhost: Hyderabad",
+    //     "date": "June 2026",
+    //     "sortDate": "2026-06-13",
+    //     "category": "community",
+    //     "type": "🗣️ Talk",
+    //     "image": null,
+    //     "description": "",
+    //     "upcoming": true,
+    //     "links": []
+    // },
     {
-        "title": "Advanced Prompting, APIs & AI Research Tools",
+        "title": "Beyond ChatGPT: Real-World AI, Innovation & Careers",
+        "venue": "Bower School | T-Hub, Hyderabad ",
+        "date": "June 2026",
+        "sortDate": "2026-06-06",
+        "category": "universities",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Advanced Prompting & Building Your First AI Assistant",
         "venue": "AI Launchpad | Future World Alliance (Virtual)",
         "date": "June 2026",
         "sortDate": "2026-06-01",
@@ -46,6 +70,33 @@
         "description": "",
         "upcoming": true,
         "links": []
+    },
+    {
+        "title": "From Vibe-Coding to Agentic Engineering",
+        "venue": "For 2026 Summer Interns | The Garage (India) & The University Recruiting Team, Microsoft",
+        "date": "May 2026",
+        "sortDate": "2026-05-27",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/from-vibe-coding-to-agentic-engineering.jpeg",
+        "description": "<p>Delivered to ~200 of Microsoft's 2026 summer interns in Hyderabad (hosted by The Garage India &amp; the University Recruiting team), this 90-minute hands-on workshop made the case that the leap from vibe coding to <em>agentic engineering</em> is what separates a slick demo from a shippable system. Instead of a lecture, the session was structured as a live build — the presenter shipped one real feature in a real repo end-to-end, then handed the keyboards over so every intern could run the same flow on a brief of their own.</p><p><strong>Key Takeaways:</strong></p><ul><li>Vibe coding has a ceiling — it works on toy demos and falls apart the moment a codebase has memory, constraints, or a second contributor</li><li>The mindset flip that unlocks everything: stop being the engineer who <em>types</em>, become the architect who <em>decides</em> and the PM who <em>clarifies</em> — treat the agent as a brilliant new starter, not a senior developer</li><li>Design before code: let the agent <em>grill you</em> instead of plan for you, so the design concept comes from your judgment and the questions are grounded in the actual repo</li><li>Externalize your thinking into durable artifacts — briefs, PRDs and issues — so every downstream agent run is bound to a contract you've reviewed</li><li>Package expertise as Agent Skills so workflows become installable and reusable, not copy-pasted prompts that live in someone's head</li><li>Split the work into two loops: <em>you</em> run the outer loop (taste, design, decomposition, ship); the <em>agent</em> runs the inner loop (write, test, fix) AFK — and humans stay in the loop at the contract moments, not on every line</li><li>Build the codebase the agent has to live in: deep modules, clear contracts, and tracer-bullet slices that ship end-to-end before they scale</li><li>The closing thesis: AI is a new paradigm, but software engineering fundamentals — Brooks, Hunt &amp; Thomas, Ousterhout — work better than ever with AI, and are now <strong>non-optional</strong>. Stop vibing. Start engineering.</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260527_Garage+UniversityRecruiting_FromVibeCodingToAgenticEngineering.pdf"
+            },
+            {
+                "label": "GitHub Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/microsoft-idc-interns-agentic-engineering-workshop-2026"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/posts/tezan-sahu_yesterday-i-watched-200-interns-break-out-activity-7465636086979989504-12Rt"
+            }
+        ]
     },
     {
         "title": "Institutionalize Your Instincts: Encoding expertise, taste, and tribal knowledge into reusable AI skills",
