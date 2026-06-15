@@ -24,40 +24,53 @@
         "links": []
     },
     {
-        "title": "Teach Your Agent to Hear: From FFT to Tool Calls — Wiring SP Pipelines with MCP",
-        "venue": "IEEE CASS Workshop Series | NSAKCET, Hyderabad",
-        "date": "September 2026",
-        "sortDate": "2026-09",
-        "category": "universities",
-        "type": "🔬 Workshop",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
-    },
-    // {
-    //     "title": "[TBA]",
-    //     "venue": "Build //localhost: Hyderabad",
-    //     "date": "June 2026",
-    //     "sortDate": "2026-06-13",
-    //     "category": "community",
-    //     "type": "🗣️ Talk",
-    //     "image": null,
-    //     "description": "",
-    //     "upcoming": true,
-    //     "links": []
-    // },
-    {
         "title": "Beyond ChatGPT: Real-World AI, Innovation & Careers",
         "venue": "Bower School | T-Hub, Hyderabad ",
         "date": "June 2026",
-        "sortDate": "2026-06-06",
+        "sortDate": "2026-06-13",
         "category": "universities",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/beyond-chatgpt-bowerx.png",
+        "description": "<p>Delivered at Bower School (T-Hub, Hyderabad) as two sessions for different age groups — ages 8–12 and ages 13–16 — this workshop made the same central argument from two different entry points: AI is not a black box you passively consume, it’s a tool you can understand, direct, and build with. Both sessions were structured around live demos and hands-on design exercises, with the younger group inventing their own AI helper concepts and the older group working through an agent design framework.</p><p><strong>Key Takeaways:</strong></p><ul><li>AI learns by spotting patterns in examples — not by understanding them; show it enough and it finds the structure, show it biased or sparse data and it inherits the flaw (made tangible with a live Teachable Machine demo that broke the moment hand orientation changed)</li><li>Almost everyone <em>uses</em> AI — the gap, and the opportunity, is in the smaller group that builds with it: designers of behavior, not consumers of output</li><li>An LLM is a next-word predictor, not a fact retriever — it pattern-completes from training data, which is why it can be confidently wrong and why knowing the mechanics matters</li><li>Model vs. Product: the model is the engine (GPT, Claude, Gemini), the product is the car (ChatGPT, Claude.ai, Gemini app) — builders work at both layers, and the product layer is where you can create right now</li><li>Agentic AI is the real frontier: a chatbot answers and stops; an agent reasons, acts, observes, and loops until the job is done — and it’s something you can already design</li><li>The Agentic Design Canvas gives any idea an 8-box structure (Problem, User, Goal, Context, Actions, Approvals, Risks, Recovery) to turn an AI concept into something buildable and responsible</li><li>The closing line: don’t compete with AI — learn to direct it</li></ul>",
+        "links": [
+            {
+                "label": "Slides (Session A)",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260613_BowerX_BeyondChatGPT_SessionA.pdf"
+            },
+            {
+                "label": "Slides (Session B)",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260613_BowerX_BeyondChatGPT_SessionB.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7471788714936016897/"
+            }
+        ]
+    },
+    {
+        "title": "Inside Build 2026",
+        "venue": "SkillUp AI | The Garage, Microsoft (India + EMEA)",
+        "date": "June 2026",
+        "sortDate": "2026-06-11",
+        "category": "microsoft",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/inside-build-2026.png",
+        "description": "<p>Delivered at SkillUp AI (The Garage, Microsoft — India + EMEA), this talk distilled 28 announcements from Microsoft Build 2026 — the company's biggest developer event of the year — into five coherent waves and three actionable takeaways for builders. The central thesis: Build 2026 marked a decisive shift from AI you <em>prompt</em> to AI that <em>works for you</em>, and every announcement was a piece of that architecture.</p><p><strong>The 5 Waves:</strong></p><ul><li><strong>Wave 1 — Agents that Act:</strong> Scout &amp; Autopilots (always-on, identity-bearing agents that prep meetings and clear inboxes unprompted), the GitHub Copilot App (a desktop cockpit for running many coding agents in parallel), and Agent 365 (a unified control plane where every agent gets an Entra identity)</li><li><strong>Wave 2 — Microsoft's Own Brain:</strong> The MAI model family (7 in-house models covering reasoning, code, voice, and image — MAI-Thinking-1 benchmarking at Claude Opus level on coding), the Copilot Super App teased for summer, and Frontier Tuning (RL hill-climbing on your own data at ~10× lower cost than the frontier)</li><li><strong>Wave 3 — AI Leaves the Cloud:</strong> Surface RTX Spark (120B-parameter models running locally with ~1M-token context, no cloud required), Aion on Windows (an open-weight reasoner, local and unmetered), and Project Solara (an agent-first platform with a wearable badge and desk clock)</li><li><strong>Wave 4 — The Builder's Stack:</strong> Microsoft IQ (context layer grounding agents in Work + Fabric + Web data with permissions and labels respected), Azure AI Foundry Agent Framework 1.0 (11,000-model catalogue, hosted agents, self-optimizer), and Claude Opus 4.8 + GPT-5.5 as first-class Azure citizens</li><li><strong>Wave 5 — AI Does Science:</strong> Microsoft Discovery (an agentic R&amp;D platform that invented a new datacenter coolant in ~200 hours — not analyzed, <em>invented</em>) and Majorana 2 (a topological quantum chip with qubits 1,000× more reliable than the prior year, pulling practical quantum forward to 2029)</li></ul><p><strong>Key Takeaways for Builders:</strong></p><ul><li>Think in agents, not features — ask what you'd hand to a junior colleague; that task is your first agent</li><li>Build for \"yours\" — the moat isn't the model, it's grounding in your context, identity, and governance</li><li>Local is a real option now — privacy- or cost-sensitive AI no longer has to live in the cloud, and it's worth planning for on-device</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260611_SkillUpAI_InsideBuild2026.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7471055805149261824/"
+            }
+        ]
     },
     {
         "title": "Advanced Prompting & Building Your First AI Assistant",
@@ -65,11 +78,26 @@
         "date": "June 2026",
         "sortDate": "2026-06-01",
         "category": "community",
-        "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/ai-launchpad-week5.jpg",
+        "description": "<p>Delivered as Week 5 of AI Launchpad (Future World Alliance, virtual), this workshop made the case that writing better individual prompts is only half the skill — the other half is building AI assistants that don't need to be prompted the same way every time. The session drew a clear line between one-off prompting and <em>context engineering</em>: designing the full information environment — role, constraints, knowledge, examples, format — so your AI works right without hand-holding. Participants left with a live, working AI career advisor built from scratch in Gemini Gems (or Custom GPT).</p><p><strong>Key Takeaways:</strong></p><ul><li>The evolution from one-off prompts to persistent, reusable AI assistants — the jump is from typing to <em>designing</em></li><li>Context engineering, not just prompt engineering: you're not writing a single instruction — you're architecting the full information environment the model reasons within</li><li>CO-STAR framework — a complete system prompt checklist (Context, Objective, Style, Tone, Audience, Response Format) — so nothing critical gets missed when building an assistant</li><li>Few-Shot prompting: showing beats telling — 2–3 concrete examples transform generic output into output that mirrors exactly the pattern you need</li><li>Chain-of-Thought: asking the model to reason step-by-step before answering — surfaces leverage moves and tradeoffs that a single-shot answer reliably misses</li><li>Tree of Thoughts: exploring multiple reasoning paths simultaneously — the same mechanism behind how reasoning models like Gemini's thinking mode and o1 work internally</li><li>Structured Output: specifying the exact response format so output is immediately usable, not just readable</li><li>Prompt Chaining: breaking complex tasks into sequential steps where each output feeds the next — forces analysis before writing, so the model discovers the strategic angle instead of defaulting to the obvious one</li><li>The 3 pillars of a great AI assistant — Instructions, Knowledge, and Actions — and why the first two alone get you 80% of the way there</li><li>NotebookLM as the Knowledge pillar: visual concept maps, AI-generated podcast debates from conflicting sources, auto-slide decks, and flashcards from your own documents — the research layer that makes an assistant data-backed instead of generic</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "https://www.tezansahu.com/ai-launchpad-week-5/workshop.html"
+            },
+            {
+                "label": "GitHub Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/ai-launchpad-week-5"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467448829810798593/"
+            }
+        ]
     },
     {
         "title": "From Vibe-Coding to Agentic Engineering",
