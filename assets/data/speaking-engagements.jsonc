@@ -1,5 +1,53 @@
 [
     {
+        "title": "From Vibe Coding to Agentic Engineering",
+        "venue": "Microsoft Garage (India)",
+        "date": "July 2026",
+        "sortDate": "2026-07-24",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Can You Prove Your Agent Skill Works?",
+        "venue": "Azure Core Elevate, Microsoft",
+        "date": "July 2026",
+        "sortDate": "2026-07-23",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "[TBA]",
+        "venue": "Common Ground 2026",
+        "date": "July 2026",
+        "sortDate": "2026-07-25",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "AI Builds the UI, Who Judges It? Agent Skills for Visual UX Evaluation of Agentic AI Systems",
+        "venue": "SERI 2026 | IIIT Hyderabad",
+        "date": "July 2026",
+        "sortDate": "2026-07-18",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
         "title": "AI-Powered Computer Vision for Critical Systems: Healthcare & National Security",
         "venue": "ATAL Faculty Development Program | CBIT, Hyderabad",
         "date": "August 2026",
