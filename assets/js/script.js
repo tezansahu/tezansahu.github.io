@@ -1098,6 +1098,41 @@ function renderParagraphs(container, text) {
     });
 }
 
+// Render the Co-Inventors (patents) / Co-Authors (papers) section.
+// Accepts new-style arrays (`coInventors` / `coAuthors`) and falls back to the
+// deprecated `authors` single-string form for backward compatibility.
+function renderInnovationCollaborators(item) {
+    var section = document.getElementById('modalInnovationAuthorsSection');
+    var headingEl = document.getElementById('modalInnovationAuthorsHeading');
+    var contentEl = document.getElementById('modalInnovationAuthors');
+    if (!section || !headingEl || !contentEl) return;
+
+    var names = null;
+    var heading = '';
+
+    if (item.type === 'patent' && Array.isArray(item.coInventors) && item.coInventors.length > 0) {
+        names = item.coInventors;
+        heading = 'Co-Inventors';
+    } else if (item.type === 'paper' && Array.isArray(item.coAuthors) && item.coAuthors.length > 0) {
+        names = item.coAuthors;
+        heading = 'Co-Authors';
+    } else if (typeof item.authors === 'string' && item.authors.trim() !== '') {
+        // Backward compat with the old single-string `authors` field.
+        names = [item.authors.trim()];
+        heading = item.type === 'patent' ? 'Co-Inventors' : 'Authors';
+    }
+
+    if (!names) {
+        section.style.display = 'none';
+        contentEl.textContent = '';
+        return;
+    }
+
+    section.style.display = 'block';
+    headingEl.textContent = heading;
+    contentEl.textContent = names.join(', ');
+}
+
 // Render the description section with a Plain-English / Technical toggle.
 // The toggle only appears when BOTH `summary` and `abstract` are present.
 function renderInnovationDescription(item) {
@@ -1279,8 +1314,8 @@ function openInnovationModal(index) {
     // Description — Plain-English summary + optional Technical Abstract with a toggle
     renderInnovationDescription(item);
 
-    // Authors
-    setModalSection('modalInnovationAuthorsSection', 'modalInnovationAuthors', item.authors);
+    // Co-Inventors (patents) / Co-Authors (papers)
+    renderInnovationCollaborators(item);
 
     // Tags
     var tagsSection = document.getElementById('modalInnovationTagsSection');

@@ -45,9 +45,9 @@
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#speaking" class="nav-link">Speaking</a>
+                <a href="#research" class="nav-link">Innovation</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#experience" class="nav-link">Experience</a>
-                <a href="#research" class="nav-link">Innovation</a>
                 <a href="#writing" class="nav-link">Writing</a>
                 <a href="#testimonials" class="nav-link">Testimonials</a>
                 <a href="#creative" class="nav-link">Creative</a>
@@ -335,6 +335,42 @@
                 <h3>Interested in having me speak at your event?</h3>
                 <p>I'd love to share insights on AI, data science, career development, and emerging technologies with your audience.</p>
                 <a href="#contact" class="btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Section - Patents & Research Papers -->
+    <section class="research innovation" id="research">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Innovation</h2>
+                <div class="section-subtitle">Patents and papers pushing the boundaries of AI</div>
+            </div>
+
+            <!-- Patents -->
+            <div class="innovation-subsection">
+                <div class="innovation-subsection-header">
+                    <h3 class="innovation-subsection-title">
+                        <i class="fas fa-certificate"></i> Patents
+                    </h3>
+                    <span class="innovation-count" id="patents-count"></span>
+                </div>
+                <div class="innovation-list" id="patents-list">
+                    <div class="innovation-loading">Loading patents…</div>
+                </div>
+            </div>
+
+            <!-- Papers (research & industry tracks, workshops, posters, tutorials, journals) -->
+            <div class="innovation-subsection">
+                <div class="innovation-subsection-header">
+                    <h3 class="innovation-subsection-title">
+                        <i class="fas fa-file-alt"></i> Papers
+                    </h3>
+                    <span class="innovation-count" id="papers-count"></span>
+                </div>
+                <div class="innovation-list" id="papers-list">
+                    <div class="innovation-loading">Loading papers…</div>
+                </div>
             </div>
         </div>
     </section>
@@ -835,42 +871,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Innovation Section - Patents & Research Papers -->
-    <section class="research innovation" id="research">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Innovation</h2>
-                <div class="section-subtitle">Patents and papers pushing the boundaries of AI</div>
-            </div>
-
-            <!-- Patents -->
-            <div class="innovation-subsection">
-                <div class="innovation-subsection-header">
-                    <h3 class="innovation-subsection-title">
-                        <i class="fas fa-certificate"></i> Patents
-                    </h3>
-                    <span class="innovation-count" id="patents-count"></span>
-                </div>
-                <div class="innovation-list" id="patents-list">
-                    <div class="innovation-loading">Loading patents…</div>
-                </div>
-            </div>
-
-            <!-- Papers (research & industry tracks, workshops, posters, tutorials, journals) -->
-            <div class="innovation-subsection">
-                <div class="innovation-subsection-header">
-                    <h3 class="innovation-subsection-title">
-                        <i class="fas fa-file-alt"></i> Papers
-                    </h3>
-                    <span class="innovation-count" id="papers-count"></span>
-                </div>
-                <div class="innovation-list" id="papers-list">
-                    <div class="innovation-loading">Loading papers…</div>
                 </div>
             </div>
         </div>
@@ -1466,7 +1466,7 @@
                     <div id="modalInnovationDescription"></div>
                 </div>
                 <div class="innovation-modal-section" id="modalInnovationAuthorsSection">
-                    <h4>Authors</h4>
+                    <h4 id="modalInnovationAuthorsHeading">Co-Authors</h4>
                     <p id="modalInnovationAuthors"></p>
                 </div>
                 <div class="innovation-modal-section" id="modalInnovationTagsSection">
