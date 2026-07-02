@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Speaking modal functionality
     initSpeakingModal();
     
+    // Innovation (patents & papers) section + modal
+    initInnovationSection();
+    
     // Creative section functionality
     initCreativeSection();
     
@@ -936,34 +939,401 @@ function openArtworkModal(imageSrc, title, size, medium) {
 }
 
 
-// Research section — progressive show/hide (smooth accordion)
-function toggleResearchItems() {
-    const wrapper = document.getElementById('research-extra-wrapper');
-    const btn = document.getElementById('research-toggle-btn');
-    const expanded = btn.classList.contains('expanded');
+// ==========================================================================
+// Innovation Section (Patents & Research Papers)
+// Loads data from assets/data/innovation.jsonc, renders slim single-row
+// cards grouped by type, and opens a detail modal on click.
+// ==========================================================================
 
-    if (expanded) {
-        // Collapse: lock current height first, then animate to 0
-        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
-        requestAnimationFrame(() => {
-            wrapper.style.maxHeight = '0';
-            wrapper.classList.remove('expanded');
+var allInnovationData = [];
+// Holds the currently-open item's { summary, abstract } so the description toggle can swap views.
+var currentInnovationDescription = { summary: '', abstract: '' };
+
+function initInnovationSection() {
+    var patentsList = document.getElementById('patents-list');
+    var papersList = document.getElementById('papers-list');
+    if (!patentsList && !papersList) return;
+
+    fetch('./assets/data/innovation.jsonc')
+        .then(function(response) { return response.text(); })
+        .then(function(text) {
+            var data = JSON.parse(stripJsonComments(text));
+            allInnovationData = data;
+            renderInnovationLists();
+            initInnovationModal();
+        })
+        .catch(function(err) {
+            console.error('Failed to load innovation data:', err);
+            if (patentsList) patentsList.innerHTML = '<div class="innovation-empty">Unable to load patents right now.</div>';
+            if (papersList) papersList.innerHTML = '<div class="innovation-empty">Unable to load papers right now.</div>';
         });
+}
+
+function renderInnovationLists() {
+    var patents = allInnovationData.filter(function(i) { return i.type === 'patent'; });
+    var papers = allInnovationData.filter(function(i) { return i.type === 'paper'; });
+
+    // Newest first
+    var byDateDesc = function(a, b) {
+        return (b.sortDate || '0000-00-00').localeCompare(a.sortDate || '0000-00-00');
+    };
+    patents.sort(byDateDesc);
+    papers.sort(byDateDesc);
+
+    renderInnovationGroup('patents-list', patents, 'No patents to show yet.');
+    renderInnovationGroup('papers-list', papers, 'No papers to show yet.');
+
+    var pc = document.getElementById('patents-count');
+    if (pc) pc.textContent = patents.length;
+    var rc = document.getElementById('papers-count');
+    if (rc) rc.textContent = papers.length;
+}
+
+function renderInnovationGroup(containerId, items, emptyMessage) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+
+    if (items.length === 0) {
+        container.innerHTML = '<div class="innovation-empty">' + emptyMessage + '</div>';
+        return;
+    }
+
+    container.innerHTML = '';
+    items.forEach(function(item) {
+        var originalIndex = allInnovationData.indexOf(item);
+        container.appendChild(createInnovationCard(item, originalIndex));
+    });
+}
+
+function createInnovationCard(item, index) {
+    var accent = getAccentSlug(item);
+    var pillLabel = getPillLabel(item);
+
+    var card = document.createElement('article');
+    card.className = 'innovation-card accent-' + accent;
+    card.dataset.index = index;
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', 'View details for ' + item.title);
+
+    var venue = item.venue ? '<span class="innovation-card-venue"><i class="far fa-building"></i> ' + escapeHTML(item.venue) + '</span>' : '';
+    var date = item.date ? '<span class="innovation-card-date"><i class="far fa-calendar"></i> ' + escapeHTML(item.date) + '</span>' : '';
+    var identifier = item.identifier ? '<span class="innovation-card-identifier"><i class="fas fa-hashtag"></i> ' + escapeHTML(item.identifier) + '</span>' : '';
+
+    card.innerHTML =
+        '<span class="innovation-card-pill accent-' + accent + '">' + escapeHTML(pillLabel) + '</span>' +
+        '<div class="innovation-card-body">' +
+            '<h4 class="innovation-card-title">' + escapeHTML(item.title) + '</h4>' +
+            '<div class="innovation-card-meta">' + venue + date + identifier + '</div>' +
+        '</div>' +
+        '<div class="innovation-card-arrow"><i class="fas fa-chevron-right"></i></div>';
+
+    return card;
+}
+
+// Slug used for the colored left border + pill background.
+// Patents map their `status` (granted/filed/under-review) to an accent class;
+// papers map their `format` (long-paper/poster/journal-article/...) similarly.
+function getAccentSlug(item) {
+    if (item.type === 'patent') {
+        return item.status || 'filed';
+    }
+    if (item.type === 'paper') {
+        return item.format ? slugify(item.format) : 'unknown';
+    }
+    return 'unknown';
+}
+
+function getPillLabel(item) {
+    if (item.type === 'patent') return getStatusLabel(item.status);
+    if (item.type === 'paper') return item.format || 'Paper';
+    return '';
+}
+
+function slugify(str) {
+    return String(str)
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+function getStatusLabel(status) {
+    switch (status) {
+        case 'granted': return 'Granted';
+        case 'filed': return 'Filed';
+        case 'under-review': return 'Under Review';
+        default: return status || '';
+    }
+}
+
+function getTypeLabel(type) {
+    if (type === 'patent') return 'Patent';
+    if (type === 'paper') return 'Paper';
+    return type || '';
+}
+
+function escapeHTML(str) {
+    if (str == null) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+// Render `text` into `container` as one <p> per blank-line-separated paragraph.
+// Each paragraph's text is inserted via textContent, so any HTML in the source is safely escaped.
+function renderParagraphs(container, text) {
+    container.innerHTML = '';
+    if (!text) return;
+    var paragraphs = String(text).split(/\r?\n\s*\n/);
+    paragraphs.forEach(function(p) {
+        var trimmed = p.trim();
+        if (!trimmed) return;
+        var el = document.createElement('p');
+        el.textContent = trimmed;
+        container.appendChild(el);
+    });
+}
+
+// Render the description section with a Plain-English / Technical toggle.
+// The toggle only appears when BOTH `summary` and `abstract` are present.
+function renderInnovationDescription(item) {
+    var section = document.getElementById('modalInnovationDescriptionSection');
+    var heading = document.getElementById('modalInnovationDescriptionHeading');
+    var toggle = document.getElementById('modalInnovationDescriptionToggle');
+    var desc = document.getElementById('modalInnovationDescription');
+    if (!section || !heading || !toggle || !desc) return;
+
+    var summary = item.summary || '';
+    var abstract = item.abstract || '';
+    currentInnovationDescription = { summary: summary, abstract: abstract };
+
+    // Nothing to show — hide the whole section.
+    if (!summary && !abstract) {
+        section.style.display = 'none';
+        return;
+    }
+    section.style.display = 'block';
+
+    var hasBoth = !!summary && !!abstract;
+
+    if (hasBoth) {
+        // Show the toggle; default to Plain English.
+        toggle.style.display = 'inline-flex';
+        heading.style.display = 'none';
+        var buttons = toggle.querySelectorAll('.innovation-toggle-btn');
+        buttons.forEach(function(btn) {
+            btn.disabled = false;
+            var isActive = btn.dataset.view === 'summary';
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        renderParagraphs(desc, summary);
     } else {
-        // Expand: animate to full content height
-        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
-        wrapper.classList.add('expanded');
-        // After transition, remove fixed max-height so content can reflow freely
-        wrapper.addEventListener('transitionend', function handler() {
-            if (wrapper.classList.contains('expanded')) {
-                wrapper.style.maxHeight = 'none';
-            }
-            wrapper.removeEventListener('transitionend', handler);
+        // Only one is present — no toggle, just a heading + text.
+        toggle.style.display = 'none';
+        heading.style.display = 'block';
+        if (summary) {
+            heading.textContent = 'Overview';
+            renderParagraphs(desc, summary);
+        } else {
+            heading.textContent = 'Abstract';
+            renderParagraphs(desc, abstract);
+        }
+    }
+}
+
+// Swap the currently-visible description view (invoked by the toggle buttons).
+function switchDescriptionView(view) {
+    var toggle = document.getElementById('modalInnovationDescriptionToggle');
+    var desc = document.getElementById('modalInnovationDescription');
+    if (!toggle || !desc) return;
+
+    var buttons = toggle.querySelectorAll('.innovation-toggle-btn');
+    buttons.forEach(function(btn) {
+        var isActive = btn.dataset.view === view;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    var text = view === 'abstract'
+        ? currentInnovationDescription.abstract
+        : currentInnovationDescription.summary;
+
+    // Subtle fade to make the swap feel intentional.
+    desc.style.opacity = '0';
+    setTimeout(function() {
+        renderParagraphs(desc, text);
+        desc.style.opacity = '1';
+    }, 120);
+}
+
+function initInnovationModal() {
+    var modal = document.getElementById('innovationModal');
+    if (!modal) return;
+    var closeBtn = modal.querySelector('.innovation-modal-close');
+
+    // Event delegation on both lists
+    ['patents-list', 'papers-list'].forEach(function(listId) {
+        var list = document.getElementById(listId);
+        if (!list) return;
+        list.addEventListener('click', function(e) {
+            var card = e.target.closest('.innovation-card');
+            if (!card) return;
+            openInnovationModal(parseInt(card.dataset.index, 10));
+        });
+        // Keyboard: Enter/Space activates a card
+        list.addEventListener('keydown', function(e) {
+            if (e.key !== 'Enter' && e.key !== ' ') return;
+            var card = e.target.closest('.innovation-card');
+            if (!card) return;
+            e.preventDefault();
+            openInnovationModal(parseInt(card.dataset.index, 10));
+        });
+    });
+
+    // Description toggle: Plain English ⇄ Technical Abstract
+    var toggle = document.getElementById('modalInnovationDescriptionToggle');
+    if (toggle) {
+        toggle.addEventListener('click', function(e) {
+            var btn = e.target.closest('.innovation-toggle-btn');
+            if (!btn || btn.classList.contains('active') || btn.disabled) return;
+            switchDescriptionView(btn.dataset.view);
         });
     }
 
-    btn.classList.toggle('expanded', !expanded);
-    btn.innerHTML = expanded
-        ? '<i class="fas fa-chevron-down"></i>&nbsp; Show More'
-        : '<i class="fas fa-chevron-up"></i>&nbsp; Show Less';
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') closeModal();
+    });
 }
+
+function openInnovationModal(index) {
+    var item = allInnovationData[index];
+    if (!item) return;
+
+    var modal = document.getElementById('innovationModal');
+
+    // Type + primary pill (status for patents, format for papers) + archival (papers only)
+    var typeEl = document.getElementById('modalInnovationType');
+    typeEl.textContent = getTypeLabel(item.type);
+
+    var pillLabel = getPillLabel(item);
+    var accent = getAccentSlug(item);
+    var statusEl = document.getElementById('modalInnovationStatus');
+    if (pillLabel) {
+        statusEl.textContent = pillLabel;
+        statusEl.className = 'innovation-modal-status accent-' + accent;
+        statusEl.style.display = '';
+    } else {
+        statusEl.textContent = '';
+        statusEl.style.display = 'none';
+    }
+
+    var archivalEl = document.getElementById('modalInnovationArchival');
+    if (archivalEl) {
+        if (item.type === 'paper') {
+            // Default archival=true if omitted.
+            var isArchival = item.archival !== false;
+            archivalEl.textContent = isArchival ? 'Archival' : 'Non-archival';
+            archivalEl.className = 'innovation-modal-archival ' + (isArchival ? 'is-archival' : 'is-non-archival');
+            archivalEl.style.display = '';
+        } else {
+            archivalEl.textContent = '';
+            archivalEl.style.display = 'none';
+        }
+    }
+
+    // Title + subtitle
+    document.getElementById('modalInnovationTitle').textContent = item.title || '';
+    document.getElementById('modalInnovationSubtitle').textContent = item.subtitle || '';
+
+    // Meta line
+    setMetaSpan('modalInnovationVenue', item.venue, 'far fa-building');
+    setMetaSpan('modalInnovationDate', item.date, 'far fa-calendar');
+    setMetaSpan('modalInnovationIdentifier', item.identifier, 'fas fa-hashtag');
+
+    // Primary link
+    var primaryContainer = document.getElementById('modalInnovationPrimaryLink');
+    if (item.primaryLink && item.primaryLink.url) {
+        var icon = item.primaryLink.icon || 'fas fa-external-link-alt';
+        primaryContainer.innerHTML =
+            '<a href="' + item.primaryLink.url + '" target="_blank" rel="noopener noreferrer">' +
+                '<i class="' + icon + '"></i> ' + escapeHTML(item.primaryLink.label || 'Open') +
+            '</a>';
+    } else {
+        primaryContainer.innerHTML = '';
+    }
+
+    // Description — Plain-English summary + optional Technical Abstract with a toggle
+    renderInnovationDescription(item);
+
+    // Authors
+    setModalSection('modalInnovationAuthorsSection', 'modalInnovationAuthors', item.authors);
+
+    // Tags
+    var tagsSection = document.getElementById('modalInnovationTagsSection');
+    var tagsEl = document.getElementById('modalInnovationTags');
+    if (item.tags && item.tags.length > 0) {
+        tagsEl.innerHTML = item.tags.map(function(t) {
+            return '<span class="innovation-tag">' + escapeHTML(t) + '</span>';
+        }).join('');
+        tagsSection.style.display = 'block';
+    } else {
+        tagsEl.innerHTML = '';
+        tagsSection.style.display = 'none';
+    }
+
+    // Extra links
+    var linksSection = document.getElementById('modalInnovationLinksSection');
+    var linksEl = document.getElementById('modalInnovationLinks');
+    if (item.links && item.links.length > 0) {
+        linksEl.innerHTML = item.links.map(function(link) {
+            var icon = link.icon || 'fas fa-external-link-alt';
+            return '<a href="' + link.url + '" target="_blank" rel="noopener noreferrer">' +
+                '<i class="' + icon + '"></i> ' + escapeHTML(link.label || 'Link') +
+            '</a>';
+        }).join('');
+        linksSection.style.display = 'block';
+    } else {
+        linksEl.innerHTML = '';
+        linksSection.style.display = 'none';
+    }
+
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function setMetaSpan(id, value, iconClass) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (value) {
+        el.innerHTML = '<i class="' + iconClass + '"></i> ' + escapeHTML(value);
+    } else {
+        el.innerHTML = '';
+    }
+}
+
+function setModalSection(sectionId, contentId, value) {
+    var section = document.getElementById(sectionId);
+    var content = document.getElementById(contentId);
+    if (value) {
+        content.textContent = value;
+        section.style.display = 'block';
+    } else {
+        content.textContent = '';
+        section.style.display = 'none';
+    }
+}
+

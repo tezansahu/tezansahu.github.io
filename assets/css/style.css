@@ -3544,3 +3544,567 @@ section {
         padding: 15px 20px;
     }
 }
+
+/* ==========================================================================
+   Innovation Section — slim, single-line entries + modal for details
+   Overrides the older .research-* card grid.
+   ========================================================================== */
+
+.innovation .section-subtitle {
+    color: #64748b;
+}
+
+.innovation-subsection {
+    margin-top: 2.5rem;
+}
+
+.innovation-subsection:first-of-type {
+    margin-top: 1rem;
+}
+
+.innovation-subsection-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #eef2f7;
+}
+
+.innovation-subsection-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #133155;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.innovation-subsection-title i {
+    color: #2172A9;
+    font-size: 1.1rem;
+}
+
+.innovation-count {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: #f1f5f9;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+}
+
+.innovation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.innovation-loading,
+.innovation-empty {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-style: italic;
+    padding: 1rem 0.25rem;
+}
+
+/* Slim, single-row card */
+.innovation-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.1rem;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #cbd5e1;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    position: relative;
+}
+
+.innovation-card:hover {
+    transform: translateX(4px);
+    background: #fafcff;
+    border-color: #cbd8ea;
+    box-shadow: 0 6px 18px rgba(19, 49, 85, 0.08);
+}
+
+.innovation-card:focus-visible {
+    outline: 2px solid #2172A9;
+    outline-offset: 2px;
+}
+
+/* Left-border + pill accent colors. Applied via `.accent-<slug>`.
+   Patents use their status slug (granted / filed / under-review).
+   Papers use a slugified format (long-paper / short-paper / workshop-paper / ...). */
+
+/* --- Patent status accents --- */
+.innovation-card.accent-granted { border-left-color: #22c55e; }
+.innovation-card.accent-filed { border-left-color: #f59e0b; }
+.innovation-card.accent-under-review { border-left-color: #a855f7; }
+
+/* --- Paper format accents --- */
+.innovation-card.accent-long-paper { border-left-color: #1e3a8a; }
+.innovation-card.accent-short-paper { border-left-color: #0d9488; }
+.innovation-card.accent-workshop-paper { border-left-color: #7c3aed; }
+.innovation-card.accent-tutorial { border-left-color: #16a34a; }
+.innovation-card.accent-extended-abstract { border-left-color: #0d9488; }
+.innovation-card.accent-poster { border-left-color: #d97706; }
+.innovation-card.accent-talk { border-left-color: #0ea5e9; }
+.innovation-card.accent-journal-article { border-left-color: #133155; }
+.innovation-card.accent-technical-report { border-left-color: #475569; }
+.innovation-card.accent-demo { border-left-color: #db2777; }
+/* Fallback for any unknown accent slug */
+.innovation-card { border-left-color: #cbd5e1; }
+
+.innovation-card-pill {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    background: #f1f5f9;
+    color: #334155;
+}
+
+/* Pill palette — patent statuses */
+.innovation-card-pill.accent-granted        { background: #dcfce7; color: #166534; }
+.innovation-card-pill.accent-filed          { background: #fef3c7; color: #92400e; }
+.innovation-card-pill.accent-under-review   { background: #f3e8ff; color: #6b21a8; }
+
+/* Pill palette — paper formats */
+.innovation-card-pill.accent-long-paper         { background: #dbeafe; color: #1e3a8a; }
+.innovation-card-pill.accent-short-paper        { background: #ccfbf1; color: #115e59; }
+.innovation-card-pill.accent-workshop-paper     { background: #ede9fe; color: #5b21b6; }
+.innovation-card-pill.accent-tutorial           { background: #dcfce7; color: #166534; }
+.innovation-card-pill.accent-extended-abstract  { background: #ccfbf1; color: #115e59; }
+.innovation-card-pill.accent-poster             { background: #ffedd5; color: #9a3412; }
+.innovation-card-pill.accent-talk               { background: #e0f2fe; color: #075985; }
+.innovation-card-pill.accent-journal-article    { background: #e0e7ff; color: #133155; }
+.innovation-card-pill.accent-technical-report   { background: #f1f5f9; color: #334155; }
+.innovation-card-pill.accent-demo               { background: #fce7f3; color: #9d174d; }
+
+.innovation-card-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.innovation-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #133155;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.35;
+}
+
+.innovation-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+.innovation-card-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.innovation-card-meta i {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.innovation-card-arrow {
+    flex: 0 0 auto;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.innovation-card:hover .innovation-card-arrow {
+    color: #2172A9;
+    transform: translateX(3px);
+}
+
+@media (max-width: 640px) {
+    .innovation-card {
+        flex-wrap: wrap;
+        padding: 0.85rem 1rem;
+    }
+    .innovation-card-pill {
+        order: -1;
+        font-size: 0.65rem;
+    }
+    .innovation-card-arrow {
+        display: none;
+    }
+    .innovation-card-title {
+        font-size: 0.95rem;
+    }
+    .innovation-card-meta {
+        font-size: 0.78rem;
+    }
+    .innovation-subsection-title {
+        font-size: 1.15rem;
+    }
+}
+
+/* ------------------------------ Modal ------------------------------ */
+.innovation-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(5px);
+}
+
+.innovation-modal-content {
+    background: #fff;
+    margin: 5vh auto;
+    padding: 0;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 720px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+.innovation-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1.1rem;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.innovation-modal-close:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.innovation-modal-header {
+    padding: 2rem 2rem 1.5rem;
+    background: linear-gradient(135deg, #133155 0%, #2172A9 100%);
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+}
+
+.innovation-modal-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.innovation-modal-type,
+.innovation-modal-status,
+.innovation-modal-archival {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+}
+
+.innovation-modal-type {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Reuse the same accent palette as the card pill so patents and papers stay consistent */
+.innovation-modal-status.accent-granted         { background: #dcfce7; color: #166534; }
+.innovation-modal-status.accent-filed           { background: #fef3c7; color: #92400e; }
+.innovation-modal-status.accent-under-review    { background: #f3e8ff; color: #6b21a8; }
+.innovation-modal-status.accent-long-paper        { background: #dbeafe; color: #1e3a8a; }
+.innovation-modal-status.accent-short-paper       { background: #ccfbf1; color: #115e59; }
+.innovation-modal-status.accent-workshop-paper    { background: #ede9fe; color: #5b21b6; }
+.innovation-modal-status.accent-tutorial          { background: #dcfce7; color: #166534; }
+.innovation-modal-status.accent-extended-abstract { background: #ccfbf1; color: #115e59; }
+.innovation-modal-status.accent-poster            { background: #ffedd5; color: #9a3412; }
+.innovation-modal-status.accent-talk              { background: #e0f2fe; color: #075985; }
+.innovation-modal-status.accent-journal-article   { background: #e0e7ff; color: #133155; }
+.innovation-modal-status.accent-technical-report  { background: #f1f5f9; color: #334155; }
+.innovation-modal-status.accent-demo              { background: #fce7f3; color: #9d174d; }
+
+/* Archival badge — subtle, on the header, only for papers */
+.innovation-modal-archival {
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.innovation-modal-archival.is-archival::before {
+    content: '\f02d'; /* fa-book */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 0.35rem;
+    opacity: 0.9;
+}
+.innovation-modal-archival.is-non-archival {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.85);
+    border-style: dashed;
+}
+.innovation-modal-archival.is-non-archival::before {
+    content: '\f15b'; /* fa-file */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 0.35rem;
+    opacity: 0.9;
+}
+
+.innovation-modal-content h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    margin: 0 0 0.5rem 0;
+}
+
+.innovation-modal-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin: 0 0 1rem 0;
+}
+
+.innovation-modal-subtitle:empty {
+    display: none;
+}
+
+.innovation-modal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.25rem;
+}
+
+.innovation-modal-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.innovation-modal-meta span:empty {
+    display: none;
+}
+
+.innovation-modal-primary-link:empty {
+    display: none;
+}
+
+.innovation-modal-primary-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: #FFC444;
+    color: #133155;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.innovation-modal-primary-link a:hover {
+    background: #ffd775;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.innovation-modal-body {
+    padding: 1.5rem 2rem 2rem;
+}
+
+.innovation-modal-section {
+    margin-bottom: 1.4rem;
+}
+
+.innovation-modal-section:last-child {
+    margin-bottom: 0;
+}
+
+.innovation-modal-section h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #133155;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.innovation-modal-section p {
+    color: #475569;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Description header: heading OR segmented toggle */
+.innovation-description-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.innovation-description-toggle {
+    display: none; /* JS reveals when both summary + abstract exist */
+    align-items: center;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.innovation-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    font-family: inherit;
+}
+
+.innovation-toggle-btn:hover:not(.active) {
+    color: #133155;
+}
+
+.innovation-toggle-btn.active {
+    background: #fff;
+    color: #133155;
+    box-shadow: 0 1px 3px rgba(19, 49, 85, 0.15);
+}
+
+.innovation-toggle-btn i {
+    font-size: 0.75rem;
+}
+
+.innovation-toggle-btn:focus-visible {
+    outline: 2px solid #2172A9;
+    outline-offset: 2px;
+}
+
+/* Small fade when swapping description text */
+#modalInnovationDescription {
+    transition: opacity 0.15s ease;
+}
+
+/* Space between consecutive paragraphs inside the description block */
+#modalInnovationDescription p + p {
+    margin-top: 0.9rem;
+}
+
+@media (max-width: 640px) {
+    .innovation-description-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .innovation-toggle-btn {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.72rem;
+    }
+}
+
+.innovation-modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.innovation-modal-tags .innovation-tag {
+    display: inline-block;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+}
+
+.innovation-modal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.innovation-modal-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid #133155;
+    color: #133155;
+    background: transparent;
+    transition: all 0.25s ease;
+}
+
+.innovation-modal-links a:hover {
+    background: #133155;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(19, 49, 85, 0.25);
+}
+
+@media (max-width: 768px) {
+    .innovation-modal-content {
+        width: 95%;
+        margin: 3vh auto;
+    }
+    .innovation-modal-header {
+        padding: 1.5rem 1.25rem 1.25rem;
+    }
+    .innovation-modal-body {
+        padding: 1.25rem 1.25rem 1.75rem;
+    }
+    .innovation-modal-content h3 {
+        font-size: 1.2rem;
+    }
+}

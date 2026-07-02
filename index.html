@@ -840,133 +840,38 @@
         </div>
     </section>
 
-    <!-- Research & Patents Section -->
-    <section class="research" id="research">
+    <!-- Innovation Section - Patents & Research Papers -->
+    <section class="research innovation" id="research">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Innovation - Research & Patents</h2>
-                <div class="section-subtitle"></div>
+                <h2 class="section-title">Innovation</h2>
+                <div class="section-subtitle">Patents and papers pushing the boundaries of AI</div>
             </div>
-            <div class="research-grid">
-                <!-- Patents -->
-                <div class="research-card patent granted">
-                    <div class="research-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="research-status granted">Granted Patent</div>
-                    <h3>Generating Narrative Query Responses Utilizing Generative Language Models</h3>
-                    <p class="research-subtitle">From Search-Based Autosuggest Queries</p>
-                    <p class="research-description">A query gateway system that provides an efficient framework for context-retained autosuggest queries from search engines to generative language models, enabling seamless AI chat experiences without disrupting user navigation.</p>
-                    <div class="research-details">
-                        <div class="research-date"><i class="fas fa-calendar"></i> Issued Dec 12, 2024</div>
-                        <a href="https://patents.google.com/patent/US20240411824A1/" target="_blank" class="research-link">
-                            <i class="fas fa-external-link-alt"></i> View Patent
-                        </a>
-                    </div>
-                </div>
 
-                <div class="research-card patent filed">
-                    <div class="research-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="research-status filed">Filed Patent</div>
-                    <h3>Location and Navigation Assistant</h3>
-                    <p class="research-subtitle">AI-Powered Indoor Navigation Solution</p>
-                    <p class="research-description">An innovative indoor navigation system using multimodal RAG techniques and vision-language models. Users simply take a selfie or point-of-view photo to get location detection and human-friendly, landmark-based navigation directions.</p>
-                    <div class="research-details">
-                        <div class="research-date"><i class="fas fa-calendar"></i> Filed Feb 21, 2025</div>
-                        <div class="research-link pending">
-                            <i class="fas fa-hourglass-half"></i> Patent Link Pending
-                        </div>
-                    </div>
+            <!-- Patents -->
+            <div class="innovation-subsection">
+                <div class="innovation-subsection-header">
+                    <h3 class="innovation-subsection-title">
+                        <i class="fas fa-certificate"></i> Patents
+                    </h3>
+                    <span class="innovation-count" id="patents-count"></span>
                 </div>
-
-                <div class="research-card patent filed">
-                    <div class="research-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="research-status filed">Filed Patent</div>
-                    <h3>Proactive Agent Identification & Suggestion Engine</h3>
-                    <p class="research-subtitle">AI Engine That Predicts What You Need Before You Ask</p>
-                    <p class="research-description">This innovation automatically understands what you're trying to do and proactively recommends the most helpful AI agent for the task. Instead of manually hunting for the right tool, it surfaces the perfect assistant in real time—saving effort and making your experience seamless.</p>
-                    <div class="research-details">
-                        <div class="research-date"><i class="fas fa-calendar"></i> Filed Oct, 2025</div>
-                        <div class="research-link pending">
-                            <i class="fas fa-hourglass-half"></i> Patent Link Pending
-                        </div>
-                    </div>
-                </div>
-
-                <div class="research-card patent filed">
-                    <div class="research-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="research-status filed">Filed Patent</div>
-                    <h3>Hierarchical Conversation Management in Conversational AI Systems</h3>
-                    <p class="research-subtitle">Tree-Based Branching for Structured, Focused AI Dialogues</p>
-                    <p class="research-description">A tree-based conversation architecture that lets users branch from any part of an AI response into isolated child conversations — each inheriting only the relevant context. With interactive mind maps and breadcrumbs for navigation, users can explore topics deeply without polluting the main thread, reducing cognitive load and keeping AI responses sharp and focused.</p>
-                    <div class="research-details">
-                        <div class="research-date"><i class="fas fa-calendar"></i> Filed Nov 2025</div>
-                        <div class="research-link pending">
-                            <i class="fas fa-hourglass-half"></i> Patent Link Pending
-                        </div>
-                    </div>
-                </div>
-
-                <div class="research-card patent filed">
-                    <div class="research-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="research-status filed">Filed Patent</div>
-                    <h3>Profile-Based Memory Architecture for an AI/ML Service</h3>
-                    <p class="research-subtitle">Multi-Persona AI with Clean Contextual Boundaries</p>
-                    <p class="research-description">A multi-profile memory system that lets a single AI assistant maintain independently scoped profiles — Work, Personal, Project-specific, or Incognito — each with its own stored preferences, tone, and history. The system intelligently detects context shifts, proactively recommends profile switches, and enforces clean information boundaries, enabling personalized, privacy-preserving AI without manual resets or separate accounts.</p>
-                    <div class="research-details">
-                        <div class="research-date"><i class="fas fa-calendar"></i> Filed Jan 2026</div>
-                        <div class="research-link pending">
-                            <i class="fas fa-hourglass-half"></i> Patent Link Pending
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Research Paper -->
-                <div class="research-card paper published">
-                    <div class="research-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="research-status published">Published Research</div>
-                    <h3>Lookup or Exploratory: What is your Search Intent?</h3>
-                    <p class="research-subtitle">Microsoft Journal of Applied Research (MSJAR)</p>
-                    <p class="research-description">This work introduces a fast, lightweight AI system that can instantly tell whether someone is searching to explore a topic broadly or to find a specific answer. By understanding this intent in real time, search engines can deliver more accurate results and better suggestions to help people find what they need faster.</p>
-                    <div class="research-details">
-                        <div class="research-date"><i class="fas fa-calendar"></i> MSJAR Vol 15, July 2021</div>
-                        <!-- <div class="research-link published-paper">
-                            <i class="fas fa-journal-whills"></i> MSJAR Publication
-                        </div> -->
-                    </div>
+                <div class="innovation-list" id="patents-list">
+                    <div class="innovation-loading">Loading patents…</div>
                 </div>
             </div>
-            <!-- Extra research items — slide in/out smoothly -->
-            <div class="research-extra-wrapper" id="research-extra-wrapper">
-                <div class="research-extra-inner">
-                    <div class="research-card paper published">
-                        <div class="research-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="research-status published">Published Research</div>
-                        <h3>Do Agent Do What Developers Say? Instruction Following Accuracy as an Evaluation Framework</h3>
-                        <p class="research-subtitle">Microsoft MLADS+ Agents Conference</p>
-                        <p class="research-description">We created a way to measure whether an AI agent truly follows the instructions its developers gave it—not just what users ask it to do. This helps teams catch mistakes early, build more reliable AI systems, and ensure agents behave the way they were intended to.</p>
-                        <div class="research-details">
-                            <div class="research-date"><i class="fas fa-calendar"></i> MLADS+ Agents, Nov 2025</div>
-                        </div>
-                    </div>
+
+            <!-- Papers (research & industry tracks, workshops, posters, tutorials, journals) -->
+            <div class="innovation-subsection">
+                <div class="innovation-subsection-header">
+                    <h3 class="innovation-subsection-title">
+                        <i class="fas fa-file-alt"></i> Papers
+                    </h3>
+                    <span class="innovation-count" id="papers-count"></span>
                 </div>
-            </div>
-            <div class="load-more-section" style="margin-top: 2rem;">
-                <button class="load-more-btn" id="research-toggle-btn" onclick="toggleResearchItems()">
-                    <i class="fas fa-chevron-down" id="research-toggle-icon"></i>&nbsp; Show More
-                </button>
+                <div class="innovation-list" id="papers-list">
+                    <div class="innovation-loading">Loading papers…</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1522,6 +1427,55 @@
             <div class="speaking-modal-body">
                 <div class="speaking-modal-links" id="modalSpeakingLinks"></div>
                 <div class="speaking-modal-description" id="modalSpeakingDescription"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Innovation Modal (Patents & Papers) -->
+    <div id="innovationModal" class="innovation-modal">
+        <div class="innovation-modal-content">
+            <span class="innovation-modal-close">&times;</span>
+            <div class="innovation-modal-header">
+                <div class="innovation-modal-badges">
+                    <span class="innovation-modal-type" id="modalInnovationType"></span>
+                    <span class="innovation-modal-status" id="modalInnovationStatus"></span>
+                    <span class="innovation-modal-archival" id="modalInnovationArchival"></span>
+                </div>
+                <h3 id="modalInnovationTitle"></h3>
+                <p class="innovation-modal-subtitle" id="modalInnovationSubtitle"></p>
+                <div class="innovation-modal-meta">
+                    <span class="innovation-modal-venue" id="modalInnovationVenue"></span>
+                    <span class="innovation-modal-date" id="modalInnovationDate"></span>
+                    <span class="innovation-modal-identifier" id="modalInnovationIdentifier"></span>
+                </div>
+                <div class="innovation-modal-primary-link" id="modalInnovationPrimaryLink"></div>
+            </div>
+            <div class="innovation-modal-body">
+                <div class="innovation-modal-section" id="modalInnovationDescriptionSection">
+                    <div class="innovation-description-header">
+                        <h4 id="modalInnovationDescriptionHeading">Overview</h4>
+                        <div class="innovation-description-toggle" id="modalInnovationDescriptionToggle" role="tablist" aria-label="Choose description style">
+                            <button type="button" class="innovation-toggle-btn active" data-view="summary" role="tab" aria-selected="true">
+                                <i class="fas fa-lightbulb"></i> In Plain English
+                            </button>
+                            <button type="button" class="innovation-toggle-btn" data-view="abstract" role="tab" aria-selected="false">
+                                <i class="fas fa-flask"></i> Technical Abstract
+                            </button>
+                        </div>
+                    </div>
+                    <div id="modalInnovationDescription"></div>
+                </div>
+                <div class="innovation-modal-section" id="modalInnovationAuthorsSection">
+                    <h4>Authors</h4>
+                    <p id="modalInnovationAuthors"></p>
+                </div>
+                <div class="innovation-modal-section" id="modalInnovationTagsSection">
+                    <div class="innovation-modal-tags" id="modalInnovationTags"></div>
+                </div>
+                <div class="innovation-modal-section" id="modalInnovationLinksSection">
+                    <h4>More Links</h4>
+                    <div class="innovation-modal-links" id="modalInnovationLinks"></div>
+                </div>
             </div>
         </div>
     </div>
