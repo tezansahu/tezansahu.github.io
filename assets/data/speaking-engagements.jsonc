@@ -42,10 +42,20 @@
         "sortDate": "2026-07-18",
         "category": "conferences",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/seri-2026.jpeg",
+        "description": "<p>Delivered at the 8th edition of the Software Engineering Research in India (SERI) Conference, at SERI's first-ever Industry Day, this talk tackled a testing gap unique to agentic AI: when an MCP App renders a live widget inside an agent's reply, nothing in today's toolchain can verify that the rendered UI is actually correct. The session introduced Agent Skills as the mechanism for turning a general-purpose coding assistant into a visual UX testing orchestrator — encoding a human evaluator's Observe → Validate → Reason loop as an installable skill.</p><p><strong>Key Takeaways:</strong></p><ul><li>Agentic UIs compose Layout × Content × Client at runtime — and that composed experience is exactly what nothing today evaluates</li><li>Existing tools are blind to the screen: eval frameworks judge text, visual-regression needs a fixed baseline, and observability never sees the render</li><li>The fix: package a human evaluator's Observe → Validate → Reason loop into an Agent Skill — no new infrastructure required</li><li>Observe: parallel Playwright MCP workers capture the visual state by describing interactions in plain language, not brittle selectors</li><li>Validate: atomic yes/no VLM checks plus targeted assertions catch what vague, sycophancy-prone judgments miss, even across multi-turn visual state</li><li>Reason: deterministic scripts aggregate the metrics while the agent attributes each defect to the platform or a third-party partner</li><li>Two honest trade-offs — judgment variance and path non-determinism — are tamed by pushing determinism wherever possible</li><li>Already powering visual UX evals for MCP App widgets in Microsoft 365 Copilot, with richer interaction-aware checks underway</li><li>The approach generalizes to any workflow needing tool orchestration and adaptive visual judgment — accessibility, localization, consistency</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260718_SERI2026_AIBuildsTheUI-WhoJudgesIt-AgentSkillsForVisualUXEvaluationOfAgenticAI.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484656474003189760/"
+            }
+        ]
     },
     {
         "title": "AI-Powered Computer Vision for Critical Systems: Healthcare & National Security",
