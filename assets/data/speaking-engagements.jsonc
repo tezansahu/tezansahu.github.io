@@ -13,15 +13,25 @@
     },
     {
         "title": "Can You Prove Your Agent Skill Works?",
-        "venue": "Azure Core Elevate, Microsoft",
+        "venue": "Azure Core Elevate, Microsoft (US & APAC Regions)",
         "date": "July 2026",
         "sortDate": "2026-07-23",
         "category": "microsoft",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/azurecoreelevate-canyouproveyourskillworks.png",
+        "description": "<p>Delivered as two sessions of Azure Core Elevate spread across two days for different geographies (US &amp; APAC regions), reaching close to 250 and 150 participants respectively, this talk made the case that the AI industry has automated skill creation but never automated skill judgment. Drawing on data showing that over a third of published agent skills are structurally flawed, the session argued that passing lint and looking well-authored says nothing about whether a skill actually makes an agent better at its task — and walked through a practical, repeatable recipe for proving that it does.</p><p><strong>Key Takeaways:</strong></p><ul><li>Skills are being mass-produced (~4k on one public marketplace) — yet 36.8% are flawed on inspection and 13.4% carry critical issues</li><li>\"Is this skill good?\" is really three questions: is it well-formed, is it safe, and does it actually work — only the third ever gets checked</li><li>Validation ≠ Evaluation: passing lint and reading well says nothing about whether a skill makes the agent better at the task</li><li>The real test: grade the outcome, not the path, and measure the delta between running with the skill and without it</li><li>SkillsBench 2026 data backs this up — curated skills lift performance +16pp on average, but ~1 in 5 tasks actually get worse</li><li>A repeatable recipe: realistic test cases, atomic assertions, and the cheapest grading method that works — from deterministic checks to LLM-as-judge</li><li>Introduced evaluate-skill-with-copilot-sdk, an open-source harness that automates with/without benchmarking and reports the delta</li><li>What's next: automatic metrics, automatic evaluation, and automatic evolution — skills that grade and improve themselves from eval signal</li><li>The closing argument: stop vibe-testing skills — measure the delta, and let a harness run the loop for you</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260722_AzureCoreElevate_CanYouProveYourAgentSkillWorks.pdf"
+            },
+            {
+                "label": "GitHub Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/prove-your-agent-skill-works"
+            }
+        ]
     },
     {
         "title": "[TBA]",
