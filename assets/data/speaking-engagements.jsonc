@@ -34,16 +34,32 @@
         ]
     },
     {
-        "title": "[TBA]",
+        "title": "Stop Vibe-Shipping Your Skills",
         "venue": "Common Ground 2026",
         "date": "July 2026",
         "sortDate": "2026-07-25",
         "category": "community",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/commonground2026.jpeg",
+        "description": "<p>Delivered at Common Ground 2026, this talk sharpened the \"can you prove your skill works?\" thesis into a practitioner's playbook — opening with a cold-open story of a skill that quietly never fired for half its team, and building out to a repeatable, runtime evaluation loop.</p><p><strong>Key Takeaways:</strong></p><ul><li>Skill Hell: abundance without evaluation — ~4k skills on one marketplace, 36.8% flawed on inspection, and ~1 in 5 curated skills actually make things worse</li><li>Evaluating a skill is really three questions: is it sound (validation), does it fire (triggering), and does it help (behaviour) — and only the first is commonly checked</li><li>Is it sound: cheap, static checks — structural validity and safety scanning — necessary, but say nothing about whether a skill fires right or helps</li><li>Does it fire: the model decides when to load a skill and gets it wrong in both directions — misfiring on the wrong prompt or staying silent on the right one</li><li>Does it help: run every case twice, with the skill and without — the delta, not a single passing run, is the whole verdict</li><li>Grade the outcome, not the path — agents reach good answers by routes you didn't script, so assertions should check results, not tool-call sequences</li><li>Two open-source skills already run this entire loop end-to-end — skill-creator and evaluate-skill-with-copilot-sdk — from generating eval sets to a reviewable scorecard</li><li>The frontier: skills that evolve themselves through a measure-propose-remeasure-keep loop, with self-discovery and self-refinement research already underway</li><li>The closing move: stop vibe-shipping skills, run the runtime checks, and let a harness prove it before you ship</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260725_CommonGround_StopVibeShippingYourSkills.pdf"
+            },
+            {
+                "label": "GitHub Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/prove-your-agent-skill-works"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7486996797077446656/"
+            }
+        ]
     },
     {
         "title": "AI Builds the UI, Who Judges It? Agent Skills for Visual UX Evaluation of Agentic AI Systems",
