@@ -2038,6 +2038,116 @@ section {
     display: none;
 }
 
+/* Speaker Bio */
+.speaker-bio {
+    position: relative;
+    text-align: left;
+    max-width: 820px;
+    margin: 2.75rem auto 0;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #FFC444;
+    border-radius: 16px;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 4px 18px rgba(19, 49, 85, 0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.speaker-bio:hover {
+    box-shadow: 0 8px 26px rgba(19, 49, 85, 0.1);
+    transform: translateY(-2px);
+}
+
+.speaker-bio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.speaker-bio .speaker-bio-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #133155;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.speaker-bio-header h3 i {
+    color: #FFC444;
+}
+.bio-copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    color: #133155;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.bio-copy-btn:hover {
+    background: #133155;
+    border-color: #133155;
+    color: #ffffff;
+}
+
+.bio-copy-btn.copied {
+    background: #FFC444;
+    border-color: #FFC444;
+    color: #133155;
+}
+
+.speaker-bio .speaker-bio-hint {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 0.4rem 0 1rem;
+}
+
+.speaker-bio .speaker-bio-text {
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: #334155;
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+
+.speaker-bio .speaker-bio-text p {
+    margin: 0 0 0.9rem;
+    font-size: inherit;
+    color: inherit;
+}
+
+.speaker-bio .speaker-bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+.speaker-bio-text a {
+    color: #133155;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 196, 68, 0.8);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.speaker-bio-text a:hover {
+    color: #FFC444;
+    border-bottom-color: #133155;
+}
+
+.speaker-bio-text em {
+    color: #133155;
+    font-style: italic;
+}
+
 /* Speaking CTA */
 .speaking-cta {
     text-align: center;
@@ -2105,6 +2215,14 @@ section {
     
     .speaking-cta {
         padding: 2rem;
+    }
+
+    .speaker-bio {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .speaker-bio-header {
+        align-items: flex-start;
     }
 }
 

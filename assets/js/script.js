@@ -487,7 +487,47 @@ let allSpeakingData = [];
 // Initialize speaking section
 document.addEventListener('DOMContentLoaded', function() {
     loadSpeakingData();
+    initSpeakerBioCopy();
 });
+
+function initSpeakerBioCopy() {
+    var btn = document.getElementById('bio-copy-btn');
+    var bio = document.getElementById('speaker-bio-text');
+    if (!btn || !bio) return;
+
+    btn.addEventListener('click', function() {
+        var paras = bio.querySelectorAll('p');
+        var text = paras.length
+            ? Array.prototype.map.call(paras, function(p) {
+                return p.textContent.replace(/\s+/g, ' ').trim();
+            }).join('\n\n')
+            : bio.textContent.replace(/\s+/g, ' ').trim();
+        var done = function() {
+            var label = btn.querySelector('span');
+            var icon = btn.querySelector('i');
+            btn.classList.add('copied');
+            if (label) label.textContent = 'Copied!';
+            if (icon) icon.className = 'fas fa-check';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                if (label) label.textContent = 'Copy';
+                if (icon) icon.className = 'far fa-copy';
+            }, 2000);
+        };
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done);
+        } else {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            done();
+        }
+    });
+}
 
 // Strip // line comments and /* ... */ block comments from a JSONC string,
 // while preserving comment-like sequences that appear inside string literals.

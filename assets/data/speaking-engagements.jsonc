@@ -1,35 +1,88 @@
 [
     {
-        "title": "From Vibe Coding to Agentic Engineering",
-        "venue": "Microsoft Garage (India)",
-        "date": "July 2026",
-        "sortDate": "2026-07-30",
+        "title": "Stop Vibe-Shipping Your Skills",
+        "venue": "SkillUp AI | The Garage, Microsoft (India)",
+        "date": "August 2026",
+        "sortDate": "2026-08-27",
         "category": "microsoft",
-        "type": "🔬 Workshop",
+        "type": "🗣️ Talk",
         "image": null,
         "description": "",
         "upcoming": true,
         "links": []
     },
     {
-        "title": "Can You Prove Your Agent Skill Works?",
-        "venue": "Azure Core Elevate, Microsoft (US & APAC Regions)",
-        "date": "July 2026",
-        "sortDate": "2026-07-23",
+        "title": "[TBA]",
+        "venue": "TEDx KLH Bachupally | KLH University, Hyderabad",
+        "date": "August 2026",
+        "sortDate": "2026-08-22",
+        "category": "universities",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Institutionalize Your Instincts to Skills",
+        "venue": "SkillUp AI | The Garage, Microsoft (India)",
+        "date": "August 2026",
+        "sortDate": "2026-08-19",
         "category": "microsoft",
         "type": "🗣️ Talk",
-        "image": "./assets/images/speaking-engagements/azurecoreelevate-canyouproveyourskillworks.png",
-        "description": "<p>Delivered as two sessions of Azure Core Elevate spread across two days for different geographies (US &amp; APAC regions), reaching close to 250 and 150 participants respectively, this talk made the case that the AI industry has automated skill creation but never automated skill judgment. Drawing on data showing that over a third of published agent skills are structurally flawed, the session argued that passing lint and looking well-authored says nothing about whether a skill actually makes an agent better at its task — and walked through a practical, repeatable recipe for proving that it does.</p><p><strong>Key Takeaways:</strong></p><ul><li>Skills are being mass-produced (~4k on one public marketplace) — yet 36.8% are flawed on inspection and 13.4% carry critical issues</li><li>\"Is this skill good?\" is really three questions: is it well-formed, is it safe, and does it actually work — only the third ever gets checked</li><li>Validation ≠ Evaluation: passing lint and reading well says nothing about whether a skill makes the agent better at the task</li><li>The real test: grade the outcome, not the path, and measure the delta between running with the skill and without it</li><li>SkillsBench 2026 data backs this up — curated skills lift performance +16pp on average, but ~1 in 5 tasks actually get worse</li><li>A repeatable recipe: realistic test cases, atomic assertions, and the cheapest grading method that works — from deterministic checks to LLM-as-judge</li><li>Introduced evaluate-skill-with-copilot-sdk, an open-source harness that automates with/without benchmarking and reports the delta</li><li>What's next: automatic metrics, automatic evaluation, and automatic evolution — skills that grade and improve themselves from eval signal</li><li>The closing argument: stop vibe-testing skills — measure the delta, and let a harness run the loop for you</li></ul>",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Idea2Impact Hackathon",
+        "venue": "NxtWave",
+        "date": "August 2026",
+        "sortDate": "2026-08-02",
+        "category": "edtech",
+        "type": "🎤 Panel Discussion",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    /* {
+        "title": "[TBA]",
+        "venue": "Aaruush '26 | SRMIST, Chennai",
+        "date": "August 2026",
+        "sortDate": "2026-08-22",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    }, */
+    {
+        "title": "From Vibe Coding to Agentic Engineering",
+        "venue": "SkillUp AI | The Garage, Microsoft (India)",
+        "date": "July 2026",
+        "sortDate": "2026-07-30",
+        "category": "microsoft",
+        "type": "🔬 Workshop",
+        "image": "./assets/images/speaking-engagements/skillup-ai-from-vibe-coding-to-agentic-engineering.png",
+        "description": "<p>Delivered virtually as part of SkillUp AI (The Garage, Microsoft India) to 60+ participants ahead of the Global Hackathon 2026, this workshop argued that the gap between a demo that wows on Friday and a build that survives Monday is a pipeline, not a better prompt. Rather than a lecture, the session was a live walk through six agent skills in a real repo — from interrogating a rough brief to an overnight loop that ships tested slices — backed by a companion repo attendees could clone at hour zero.</p><p><strong>Key Takeaways:</strong></p><ul><li>Vibe coding has a ceiling — greenfield demos lie to you, and everything you ship after the demo is brownfield: hidden callers, hidden tests, and decisions that live in people's heads instead of the repo</li><li>Every agent run starts from zero — it's a brilliant new starter fired at the end of every shift, so compacting isn't memory and files are; whatever it must know has to be on disk before the run begins</li><li>A 1M-token window buys roughly 100k tokens of real <em>thinking</em> — past that, reasoning degrades but confidence doesn't, which is why tasks must be sized to fit inside the smart zone</li><li>The move that survives both facts: stop typing code and start commissioning it — your ceiling shifts from typing speed to the quality of your decisions</li><li>Copilot already ships eight levers most people never touch — but only an Agent Skill encodes a whole <em>procedure</em>, so the agent walks the same path every time instead of improvising</li><li>Grilling inverts plan mode: instead of the agent proposing a plan for you to rubber-stamp, it interrogates you until the design holds up — every answer prunes a branch, and ADRs record the <em>why</em> so nobody \"fixes\" it back</li><li>Fire tracer bullets, not layers — cut the spec into thin vertical slices with declared blocking edges, so the frontier can be drained in parallel and each ticket labelled afk or human-in-the-loop</li><li>Ralph is genuinely just a while loop — fresh context, next unblocked ticket, TDD at agreed seams, a two-axis review of standards and spec, a decision-rich commit, repeat until there are no tasks left</li><li>Agent-written tests lie in three predictable ways — implementation-coupled, tautological, or horizontally sliced — and a passing test is the only thing the loop can actually trust</li><li>The closing thesis: stop vibing, start engineering — AI invented none of these ideas, it just made them non-optional</li></ul>",
         "links": [
             {
                 "label": "Slides",
                 "icon": "fas fa-file-pdf",
-                "url": "./assets/data/resources/20260722_AzureCoreElevate_CanYouProveYourAgentSkillWorks.pdf"
+                "url": "./assets/data/resources/20260730_SkillUpAI_FromVibeCodingToAgenticEngineering.pdf"
             },
             {
                 "label": "GitHub Repo",
                 "icon": "fab fa-github",
-                "url": "https://github.com/tezansahu/prove-your-agent-skill-works"
+                "url": "https://github.com/tezansahu/microsoft-idc-agentic-engineering-workshop-2026"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:share:7489352164729913345/"
             }
         ]
     },
@@ -62,6 +115,28 @@
         ]
     },
     {
+        "title": "Can You Prove Your Agent Skill Works?",
+        "venue": "Azure Core Elevate, Microsoft (US & APAC Regions)",
+        "date": "July 2026",
+        "sortDate": "2026-07-23",
+        "category": "microsoft",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/azurecoreelevate-canyouproveyourskillworks.png",
+        "description": "<p>Delivered as two sessions of Azure Core Elevate spread across two days for different geographies (US &amp; APAC regions), reaching close to 250 and 150 participants respectively, this talk made the case that the AI industry has automated skill creation but never automated skill judgment. Drawing on data showing that over a third of published agent skills are structurally flawed, the session argued that passing lint and looking well-authored says nothing about whether a skill actually makes an agent better at its task — and walked through a practical, repeatable recipe for proving that it does.</p><p><strong>Key Takeaways:</strong></p><ul><li>Skills are being mass-produced (~4k on one public marketplace) — yet 36.8% are flawed on inspection and 13.4% carry critical issues</li><li>\"Is this skill good?\" is really three questions: is it well-formed, is it safe, and does it actually work — only the third ever gets checked</li><li>Validation ≠ Evaluation: passing lint and reading well says nothing about whether a skill makes the agent better at the task</li><li>The real test: grade the outcome, not the path, and measure the delta between running with the skill and without it</li><li>SkillsBench 2026 data backs this up — curated skills lift performance +16pp on average, but ~1 in 5 tasks actually get worse</li><li>A repeatable recipe: realistic test cases, atomic assertions, and the cheapest grading method that works — from deterministic checks to LLM-as-judge</li><li>Introduced evaluate-skill-with-copilot-sdk, an open-source harness that automates with/without benchmarking and reports the delta</li><li>What's next: automatic metrics, automatic evaluation, and automatic evolution — skills that grade and improve themselves from eval signal</li><li>The closing argument: stop vibe-testing skills — measure the delta, and let a harness run the loop for you</li></ul>",
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260722_AzureCoreElevate_CanYouProveYourAgentSkillWorks.pdf"
+            },
+            {
+                "label": "GitHub Repo",
+                "icon": "fab fa-github",
+                "url": "https://github.com/tezansahu/prove-your-agent-skill-works"
+            }
+        ]
+    },
+    {
         "title": "AI Builds the UI, Who Judges It? Agent Skills for Visual UX Evaluation of Agentic AI Systems",
         "venue": "SERI 2026 | IIIT Hyderabad",
         "date": "July 2026",
@@ -82,30 +157,6 @@
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484656474003189760/"
             }
         ]
-    },
-    {
-        "title": "AI-Powered Computer Vision for Critical Systems: Healthcare & National Security",
-        "venue": "ATAL Faculty Development Program | CBIT, Hyderabad",
-        "date": "August 2026",
-        "sortDate": "2026-08-22",
-        "category": "universities",
-        "type": "🔬 Workshop",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
-    },
-    {
-        "title": "[TBA]",
-        "venue": "Aaruush '26 | SRMIST, Chennai",
-        "date": "August 2026",
-        "sortDate": "2026-08-22",
-        "category": "universities",
-        "type": "🔬 Workshop",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
     },
     {
         "title": "Beyond ChatGPT: Real-World AI, Innovation & Careers",
@@ -191,7 +242,7 @@
         "category": "microsoft",
         "type": "🔬 Workshop",
         "image": "./assets/images/speaking-engagements/from-vibe-coding-to-agentic-engineering.jpeg",
-        "description": "<p>Delivered to ~200 of Microsoft's 2026 summer interns in Hyderabad (hosted by The Garage India &amp; the University Recruiting team), this 90-minute hands-on workshop made the case that the leap from vibe coding to <em>agentic engineering</em> is what separates a slick demo from a shippable system. Instead of a lecture, the session was structured as a live build — the presenter shipped one real feature in a real repo end-to-end, then handed the keyboards over so every intern could run the same flow on a brief of their own.</p><p><strong>Key Takeaways:</strong></p><ul><li>Vibe coding has a ceiling — it works on toy demos and falls apart the moment a codebase has memory, constraints, or a second contributor</li><li>The mindset flip that unlocks everything: stop being the engineer who <em>types</em>, become the architect who <em>decides</em> and the PM who <em>clarifies</em> — treat the agent as a brilliant new starter, not a senior developer</li><li>Design before code: let the agent <em>grill you</em> instead of plan for you, so the design concept comes from your judgment and the questions are grounded in the actual repo</li><li>Externalize your thinking into durable artifacts — briefs, PRDs and issues — so every downstream agent run is bound to a contract you've reviewed</li><li>Package expertise as Agent Skills so workflows become installable and reusable, not copy-pasted prompts that live in someone's head</li><li>Split the work into two loops: <em>you</em> run the outer loop (taste, design, decomposition, ship); the <em>agent</em> runs the inner loop (write, test, fix) AFK — and humans stay in the loop at the contract moments, not on every line</li><li>Build the codebase the agent has to live in: deep modules, clear contracts, and tracer-bullet slices that ship end-to-end before they scale</li><li>The closing thesis: AI is a new paradigm, but software engineering fundamentals — Brooks, Hunt &amp; Thomas, Ousterhout — work better than ever with AI, and are now <strong>non-optional</strong>. Stop vibing. Start engineering.</li></ul>",
+        "description": "<p>Delivered to ~200 of Microsoft's 2026 summer interns in Hyderabad (hosted by The Garage India & the University Recruiting team), this 90-minute hands-on workshop made the case that the leap from vibe coding to <em>agentic engineering</em> is what separates a slick demo from a shippable system. Instead of a lecture, the session was structured as a live build — the presenter shipped one real feature in a real repo end-to-end, then handed the keyboards over so every intern could run the same flow on a brief of their own.</p><p><strong>Key Takeaways:</strong></p><ul><li>Vibe coding has a ceiling — it works on toy demos and falls apart the moment a codebase has memory, constraints, or a second contributor</li><li>The mindset flip that unlocks everything: stop being the engineer who <em>types</em>, become the architect who <em>decides</em> and the PM who <em>clarifies</em> — treat the agent as a brilliant new starter, not a senior developer</li><li>Design before code: let the agent <em>grill you</em> instead of plan for you, so the design concept comes from your judgment and the questions are grounded in the actual repo</li><li>Externalize your thinking into durable artifacts — briefs, PRDs and issues — so every downstream agent run is bound to a contract you've reviewed</li><li>Package expertise as Agent Skills so workflows become installable and reusable, not copy-pasted prompts that live in someone's head</li><li>Split the work into two loops: <em>you</em> run the outer loop (taste, design, decomposition, ship); the <em>agent</em> runs the inner loop (write, test, fix) AFK — and humans stay in the loop at the contract moments, not on every line</li><li>Build the codebase the agent has to live in: deep modules, clear contracts, and tracer-bullet slices that ship end-to-end before they scale</li><li>The closing thesis: AI is a new paradigm, but software engineering fundamentals — Brooks, Hunt &amp; Thomas, Ousterhout — work better than ever with AI, and are now <strong>non-optional</strong>. Stop vibing. Start engineering.</li></ul>",
         "links": [
             {
                 "label": "Slides",
@@ -631,7 +682,7 @@
     },
     {
         "title": "Intro to Vibe Coding",
-        "venue": "Heartfulness International School | Microsoft Garage (India)",
+        "venue": "Heartfulness International School | The Garage, Microsoft (India)",
         "date": "October 2025",
         "sortDate": "2025-10",
         "category": "universities",
