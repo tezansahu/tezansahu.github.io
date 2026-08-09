@@ -42,10 +42,16 @@
         "sortDate": "2026-08-02",
         "category": "edtech",
         "type": "🎤 Panel Discussion",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/nxtwave-idea2impact.jpg",
+        "description": "<p>Invited as a panelist at the finals of Idea2Impact — NxtWave's first in-person hackathon for its Academy students — alongside Harshit Singh (Amazon), with Harshitha (NxtWave) moderating. The conversation engaged 350+ builders across hackathons, career growth, interview preparation, and the fast-moving frontiers of AI.</p><p><strong>Key Takeaways:</strong></p><ul><li>How to approach hackathons as an opportunity to build, learn, and stand out</li><li>Habits and working methods that compound into differentiated careers</li><li>Practical preparation for SWE, Applied Science, and Data Science interviews</li><li>Lessons from career progression and navigating high-growth roles</li><li>How builders can adapt and stay relevant through the AI wave</li><li>Audience questions pushed the discussion into consciousness in AI, sustainable AI, and AGI</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490404311177441280/"
+            }
+        ]
     },
     /* {
         "title": "[TBA]",
