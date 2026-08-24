@@ -1,27 +1,33 @@
 [
+    // {
+    //     "title": "Stop Vibe-Shipping Your Skills",
+    //     "venue": "SkillUp AI | The Garage, Microsoft (India)",
+    //     "date": "August 2026",
+    //     "sortDate": "2026-08-27",
+    //     "category": "microsoft",
+    //     "type": "🗣️ Talk",
+    //     "image": null,
+    //     "description": "",
+    //     "upcoming": true,
+    //     "links": []
+    // },
     {
-        "title": "Stop Vibe-Shipping Your Skills",
-        "venue": "SkillUp AI | The Garage, Microsoft (India)",
-        "date": "August 2026",
-        "sortDate": "2026-08-27",
-        "category": "microsoft",
-        "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
-    },
-    {
-        "title": "[TBA]",
-        "venue": "TEDx KLH Bachupally | KLH University, Hyderabad",
+        "title": "If AI Does My Work Better, What Do I Actually Do?",
+        "venue": "TEDx KLH Bachupally | Hyderabad",
         "date": "August 2026",
         "sortDate": "2026-08-22",
         "category": "universities",
-        "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "type": "🗣️Talk",
+        "image": "./assets/images/speaking-engagements/tedx-klh-bachupally.JPG",
+        "description": "<p>Delivered at TEDxKLH Bachupally to ~300 attendees, mostly students, this talk asked what remains uniquely valuable when AI can produce code, presentations, reports, and other professional work faster than we can. <strong>Its key idea: as AI gets better at producing the answers, our responsibility is to write, test, and own the <em>answer key</em> — defining what good looks like, verifying work against that standard, and exercising judgment over whether the standard itself is right.</strong></p><p>The talk introduced CRAFT, a five-part framework for turning vague reactions such as \"make it better\" into explicit, evolving standards that make AI's outputs trustworthy, inspectable, and genuinely ours.</p><p><strong>Key Takeaways:</strong></p><ul><li>The answer key combines specification, verification, and human judgment</li><li>CRAFT turns instinct into a reusable standard: Collect, React, Articulate, Formalize, Tune</li><li>A good answer key evolves as new work reveals what the standard missed</li><li>Start small: make one reaction explicit and write one line of the answer key</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497503022030376960/"
+            }
+        ]
     },
     {
         "title": "Institutionalize Your Instincts to Skills",
@@ -30,10 +36,16 @@
         "sortDate": "2026-08-19",
         "category": "microsoft",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/institutionalize-your-instincts-to-skills.png",
+        "description": "<p>Delivered as part of SkillUp AI at The Garage, Microsoft India, this talk revisited a simple premise: the next leap in AI productivity will not come only from a better model, but from better ways to package our standards, context, taste, and hard-won judgment. It introduced Agent Skills as the open-standard mechanism for turning expertise that lives in one person's head into reusable capabilities an agent can load, apply, and share.</p><p>Building on the earlier edition of this talk, the session mapped where skills already run — from Claude Code and GitHub Copilot to the broader open ecosystem and the direction of M365 Copilot and Cowork — then made the idea tangible through a live demo that used <em>skill-creator</em> to \"skill-ify\" a recurring weekly-update workflow from a blank repository.</p><p><strong>Key Takeaways:</strong></p><ul><li>Stop repeating prompts; install the expertise once and let the agent hold it</li><li>A skill is simply a folder built around <code>SKILL.md</code>, with optional scripts, references, and assets</li><li>Progressive disclosure loads only the guidance needed for the task at hand</li><li>The same open skill format now works across a growing ecosystem of AI coding tools</li><li>High-value skills encode the workflows, standards, and judgment specific to your role or team</li><li>Start with one repeated workflow, skill-ify it, test it on real work, and commit it for others</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20260819_SkillUpAI_InstitutionalizeYourInstinctsToSkills.pdf"
+            }
+        ]
     },
     {
         "title": "Idea2Impact Hackathon",
