@@ -1,27 +1,56 @@
 [
-    // {
-    //     "title": "Stop Vibe-Shipping Your Skills",
-    //     "venue": "SkillUp AI | The Garage, Microsoft (India)",
-    //     "date": "August 2026",
-    //     "sortDate": "2026-08-27",
-    //     "category": "microsoft",
-    //     "type": "🗣️ Talk",
-    //     "image": null,
-    //     "description": "",
-    //     "upcoming": true,
-    //     "links": []
-    // },
+    {
+        "title": "Your MCP Server Is an Attacker's Dream",
+        "venue": "XtremePython 2026 Conference",
+        "date": "November 2026",
+        "sortDate": "2026-11-17",
+        "category": "conferences",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Stop Future-Proofing Your Career",
+        "venue": "TEDx Geethanjali CET",
+        "date": "October 2026",
+        "sortDate": "2026-10-10",
+        "category": "signature-stages",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "[Title TBA]",
+        "venue": "Agentic Indians Meetup #1 - The State of Agentic Software Development",
+        "date": "September 2026",
+        "sortDate": "2026-09-21",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
     {
         "title": "If AI Does My Work Better, What Do I Actually Do?",
         "venue": "TEDx KLH Bachupally | Hyderabad",
         "date": "August 2026",
         "sortDate": "2026-08-22",
-        "category": "universities",
+        "category": "signature-stages",
         "type": "🗣️Talk",
         "image": "./assets/images/speaking-engagements/tedx-klh-bachupally.jpg",
         "description": "<p>Delivered at TEDxKLH Bachupally to ~300 attendees, mostly students, this talk asked what remains uniquely valuable when AI can produce code, presentations, reports, and other professional work faster than we can. <strong>Its key idea: as AI gets better at producing the answers, our responsibility is to write, test, and own the <em>answer key</em> — defining what good looks like, verifying work against that standard, and exercising judgment over whether the standard itself is right.</strong></p><p>The talk introduced CRAFT, a five-part framework for turning vague reactions such as \"make it better\" into explicit, evolving standards that make AI's outputs trustworthy, inspectable, and genuinely ours.</p><p><strong>Key Takeaways:</strong></p><ul><li>The answer key combines specification, verification, and human judgment</li><li>CRAFT turns instinct into a reusable standard: Collect, React, Articulate, Formalize, Tune</li><li>A good answer key evolves as new work reveals what the standard missed</li><li>Start small: make one reaction explicit and write one line of the answer key</li></ul>",
         "upcoming": false,
         "links": [
+            {
+                "label": "Recording",
+                "icon": "fas fa-video",
+                "url": "https://youtu.be/5IpsC_iVCdY"
+            },
             {
                 "label": "LinkedIn Post",
                 "icon": "fab fa-linkedin",
@@ -65,18 +94,6 @@
             }
         ]
     },
-    /* {
-        "title": "[TBA]",
-        "venue": "Aaruush '26 | SRMIST, Chennai",
-        "date": "August 2026",
-        "sortDate": "2026-08-22",
-        "category": "universities",
-        "type": "🔬 Workshop",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
-    }, */
     {
         "title": "From Vibe Coding to Agentic Engineering",
         "venue": "SkillUp AI | The Garage, Microsoft (India)",
