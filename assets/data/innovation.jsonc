@@ -40,7 +40,7 @@
 //   ---- Paper-only ----
 //   format        Free-text label; commonly one of:
 //                     "Long Paper" | "Short Paper" | "Workshop Paper" | "Tutorial"
-//                     | "Extended Abstract" | "Poster" | "Talk" | "Journal Article"
+//                     | "Extended Abstract" | "Preprint" | "Poster" | "Talk" | "Journal Article"
 //                     | "Technical Report" | "Demo"
 //                 Rendered as the colored pill on the card (replaces the old "Published" status).
 //                 Unknown values still render with a neutral slate pill.
@@ -65,6 +65,32 @@
             "url": "https://patents.google.com/patent/US20240411824A1/",
             "icon": "fas fa-external-link-alt"
         }
+    },
+    {
+        "type": "patent",
+        "status": "filed",
+        "title": "Version-Conditioned Reconfiguration of Request Text, Runtime Parameters, and Persistent Instruction Data in an Agentic Harness",
+        "subtitle": "Automatically adapting an agent harness when its underlying language model changes",
+        "venue": "Filed at USPTO",
+        "date": "Filed Sep 15, 2026",
+        "sortDate": "2026-09-15",
+        "summary": "Switching the language model behind an AI agent is rarely a drop-in replacement: each model may expect different request wording, runtime settings, and persistent instructions. This system detects when an agentic harness is moving from one model to another, reads model-specific guidance, identifies every incompatible part of the invocation configuration, and generates a precise change-set across prompts, parameters, and stored instructions. It then applies those changes before issuing the request, allowing the harness to adapt systematically instead of relying on manual prompt rewrites and configuration guesswork.",
+        "abstract": "A system reconfigures configuration data of an agentic harness according to the generative language model that is to receive a request. The system determines that a request is to be directed to a second generative language model in place of a first, and obtains guidance data specifying a manner of invoking the second model that differs from a manner of invoking the first. From the guidance data, the system identifies one or more elements of an invocation configuration of the harness that are inconsistent with the manner of invoking the second model, each element being request text, a runtime parameter governing processing of the request, or persistent instruction data included in the request. The system generates a change-set specifying a modification to each identified element, applies the change-set to produce a modified invocation configuration, and issues the request according to the modified invocation configuration.",
+        "coInventors": ["Akhil Abburu"],
+        "tags": ["AI Agents", "Agentic Harness", "Model Portability", "Prompt Engineering", "Runtime Configuration"]
+    },
+    {
+        "type": "patent",
+        "status": "filed",
+        "title": "Temporal Ensemble-Driven Synthetic Scenario Engine for Realistic Agent Testing",
+        "subtitle": "Generating and replaying realistic multi-application scenarios for point-in-time agent evaluation",
+        "venue": "Filed at USPTO",
+        "date": "Filed Sep 11, 2026",
+        "sortDate": "2026-09-11",
+        "summary": "Conventional agent evaluations test against static snapshots, even though real work unfolds over time across email, chat, documents, and other applications. This system uses a gated generation process to construct realistic multi-application scenarios whose records and events evolve over time. An evaluation service can then reconstruct the scenario at specific moments, making it possible to test what an agent would have known, seen, and done at each point in a workflow rather than grading only against the final state.",
+        "abstract": "The techniques presented herein are directed to a system for constructing realistic multi-application temporal evaluative scenarios for assessing the performance of artificial intelligence agents. As discussed above, a user may interact with multiple software applications to execute a workflow for accomplishing a given task. Within this workflow paradigm, many providers of artificial intelligence productivity tools such as artificial intelligence agents aim to automate multi-application workflows. However, despite the expanding capabilities of artificial intelligence agents, conventional mechanisms for evaluating artificial intelligence agents remain lacking. Namely, that conventional evaluation mechanisms lack the ability to represent a multi-application, temporal reality. To address these and other technical challenges, the present system utilizes a gated generation process to construct an evaluative scenario that is configured to evolve over time across any number of software components. In addition, the system can include an evaluation service that enables reconstructions of the evaluative scenario for point-in-time testing.",
+        "coInventors": ["Himani Arora"],
+        "tags": ["Agent Evaluation", "Synthetic Data", "Temporal Simulation", "Enterprise Agents", "Testing"]
     },
     {
         "type": "patent",
@@ -149,6 +175,32 @@
     // TODO: Adjust `format` and `archival` for each entry to match reality.
     {
         "type": "paper",
+        "format": "Preprint",
+        "archival": false,
+        "title": "Packaged, But Not Portable: Why Conforming to the Agent Plugin Standard Is Rare, and Why Conforming Would Not Be Enough",
+        "subtitle": "A large-scale study of agent-plugin conformance and the missing foundations for safe composition",
+        "venue": "arXiv Preprint",
+        "date": "Sep 2026",
+        "sortDate": "2026-09-20",
+        "identifier": "arXiv:2609.23809",
+        "summary": "This independent study asks whether the emerging Agent Plugins standard is being adopted — and whether conformance alone would make plugins genuinely portable across coding agents. To answer that, it builds AgentPluginZoo, a provenance-tracked corpus of 68,072 plugin bundles from 30,655 repositories. Only 6.2% validate against the standard, although most failures are shallow: 96.6% would load after adding one missing boilerplate field. The deeper problem is composition. Many conforming bundles would lose author-declared information, and 81% of capability-exporting bundles share a capability name with another plugin without any namespace or precedence rule to resolve the collision. The paper proposes four additions for an interoperable ecosystem: qualified capability identity, a declared capability surface, precedence rules, and explicit inter-plugin relations.",
+        "abstract": "Coding agents are extended by plugins: installable bundles that ship skills, sub-agents, commands, hooks, and tool servers. On 24 July 2026, an open specification (Agent Plugins v1.0.0) standardised how such a bundle is laid out and described, so that one plugin could run on any agent. We ask the two questions a practitioner would ask of it: is the ecosystem adopting the standard, and if a plugin did conform, would that be enough to make it work alongside the other plugins a user has installed?\n\nWe answer both by building AgentPluginZoo, a provenance-tracked corpus of 68,072 plugin bundles across 30,655 repositories, released with its discovery ledger, scoring code, and analysis. Only 6.2% validate, but the gap is shallow rather than structural: 96.6% would load after adding one missing boilerplate field. The real cost lands elsewhere. 40.2% would load while the specification obliges the client to discard fields their authors wrote, mostly declarations of what the plugin ships. Moreover, conformance settles nothing for the second question: 81% of capability-exporting bundles share a name with another plugin, with no namespace or precedence rule to decide which one answers.\n\nThis paper argues the community standardised a packaging format when composition needs a model, names the four concepts such a model must add — qualified capability identity, a declared capability surface, a precedence rule, and inter-plugin relations — and shows they fit an additive v1.1 profile of the same specification rather than a competing standard. Recommendations follow for practitioners packaging extensions today and for the people evolving the standard, chief among them that conformance must be made observable before it can become common.",
+        "tags": ["AI Agents", "Agent Plugins", "Extensibility", "Interoperability", "Software Engineering"],
+        "primaryLink": {
+            "label": "View on arXiv",
+            "url": "https://arxiv.org/abs/2609.23809",
+            "icon": "fas fa-file-alt"
+        },
+        "links": [
+            {
+                "label": "Code & Dataset",
+                "url": "https://github.com/tezansahu/agentpluginzoo",
+                "icon": "fab fa-github"
+            }
+        ]
+    },
+    {
+        "type": "paper",
         "format": "Talk",
         "archival": false,
         "title": "AI Builds the UI, Who Judges It? Agent Skills for Visual UX Evaluation of Agentic AI Systems",
@@ -168,41 +220,57 @@
     },
     {
         "type": "paper",
-        "format": "Poster",
+        "format": "Extended Abstract",
         "archival": false,
         "title": "Who Belongs in the Eval Set? A Capability-Taxonomy-Driven Pipeline for Curating Regression Eval Sets in Agent-Extensibility Platforms",
         "subtitle": "Curating platform-side regression eval sets under a fixed compute and review budget",
-        "venue": "Software Engineering Research in India (SERI) 2026 — Industry Track",
-        "date": "July 2026",
-        "sortDate": "2026-07-18",
+        "venue": "SERI 2026 Industry Track | arXiv Preprint",
+        "date": "Aug 2026",
+        "sortDate": "2026-08-02",
+        "identifier": "arXiv:2608.01004",
         "summary": "Platform teams that host third-party AI agents (like Copilot's extension ecosystem) face a hard problem: every customer ships their own set of test cases, but the platform can only afford to run so many of them at each release, since each test costs LLM-judge compute and human triage. Admit too much and it becomes unaffordable; reject too much and real regressions slip into production. We built a pipeline that automatically decides which incoming test queries should join the platform's regression set. It maps each query onto a taxonomy of ~30 capabilities the platform cares about (authentication, tool invocation, orchestration, response formats, and so on), then uses a mix of deterministic rules and an LLM classifier to figure out what each query actually exercises. A quality rater compares new queries against existing ones so a sharper test can displace a weaker one that covers the same ground. A rule-based engine issues one of four verdicts — admit, drop, swap, or refer for human review — and eviction always goes through a human, so nothing important disappears silently. We apply the approach to declarative agents with custom actions in Microsoft 365 Copilot, deployed as an MCP server.",
         "abstract": "Platform teams hosting agent-extensibility surfaces face a regression-economics paradox. Customers each ship an eval set, but the platform's living regression set — continuously curated as customers onboard — must stay under a hard query-count ceiling, because each admitted query is LLM-judged per release build and human-triaged on failures. Admitting everything inflates compute, tenant setup, mock data, and reviewer labor, while rejecting too freely opens production blind spots. To the best of our knowledge, no published industrial pipeline addresses this platform-side curation problem. Existing frameworks are customer-side, certifying single agents rather than curating across many incoming sets under a fixed budget.\n\nOur pipeline takes the agent specification and an incoming eval set, projects each query into a platform-owned capability taxonomy of ~30 capabilities (authentication, tool invocation, orchestration, response formats), and emits a per-query decision: admit, drop, swap, or refer for human review. A healthy regression set is the minimal collection of queries that captures the maximal spread of capability signatures, the distinct combinations of capabilities a query exercises together.\n\nA classifier produces a TRUE/FALSE verdict with confidence per (query, capability) pair through two non-overlapping paths. A deterministic specification-based extractor handles capabilities the agent already declares, and is authoritative wherever the specification speaks. A large language model (LLM) with N-sample self-consistency handles capabilities that surface only in query intent.\n\nAn Invocation Quality (IQ) rater addresses what binary coverage cannot. When a new query shares a signature with an existing entry, we ask whether it is a better test, because overlap is common and a shallow tester should yield to a deeper one. The rater scores how thoroughly each query exercises each TRUE capability, so a sharper instance displaces a weaker incumbent.\n\nA consolidator brings coverage and quality together. Given those scores plus facts derived live against the regression set (champions, new coverage, wins, similarity, novelty), a pure rule-based engine emits one of admit, drop, swap, or refer for review. A conservative curator alone writes to the regression set, surfacing eviction candidates but never auto-deleting, because eviction must be auditable.\n\nThree invariants anchor the design. Queries are atomic, so the best test of any single capability is unevictable. Per-capability scores are stored facts about the query, while champion and redundant roles are derived live. Admission is reversible, and eviction is always human-reviewed. The mechanism is taxonomy-agnostic and applies to any eval-set curation problem with a typed capability taxonomy, including ones whose taxonomies evolve as off-distribution queries cluster into extension candidates. We apply it to declarative agents with custom actions in Microsoft 365 Copilot, available as an MCP server.",
         "coAuthors": ["Aritra Das", "Pankaj Mittal", "Sudipta Das"],
         "tags": ["Agent Evaluation", "Eval Curation", "Copilot Extensibility", "MCP"],
         "primaryLink": {
+            "label": "View on arXiv",
+            "url": "https://arxiv.org/abs/2608.01004",
+            "icon": "fas fa-file-alt"
+        },
+        "links": [
+            {
             "label": "Poster",
             "url": "./assets/data/resources/20260718_SERI2026_Poster_WhoBelongsInTheEvalSet.pdf",
             "icon": "fas fa-file-pdf"
-        }
+            }
+        ]
     },
     {
         "type": "paper",
-        "format": "Poster",
+        "format": "Extended Abstract",
         "archival": false,
         "title": "What Could the Agent See at 19:05? Generating Temporal Enterprise Scenarios from Real Research and Replaying Them to Evaluate Agents",
         "subtitle": "Point-in-time evaluation of enterprise agents via generated temporal scenarios and byte-reproducible replay",
-        "venue": "Software Engineering Research in India (SERI) 2026 — Industry Track",
-        "date": "July 2026",
-        "sortDate": "2026-07-18",
+        "venue": "SERI 2026 Industry Track | arXiv Preprint",
+        "date": "Aug 2026",
+        "sortDate": "2026-08-02",
+        "identifier": "arXiv:2608.01042",
         "summary": "AI agents today read a person's email, chat, files, and business systems (issue trackers, code repos, incident tools) and act across them. Testing such an agent is currently done against one frozen snapshot of made-up data — but real work is a story that unfolds over hours: a ticket that's 'open' at 10 am is 'closed' by 5 pm, and the correct answer to 'what's the status?' depends entirely on when you ask. So today's evaluations grade the agent as if every story were already over, and every moment in between is skipped. Building a fresh snapshot for each moment is too expensive, and simply dropping 'future' records still leaks tomorrow's information hidden inside a field. Always-on agents that react to changes can't be tested at all. This system fixes both problems. First, it generates believable scenarios grounded in real research — interviews, tickets, incident reports — expanding each into a cast of people, a cause-and-effect storyline, and a timestamped set of records with full ground truth. Then it replays that world at any chosen moment: a fast rule-based pass rebuilds records to how they stood at time T, and a language model only touches the few things rules can't (like a text mention of a later event). Each rebuild is computed once and stored as a tiny diff, so evaluation is instant, reproducible byte-for-byte, and works even for always-on agents. One story becomes dozens of point-in-time evaluation questions, and new apps or skills plug in through a single uniform adapter.",
         "abstract": "A new kind of software now does real knowledge work: AI agents that read a person's email, chat, files, and connected business systems — an issue tracker, a code repository, an incident tool — and act across all of them. Vendors are racing to ship such agents & the add-ons (skills, plugins) that extend them, and how good any is depends on how rigorously it can be evaluated before release. This is where the industry is stuck.\n\nSuch an agent is evaluated today against a sandbox loaded with one frozen snapshot of made-up data. But real work is not a snapshot — it is a story unfolding over hours across many apps, & every moment of that story is a different situation, calling for different questions with different correct answers. Ask 'what is the status of my ticket?' mid-morning and it is 'open'; by day's end it is 'closed' — and the situations in between each invite their own questions. A snapshot is only the last of these, so an agent is graded as if every story were already over, and every in-between moment goes unevaluated. Recreating each moment as its own snapshot — a fresh sandbox per instant — is far too costly. Even within one snapshot, dropping records 'newer than T' still leaks the future hidden inside a record, so the agent looks right while citing facts that did not yet exist. And always-on agents, whose job is to react to a change, cannot be evaluated at all: nothing can place them just after it. Authoring even one realistic multi-app scenario by hand takes days, so teams cannot trust their offline scores and catch regressions only in production.\n\nWe present a system that fixes this with two cooperating capabilities. First, it generates a believable world. Grounded in real research (interviews, tickets, incident reports), it mines recurring situations into scenario seeds, then expands a seed into a cast of people — each with what they may see — a cause-and-effect storyline, a timestamped timeline, and the records those events produce: one self-contained, all-knowing ground truth. Second, it replays that world at any instant. From each app's data schema alone, the system infers how its records evolve, then rebuilds any record exactly as it stood at a chosen moment — a fast rule-based pass for what the clock can decide, and a small, careful use of a language model for what it cannot (a status, or text mentioning later events). Since the evaluable moments are finite and known ahead, every rebuild is computed once and stored as a tiny difference, so evaluation is an instant, exactly-repeatable lookup with no model in the loop — & any agent plugs in through one uniform adapter, judged against machine-generated, moment-specific answers.\n\nOne episode becomes dozens of point-in-time, per-person evals; a new app or skill is onboarded in minutes; batch runs are byte-for-byte reproducible; and even always-on, react-to-change agents become evaluable. We describe the system, its architecture, and the trade-offs of applying it to enterprise agents.",
         "coAuthors": ["Himani Arora"],
         "tags": ["Agent Evaluation", "Enterprise Agents", "Temporal Simulation", "Reproducibility"],
         "primaryLink": {
+            "label": "View on arXiv",
+            "url": "https://arxiv.org/abs/2608.01042",
+            "icon": "fas fa-file-alt"
+        },
+        "links": [
+            {
             "label": "Poster",
             "url": "./assets/data/resources/20260718_SERI2026_Poster_WhatCouldTheAgentSeeAt1905.pdf",
             "icon": "fas fa-file-pdf"
-        }
+            }
+        ]
     },
     {
         "type": "paper",
@@ -220,16 +288,42 @@
     },
     {
         "type": "paper",
+        "format": "Preprint",
+        "archival": false,
+        "title": "Travelling Salesman Problem: Parallel Implementations & Analysis",
+        "subtitle": "Comparing serial and parallel brute-force implementations of a classic NP-hard optimization problem",
+        "venue": "High Performance Scientific Computing Course Project | arXiv Preprint",
+        "date": "May 2022",
+        "sortDate": "2022-05-28",
+        "identifier": "arXiv:2205.14352",
+        "summary": "Written as part of the High Performance Scientific Computing course, this project studies how the brute-force solution to the Travelling Salesman Problem can be parallelized under multiple computing paradigms. It implements serial and parallel variants, then compares their execution times to analyze where parallelism helps, how the implementations scale, and what overheads remain when accelerating an NP-hard search problem.",
+        "abstract": "The Traveling Salesman Problem (often called TSP) is a classic algorithmic problem in the field of computer science and operations research. It is an NP-Hard problem focused on optimization. TSP has several applications even in its purest formulation, such as planning, logistics, and the manufacture of microchips; and can be slightly modified to appear as a sub-problem in many areas, such as DNA sequencing. In this paper, a study on parallelization of the Brute Force approach (under several paradigms) of the Travelling Salesman Problem is presented. Detailed timing studies for the serial and various parallel implementations of the Travelling Salesman Problem have also been illustrated.",
+        "coAuthors": ["Amey Gohil", "Manan Tayal", "Vyankatesh Sawalpurkar"],
+        "tags": ["Parallel Computing", "Algorithms", "Optimization", "High-Performance Computing"],
+        "primaryLink": {
+            "label": "View on arXiv",
+            "url": "https://arxiv.org/abs/2205.14352",
+            "icon": "fas fa-file-alt"
+        }
+    },
+    {
+        "type": "paper",
         "format": "Journal Article",
         "archival": true,
-        "title": "Lookup or Exploratory: What is your Search Intent?",
+        "title": "Lookup or Exploratory: What is Your Search Intent?",
         "subtitle": "A lightweight real-time classifier for user search intent",
         "venue": "Microsoft Journal of Applied Research (MSJAR)",
         "date": "MSJAR Vol 15, July 2021",
         "sortDate": "2021-07-01",
+        "identifier": "arXiv:2110.04640",
         "summary": "This work introduces a fast, lightweight AI system that can instantly tell whether someone is searching to explore a topic broadly or to find a specific answer. By understanding this intent in real time, search engines can deliver more accurate results and better suggestions to help people find what they need faster.",
         "abstract": "Users’ search query specificity is broadly divided into two categories: Exploratory or Lookup. If a user’s query specificity can be identified at the run time, it can be used to significantly improve the search results as well as the quality of suggestions to alter the query. However, with millions of queries coming every day on a commercial search engine, it is non-trivial to develop a horizontal technique to determine query specificity at run time. Existing techniques suffer either from lack of enough training data or are dependent on information such as query length or session information. In this paper, we show that such methodologies are inadequate or at times misleading.\n\nWe propose a novel methodology, to overcome these limitations. First, we demonstrate a heuristic based method to identify Exploratory or Lookup intent queries at scale, classifying millions of queries into the two classes with a high accuracy, as shown in our experiments. Our methodology is not dependent on session data or query length. Next, we train a transformer-based deep neural network to classify the queries into one of the two classes at run time. Our method uses a bidirectional GRU initialized with pretrained BERT-base-uncased embeddings and an augmented triplet loss to classify the intent of queries without using any session data. We also introduce a novel Semi-Greedy Iterative Training approach to fine-tune our model. Our model is deployable for real time query specificity identification with response time of less than 1ms. Our technique is generic, and the results have valuable implications for improving the quality of search results and suggestions.",
-        "coAuthors": ["Manoj Agarwal"],
-        "tags": ["Search", "Intent Classification", "Bing"]
+        "coAuthors": ["Manoj K. Agarwal"],
+        "tags": ["Search", "Intent Classification", "Bing"],
+        "primaryLink": {
+            "label": "View on arXiv",
+            "url": "https://arxiv.org/abs/2110.04640",
+            "icon": "fas fa-file-alt"
+        }
     }
 ]
