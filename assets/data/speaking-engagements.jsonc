@@ -12,16 +12,39 @@
         "links": []
     },
     {
-        "title": "All that Glitters is NOT 'Done'",
-        "venue": "Beyond Agents - Building Intelligent Systems | Microsoft AI Innovators Hub, Hyderabad",
-        "date": "October 2026",
-        "sortDate": "2026-10-10",
-        "category": "community",
+        "title": "TBD",
+        "venue": "TEDx SOIM | Hyderabad",
+        "date": "December 2026",
+        "sortDate": "2026-12-05",
+        "category": "signature-stages",
         "type": "🗣️ Talk",
         "image": null,
         "description": "",
         "upcoming": true,
         "links": []
+    },
+    {
+        "title": "Great with Words. Ready for Decisions?",
+        "venue": "Beyond Agents | Microsoft AI Innovators Hub, Hyderabad",
+        "date": "October 2026",
+        "sortDate": "2026-10-10",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": "./assets/images/speaking-engagements/beyond-agents-great-with-words-ready-for-decisions.png",
+        "description": "<p>Delivered to 300+ attendees at Beyond Agents — Building Intelligent Systems (Microsoft AI Innovators Hub, Hyderabad), this talk asked a question that becomes urgent once agents begin acting on our behalf: can a system that sounds certain also make decisions we can trust? Using an agent that claims \"everyone was notified\" despite having only created a draft, the session introduced Jev and the emerging System One model interface — decision models designed to return bounded verdicts over supplied evidence rather than another fluent paragraph.</p><p>The talk connected Jev's choices and scores to calibrated confidence, real-world action-selection patterns, and LangWatch Instant Evals, then showed how to validate a fast judge before placing it inside an evaluation cascade or production guardrail. The central idea: <strong>a well-formed verdict is not proof, confidence is not correctness, and an agent should never claim completion without evidence of the event that made it true.</strong></p><p><strong>Key Takeaways:</strong></p><ul><li>Decision models turn language understanding into a typed software interface: supply state, ask a precise question, and receive a bounded choice or score</li><li>Jev is the model; System One is the interface — the application still owns validation, thresholds, permissions, and side effects</li><li>Calibrated confidence describes outcomes across similar cases; it is not a guarantee that one particular verdict is correct</li><li>Fast decisions can power browser agents, mobile actions, robotics, database predicates, and retrospective evals without replacing the surrounding execution pipeline</li><li>Before trusting an AI judge, define the failure precisely, label inspectable cases, keep a separate holdout, and measure both misses and false alarms</li><li>Confidence-based routing can reduce cost, but confidently wrong answers can bypass the escape route — valid shape ≠ true judgment ≠ authorized action</li><li>Turn retrospective discoveries into regression tests, online monitors, and blocking guards so the system checks receipts before claiming success</li><li>Start with one consequential claim — message sent, document updated, task completed — and ask what evidence would actually prove it</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20261010_BeyondAgents_GreatWithWordsReadyForDecisions.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7514890176851169280/"
+            }
+        ]
     },
     {
         "title": "If AI Does My Work Better, What Do I Actually Do?",
@@ -75,6 +98,11 @@
         "description": "<p>Invited as a panelist at the finals of Idea2Impact — NxtWave's first in-person hackathon for its Academy students — alongside Harshit Singh (Amazon), with Harshitha (NxtWave) moderating. The conversation engaged 350+ builders across hackathons, career growth, interview preparation, and the fast-moving frontiers of AI.</p><p><strong>Key Takeaways:</strong></p><ul><li>How to approach hackathons as an opportunity to build, learn, and stand out</li><li>Habits and working methods that compound into differentiated careers</li><li>Practical preparation for SWE, Applied Science, and Data Science interviews</li><li>Lessons from career progression and navigating high-growth roles</li><li>How builders can adapt and stay relevant through the AI wave</li><li>Audience questions pushed the discussion into consciousness in AI, sustainable AI, and AGI</li></ul>",
         "upcoming": false,
         "links": [
+            {
+                "label": "Recording",
+                "icon": "fas fa-video",
+                "url": "https://youtu.be/NOM0VVz4yQk?si=43eRZnXRysKToENb"
+            },
             {
                 "label": "LinkedIn Post",
                 "icon": "fab fa-linkedin",
