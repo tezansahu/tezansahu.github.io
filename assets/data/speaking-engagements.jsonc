@@ -1,5 +1,65 @@
 [
     {
+        "title": "Lights, Camera, Agents!",
+        "venue": "STAR Program | Vasavi College of Engineering, Hyderabad",
+        "date": "October 2026",
+        "sortDate": "2026-10-30",
+        "category": "universities",
+        "type": "🔬 Workshop",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "TBA",
+        "venue": "Guest Lecture: Autonomous Software Engineering | IIIT Hyderabad",
+        "date": "November 2026",
+        "sortDate": "2026-11-05",
+        "category": "universities",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Stop Babysitting Your AI: Build a Judge Instead",
+        "venue": "Community Talk | Future World Alliance",
+        "date": "November 2026",
+        "sortDate": "2026-11-07",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "TBA",
+        "venue": "Guest Lecture: Testing AI Systems | IIIT Hyderabad",
+        "date": "November 2026",
+        "sortDate": "2026-11-10",
+        "category": "universities",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
+        "title": "Before You Blame the Skill: Field Lessons from Shipping Agent Skills with SaaS Partners",
+        "venue": "FDEx Hyderabad | Community Session",
+        "date": "November 2026",
+        "sortDate": "2026-11-28",
+        "category": "community",
+        "type": "🗣️ Talk",
+        "image": null,
+        "description": "",
+        "upcoming": true,
+        "links": []
+    },
+    {
         "title": "Your MCP Server Is an Attacker's Dream",
         "venue": "XtremePython 2026 Conference",
         "date": "November 2026",
