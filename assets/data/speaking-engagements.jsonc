@@ -1,18 +1,34 @@
 [
     {
         "title": "Lights, Camera, Agents!",
-        "venue": "STAR Program | Vasavi College of Engineering, Hyderabad",
+        "venue": "IEEE WIE Affinity Group | Vasavi College of Engineering, Hyderabad",
         "date": "October 2026",
         "sortDate": "2026-10-30",
         "category": "universities",
         "type": "🔬 Workshop",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/lights-camera-agents.jpg",
+        "description": "<p>Delivered to ~60 students at Vasavi College of Engineering, Hyderabad, this three-hour workshop organised by the IEEE Women in Engineering (WIE) Affinity Group treated AI agents like a film production: models were actors, instructions were scripts, tools were props, and evals were the critics. The session moved from agent fundamentals and multi-agent orchestration to a hands-on <em>Blog-to-Thread Studio</em> lab using Microsoft Agent Framework and Gemini, turning a blog URL into a reviewed thread and a Typefully draft. The central idea: <strong>chatbots talk, agents act — but a successful take needs more than a convincing performance.</strong></p><p><strong>Key Takeaways:</strong></p><ul><li>An agent is a goal-driven loop, not a single prompt — it uses tools, observes results, and knows when to stop</li><li>Model, instructions, tools, and memory shape an agent's behaviour; tool descriptions are part of the prompt, not just documentation</li><li>Hire a crew only when the roles truly differ — choose sequential, concurrent, handoff, group-chat, or hierarchical orchestration to match the work</li><li>Structured outputs make agent handoffs usable by code; a bounded writer-critic loop improves drafts without endless retakes</li><li>Evaluate both the final output and the execution path — use code checks for hard rules and an LLM judge for groundedness and quality</li><li>A judge needs judging too — calibrate against human-labelled examples, inspect failures, and re-run evals after changes</li><li>Ship with traces, budgets, scoped tools, and a human on final cut — scraped pages are data, and public posts need review</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "https://www.tezansahu.com/lights-camera-agents/deck/Lights-Camera-Agents.html"
+            },
+            {
+                "label": "Hands-on Lab",
+                "icon": "fas fa-flask",
+                "url": "https://tinyurl.com/lights-camera-agents-lab"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522515563445895168/"
+            }
+        ]
     },
     {
-        "title": "TBA",
+        "title": "The Curious Case of the Dumber Agent",
         "venue": "Guest Lecture: Autonomous Software Engineering | IIIT Hyderabad",
         "date": "November 2026",
         "sortDate": "2026-11-05",
@@ -36,7 +52,7 @@
         "links": []
     },
     {
-        "title": "TBA",
+        "title": "Grading Agents That Act",
         "venue": "Guest Lecture: Testing AI Systems | IIIT Hyderabad",
         "date": "November 2026",
         "sortDate": "2026-11-10",
