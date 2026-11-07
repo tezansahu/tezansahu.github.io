@@ -34,22 +34,49 @@
         "sortDate": "2026-11-05",
         "category": "universities",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/the-curious-case-of-the-dumber-agent.png",
+        "description": "<p>Delivered as a guest lecture for CS6.403: Autonomous Software Engineering (AutoSE) at IIIT Hyderabad to 20+ research students and researchers, this session investigated why an agent that worked brilliantly on day one can become less reliable over time. Building on the course's coverage of skills, specs, harnesses, and multi-agent patterns, the lecture examined six suspects — context, evaluation, decisions, architecture, drift, and self-tuning — to show why the model rarely gets dumber, but the harness around it can.</p><p><strong>Key Takeaways:</strong></p><ul><li>Context files and skills are hypotheses, not guaranteed improvements — measure their benefit against a no-skill baseline, including cost and latency</li><li>Evaluate triggering and behaviour separately; repeat paired runs and debug seed data and graders before blaming the agent</li><li>Decision models can reduce routing costs, but need task-specific thresholds, fallbacks, and a \"no skill\" option</li><li>Choose the simplest architecture that solves the task; compare skills, subagents, and teams under the same model, tasks, and budget</li><li>Skills and memory age like dependencies — check live tool contracts, verify citations, and enforce important rules through tests</li><li>Self-improvement needs raw traces, held-out evaluation, and no-regression gates; engineers still own the answer key and consequential decisions</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20261105_IIITHAutoSE_TheCuriousCaseOfTheDumberAgent.pdf"
+            },
+            {
+                "label": "Hands-on Lab",
+                "icon": "fas fa-flask",
+                "url": "https://drive.google.com/file/d/1isPIBaiDhYVlqV0_fwK13j5TmCoBHCDX/view?usp=sharing"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524291975945261056/"
+            }
+        ]
     },
     {
         "title": "Stop Babysitting Your AI: Build a Judge Instead",
-        "venue": "Community Talk | Future World Alliance",
+        "venue": "AI Launchpad Lightning Session | Future World Alliance",
         "date": "November 2026",
         "sortDate": "2026-11-07",
         "category": "community",
         "type": "🗣️ Talk",
         "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "description": "<p>Delivered as a Lightning Session organised by Future World Alliance (FWA) as a precursor to AI Launchpad, this session tackled the babysitting tax: handing work to AI, then watching every thought and rereading every output. Through a live newsletter-pitch demo, the talk showed how to replace vague quality scores with specific, evidence-backed checks and build a judge that routes work to pass, review, or block. The goal was practical delegation — let the judge handle routine checks while people keep the decisions that matter.</p><p><strong>Key Takeaways:</strong></p><ul><li>Decide who checks using the cost of a mistake and whether it can be undone — consequential, irreversible actions always need human sign-off</li><li>Replace vague ratings with atomic, verifiable, self-sufficient yes/no checks that reveal what needs fixing</li><li>Ground the judge in supplied sources, require evidence, and use code for deterministic checks such as word limits</li><li>Judges have biases too — use a different model family where possible and test rather than assume reliability</li><li>Grade the grader against five human-labelled cases, including tricky and borderline examples; fix the judge, not the test</li><li>Route verdicts into pass, review, or block, and turn human corrections into examples that sharpen the judge over time</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "Recording",
+                "icon": "fas fa-video",
+                "url": "https://maven.com/p/a3e3fb/stop-babysitting-your-ai-build-a-judge-instead"
+            },
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20261107_FutureWorldAlliance_StopBabysittingYourAIBuildAJudgeInstead.pdf"
+            }
+        ]
     },
     {
         "title": "Grading Agents That Act",
