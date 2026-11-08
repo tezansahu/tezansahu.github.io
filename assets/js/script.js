@@ -139,6 +139,11 @@ function initMarqueeAnimations() {
             const clone = item.cloneNode(true);
             content.appendChild(clone);
         });
+
+        if (content.matches('#vocal-covers, #artwork-gallery')) {
+            initInteractiveMarquee(content, items.length);
+            return;
+        }
         
         // Pause animation on hover
         content.addEventListener('mouseenter', () => {
@@ -149,6 +154,110 @@ function initMarqueeAnimations() {
             content.style.animationPlayState = 'running';
         });
     });
+}
+
+function initInteractiveMarquee(content, itemCount) {
+    const container = content.parentElement;
+    const duration = parseFloat(getComputedStyle(content).animationDuration) * 1000;
+    // Include the gap between the original and cloned sets for a seamless loop.
+    const measureDistance = () => content.children[itemCount].offsetLeft - content.children[0].offsetLeft;
+    let distance = measureDistance();
+    content.style.animation = 'none';
+    const animation = content.animate([
+        { transform: 'translateX(0)' },
+        { transform: `translateX(-${distance}px)` }
+    ], { duration, iterations: Infinity });
+    let pointer = null;
+    let hovered = false;
+    let suppressClick = false;
+
+    function resumeAnimation() {
+        if (!pointer && !hovered) animation.play();
+    }
+
+    function moveBy(delta) {
+        const time = animation.currentTime + delta / distance * duration;
+        animation.currentTime = ((time % duration) + duration) % duration;
+    }
+
+    container.addEventListener('pointerenter', event => {
+        if (event.pointerType === 'mouse') {
+            hovered = true;
+            animation.pause();
+        }
+    });
+    container.addEventListener('pointerleave', event => {
+        if (event.pointerType === 'mouse') {
+            hovered = false;
+            resumeAnimation();
+        }
+    });
+    container.addEventListener('pointerdown', event => {
+        if (!event.isPrimary || event.button !== 0 || pointer) return;
+        suppressClick = false;
+        pointer = { id: event.pointerId, x: event.clientX, y: event.clientY, dragging: false };
+        animation.pause();
+    });
+    container.addEventListener('pointermove', event => {
+        if (!pointer || event.pointerId !== pointer.id) return;
+        const deltaX = event.clientX - pointer.x;
+        const deltaY = event.clientY - pointer.y;
+        if (!pointer.dragging) {
+            if (Math.max(Math.abs(deltaX), Math.abs(deltaY)) < 8) return;
+            if (Math.abs(deltaY) > Math.abs(deltaX)) {
+                pointer = null;
+                resumeAnimation();
+                return;
+            }
+            pointer.dragging = true;
+            suppressClick = true;
+            container.setPointerCapture(event.pointerId);
+            container.classList.add('is-dragging');
+        }
+        event.preventDefault();
+        moveBy(-deltaX);
+        pointer.x = event.clientX;
+    });
+
+    function endDrag(event) {
+        if (!pointer || event.pointerId !== pointer.id) return;
+        pointer = null;
+        container.classList.remove('is-dragging');
+        if (container.hasPointerCapture(event.pointerId)) {
+            container.releasePointerCapture(event.pointerId);
+        }
+        hovered = event.pointerType === 'mouse' && container.matches(':hover');
+        resumeAnimation();
+    }
+
+    window.addEventListener('pointerup', endDrag);
+    window.addEventListener('pointercancel', endDrag);
+    container.addEventListener('lostpointercapture', event => {
+        if (event.target === container) endDrag(event);
+    });
+    container.addEventListener('dragstart', event => event.preventDefault());
+    // A swipe must not activate the card's existing inline click handler.
+    container.addEventListener('click', event => {
+        if (suppressClick) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            suppressClick = false;
+        }
+    }, true);
+    container.addEventListener('keydown', event => {
+        if (event.target !== container || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+        event.preventDefault();
+        const step = distance / itemCount;
+        moveBy(event.key === 'ArrowRight' ? step : -step);
+    });
+
+    new ResizeObserver(() => {
+        distance = measureDistance();
+        animation.effect.setKeyframes([
+            { transform: 'translateX(0)' },
+            { transform: `translateX(-${distance}px)` }
+        ]);
+    }).observe(content);
 }
 
 // Form handling
@@ -1411,4 +1520,3 @@ function setModalSection(sectionId, contentId, value) {
         section.style.display = 'none';
     }
 }
-
