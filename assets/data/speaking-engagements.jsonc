@@ -62,7 +62,7 @@
         "sortDate": "2026-11-07",
         "category": "community",
         "type": "🗣️ Talk",
-        "image": null,
+        "image": "./assets/images/speaking-engagements/stop-babysitting-your-ai.png",
         "description": "<p>Delivered as a Lightning Session organised by Future World Alliance (FWA) as a precursor to AI Launchpad, this session tackled the babysitting tax: handing work to AI, then watching every thought and rereading every output. Through a live newsletter-pitch demo, the talk showed how to replace vague quality scores with specific, evidence-backed checks and build a judge that routes work to pass, review, or block. The goal was practical delegation — let the judge handle routine checks while people keep the decisions that matter.</p><p><strong>Key Takeaways:</strong></p><ul><li>Decide who checks using the cost of a mistake and whether it can be undone — consequential, irreversible actions always need human sign-off</li><li>Replace vague ratings with atomic, verifiable, self-sufficient yes/no checks that reveal what needs fixing</li><li>Ground the judge in supplied sources, require evidence, and use code for deterministic checks such as word limits</li><li>Judges have biases too — use a different model family where possible and test rather than assume reliability</li><li>Grade the grader against five human-labelled cases, including tricky and borderline examples; fix the judge, not the test</li><li>Route verdicts into pass, review, or block, and turn human corrections into examples that sharpen the judge over time</li></ul>",
         "upcoming": false,
         "links": [
@@ -80,15 +80,26 @@
     },
     {
         "title": "Grading Agents That Act",
-        "venue": "Guest Lecture: Testing AI Systems | IIIT Hyderabad",
+        "venue": "Guest Lecture: Topics in Software Engineering | IIIT Hyderabad",
         "date": "November 2026",
         "sortDate": "2026-11-10",
         "category": "universities",
         "type": "🗣️ Talk",
-        "image": null,
-        "description": "",
-        "upcoming": true,
-        "links": []
+        "image": "./assets/images/speaking-engagements/grading-agents-that-act.jpeg",
+        "description": "<p>Delivered virtually to a class of ~15 students in IIIT Hyderabad's Topics in Software Engineering research elective, focusing this year on Testing AI Systems, this guest lecture explored how to build reliable evaluations for AI agents that act inside external software systems. Drawing on research and industry practice, the session covered realistic test environments, metric design, task-specific assertions, judge validation, and capability-driven regression suites under a fixed budget. The emphasis was on grounding evaluation in observable evidence — what the agent actually did, what changed, and whether it respected the user's intent and constraints.</p><p><strong>Key Takeaways:</strong></p><ul><li>The test world is part of the instrument — use resettable, versioned synthetic environments with stable ground truth, including what was visible at the time</li><li>Define what quality means before choosing a score; turn observed failure modes into atomic, verifiable checks and task-specific assertions</li><li>Grade the outcome and inspect the means — verify final state, tool parameters, approval boundaries, and unintended side effects, not just the agent's reply</li><li>Use code where possible and LLM judges where needed; validate both against human labels and test verifiers for loopholes</li><li>Separate capability from reliability — repeated trials distinguish an agent that can succeed once from one that succeeds consistently</li><li>Curate regression suites under a budget using capability coverage and failure signals; averages can hide regressions in the tasks that matter</li></ul>",
+        "upcoming": false,
+        "links": [
+            {
+                "label": "Slides",
+                "icon": "fas fa-file-pdf",
+                "url": "./assets/data/resources/20261110_IIITHTestingAISystems_GradingAgentsThatAct.pdf"
+            },
+            {
+                "label": "LinkedIn Post",
+                "icon": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7525965336022753280/"
+            }
+        ]
     },
     {
         "title": "Before You Blame the Skill: Field Lessons from Shipping Agent Skills with SaaS Partners",
